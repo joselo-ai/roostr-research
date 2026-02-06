@@ -1,0 +1,65 @@
+[2026-02-06 12:10:25] ========================================
+[2026-02-06 12:10:25] 🤖 Starting automatic price update...
+[2026-02-06 12:10:25] 📊 Updating prices...
+Traceback (most recent call last):
+  File "/tmp/update_prices_worker.py", line 5, in <module>
+    from price_fetcher import PriceFetcher
+ModuleNotFoundError: No module named 'price_fetcher'
+[2026-02-06 12:10:25] ❌ Price update failed
+[2026-02-06 12:11:03] ========================================
+[2026-02-06 12:11:03] 🤖 Starting automatic price update...
+[2026-02-06 12:11:03] 📊 Updating prices...
+📡 Fetching prices for 2 positions: TAO, SOL
+✅ Fetched 2 prices
+   TAO: $176.84 | P&L: $+23,334 (+0.4%)
+   SOL: $86.78 | P&L: $+1,966 (+0.3%)
+✅ Updated 2 positions in database
+[2026-02-06 12:11:03] ✅ Prices updated successfully
+[2026-02-06 12:11:03] 🔄 Regenerating dashboard...
+Updating dashboard...
+Loaded 9 signals from database
+Portfolio: $5,830,000 deployed, $+25,300 P&L (+25.3%)
+Watchlist: 2 GREEN, 6 YELLOW, 1 RED
+✅ Dashboard updated: dashboard.html
+Open: file://dashboard.html
+[2026-02-06 12:11:03] ✅ Dashboard regenerated
+[2026-02-06 12:11:03] ✅ Price update complete
+[2026-02-06 12:11:03] ========================================
+[2026-02-06 12:15:15] ========================================
+[2026-02-06 12:15:15] 🤖 Starting automatic price update...
+[2026-02-06 12:15:15] 📊 Updating prices...
+📡 Fetching prices for 2 positions: TAO, SOL
+✅ Fetched 2 prices
+   TAO: $177.15 | P&L: $+32,491 (+0.6%)
+   SOL: $86.82 | P&L: $+2,258 (+0.4%)
+✅ Updated 2 positions in database
+[2026-02-06 12:15:15] ✅ Prices updated successfully
+[2026-02-06 12:15:15] 🔄 Regenerating dashboard...
+Updating dashboard...
+Loaded 9 signals from database
+Portfolio: $5,830,000 deployed, $+34,749 P&L (+34.7%)
+Watchlist: 2 GREEN, 6 YELLOW, 1 RED
+✅ Dashboard updated: dashboard.html
+Open: file://dashboard.html
+[2026-02-06 12:15:15] ✅ Dashboard regenerated
+[2026-02-06 12:15:15] ✅ Price update complete
+[2026-02-06 12:15:15] ========================================
+[2026-02-06 12:18:04] ========================================
+[2026-02-06 12:18:04] 🤖 Starting automatic price update...
+[2026-02-06 12:18:04] 📊 Updating prices...
+📡 Fetching prices for 2 positions: TAO, SOL
+✅ Fetched 2 prices
+   TAO: $177.59 | P&L: $+45,487 (+0.9%)
+   SOL: $86.84 | P&L: $+2,403 (+0.4%)
+✅ Updated 2 positions in database
+[2026-02-06 12:18:04] ✅ Prices updated successfully
+[2026-02-06 12:18:04] 🔄 Regenerating dashboard...
+Updating dashboard...
+Loaded 9 signals from database
+Portfolio: $5,830,000 deployed, $+47,890 P&L (+47.9%)
+Watchlist: 2 GREEN, 6 YELLOW, 1 RED
+✅ Dashboard updated: dashboard.html
+Open: file://dashboard.html
+[2026-02-06 12:18:04] ✅ Dashboard regenerated
+[2026-02-06 12:18:04] ✅ Price update complete
+[2026-02-06 12:18:04] ========================================
