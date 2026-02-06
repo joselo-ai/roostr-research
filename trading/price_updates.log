@@ -63,3 +63,30 @@ Open: file://dashboard.html
 [2026-02-06 12:18:04] ✅ Dashboard regenerated
 [2026-02-06 12:18:04] ✅ Price update complete
 [2026-02-06 12:18:04] ========================================
+[2026-02-06 12:20:00] ========================================
+[2026-02-06 12:20:00] ========================================
+[2026-02-06 12:20:00] 🤖 Starting automatic price update...
+[2026-02-06 12:20:00] 🤖 Starting automatic price update...
+[2026-02-06 12:20:00] 📊 Updating prices...
+[2026-02-06 12:20:00] 📊 Updating prices...
+📡 Fetching prices for 2 positions: TAO, SOL
+✅ Fetched 2 prices
+   TAO: $177.93 | P&L: $+55,530 (+1.1%)
+   SOL: $86.98 | P&L: $+3,423 (+0.5%)
+✅ Updated 2 positions in database
+[2026-02-06 12:20:00] ✅ Prices updated successfully
+[2026-02-06 12:20:00] ✅ Prices updated successfully
+[2026-02-06 12:20:00] 🔄 Regenerating dashboard...
+[2026-02-06 12:20:00] 🔄 Regenerating dashboard...
+Updating dashboard...
+Loaded 9 signals from database
+Portfolio: $5,830,000 deployed, $+58,953 P&L (+59.0%)
+Watchlist: 2 GREEN, 6 YELLOW, 1 RED
+✅ Dashboard updated: dashboard.html
+Open: file://dashboard.html
+[2026-02-06 12:20:00] ✅ Dashboard regenerated
+[2026-02-06 12:20:00] ✅ Dashboard regenerated
+[2026-02-06 12:20:00] ✅ Price update complete
+[2026-02-06 12:20:00] ✅ Price update complete
+[2026-02-06 12:20:00] ========================================
+[2026-02-06 12:20:00] ========================================
