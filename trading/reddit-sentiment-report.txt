@@ -1,0 +1,84 @@
+======================================================================
+🔥 REDDIT SOCIAL SENTIMENT REPORT
+Generated: 2026-02-08 17:30:04 EST
+======================================================================
+
+📊 SUMMARY:
+   Total tickers: 9
+   🟢 GREEN (High conviction): 0
+   🟡 YELLOW (Watch): 9
+   🔴 RED (Avoid): 0
+   🚨 Unusual volume: 0
+
+🟡 YELLOW SIGNALS (9):
+----------------------------------------------------------------------
+1. $NVDA
+   Mentions: 4 | Conviction: 10/10 | Sentiment: neutral (0.0)
+   Engagement: 6,287↑ 1,135💬
+   Subreddits: r/stocks, wallstreetbets
+   Top post: $NVDA crushing earnings - AI revenue up 200% YoY...
+   URL: https://reddit.com/r/wallstreetbets/comments/abc123/
+
+2. $PLTR
+   Mentions: 1 | Conviction: 9/10 | Sentiment: neutral (0.0)
+   Engagement: 1,250↑ 234💬
+   Subreddits: r/stocks
+   Top post: $PLTR Palantir - Government contracts accelerating...
+   URL: https://reddit.com/r/stocks/comments/ghi789/
+
+3. $PE
+   Mentions: 1 | Conviction: 7/10 | Sentiment: neutral (0.0)
+   Engagement: 890↑ 412💬
+   Subreddits: r/investing
+   Top post: Bear case on $TSLA - deliveries missing targets...
+   URL: https://reddit.com/r/investing/comments/jkl012/
+
+4. $BYD
+   Mentions: 1 | Conviction: 7/10 | Sentiment: neutral (0.0)
+   Engagement: 890↑ 412💬
+   Subreddits: r/investing
+   Top post: Bear case on $TSLA - deliveries missing targets...
+   URL: https://reddit.com/r/investing/comments/jkl012/
+
+5. $TSLA
+   Mentions: 1 | Conviction: 7/10 | Sentiment: neutral (0.0)
+   Engagement: 890↑ 412💬
+   Subreddits: r/investing
+   Top post: Bear case on $TSLA - deliveries missing targets...
+   URL: https://reddit.com/r/investing/comments/jkl012/
+
+6. $EPYC
+   Mentions: 1 | Conviction: 8/10 | Sentiment: neutral (0.0)
+   Engagement: 678↑ 156💬
+   Subreddits: r/stocks
+   Top post: $AMD strong position in data center CPUs...
+   URL: https://reddit.com/r/stocks/comments/mno345/
+
+7. $AMD
+   Mentions: 1 | Conviction: 8/10 | Sentiment: neutral (0.0)
+   Engagement: 678↑ 156💬
+   Subreddits: r/stocks
+   Top post: $AMD strong position in data center CPUs...
+   URL: https://reddit.com/r/stocks/comments/mno345/
+
+8. $T
+   Mentions: 1 | Conviction: 5/10 | Sentiment: neutral (0.0)
+   Engagement: 445↑ 98💬
+   Subreddits: r/investing
+   Top post: Dividend play: $T AT&T yield 6.5%...
+   URL: https://reddit.com/r/investing/comments/vwx234/
+
+9. $IONQ
+   Mentions: 1 | Conviction: 5/10 | Sentiment: neutral (0.0)
+   Engagement: 234↑ 67💬
+   Subreddits: r/stockmarket
+   Top post: Small caps heating up - $IONQ quantum computing play...
+   URL: https://reddit.com/r/stockmarket/comments/stu901/
+
+======================================================================
+💡 Next steps:
+   1. Review GREEN signals for entry opportunities
+   2. Research tickers with unusual volume
+   3. Cross-reference with other sources (Yieldschool, DumbMoney)
+   4. Check fundamentals before deployment
+======================================================================

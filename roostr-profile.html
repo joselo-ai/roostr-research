@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>roostr Profile Images</title>
+</head>
+<body style="margin: 0; padding: 20px; background: #1a1f3a; font-family: monospace;">
+    
+    <!-- Profile Picture (400x400) -->
+    <div style="margin-bottom: 40px;">
+        <h2 style="color: #00ff88;">Profile Picture (Right-click → Save Image As)</h2>
+        <canvas id="profile" width="400" height="400" style="border: 2px solid #00ff88;"></canvas>
+    </div>
+    
+    <!-- Header Image (1500x500) -->
+    <div>
+        <h2 style="color: #00ff88;">Header Image (Right-click → Save Image As)</h2>
+        <canvas id="header" width="1500" height="500" style="border: 2px solid #00ff88;"></canvas>
+    </div>
+
+    <script>
+        // Profile Picture
+        const profileCanvas = document.getElementById('profile');
+        const profileCtx = profileCanvas.getContext('2d');
+        
+        // Background gradient
+        const profileGradient = profileCtx.createRadialGradient(200, 200, 50, 200, 200, 200);
+        profileGradient.addColorStop(0, '#1a1f3a');
+        profileGradient.addColorStop(1, '#0a0e27');
+        profileCtx.fillStyle = profileGradient;
+        profileCtx.fillRect(0, 0, 400, 400);
+        
+        // Rooster emoji (large)
+        profileCtx.font = 'bold 220px Arial';
+        profileCtx.textAlign = 'center';
+        profileCtx.textBaseline = 'middle';
+        profileCtx.fillText('🐓', 200, 200);
+        
+        // Header Image
+        const headerCanvas = document.getElementById('header');
+        const headerCtx = headerCanvas.getContext('2d');
+        
+        // Background gradient
+        const headerGradient = headerCtx.createLinearGradient(0, 0, 1500, 0);
+        headerGradient.addColorStop(0, '#0a0e27');
+        headerGradient.addColorStop(0.5, '#1a1f3a');
+        headerGradient.addColorStop(1, '#0a0e27');
+        headerCtx.fillStyle = headerGradient;
+        headerCtx.fillRect(0, 0, 1500, 500);
+        
+        // Text "roostr"
+        headerCtx.font = 'bold 120px Monaco, monospace';
+        headerCtx.fillStyle = '#00ff88';
+        headerCtx.textAlign = 'center';
+        headerCtx.textBaseline = 'middle';
+        headerCtx.fillText('roostr', 750, 200);
+        
+        // Rooster emoji
+        headerCtx.font = 'bold 100px Arial';
+        headerCtx.fillText('🐓', 600, 200);
+        
+        // Tagline
+        headerCtx.font = 'italic 32px Monaco, monospace';
+        headerCtx.fillStyle = '#888888';
+        headerCtx.fillText('We hunt information asymmetries', 750, 320);
+        
+        // Border accent
+        headerCtx.strokeStyle = '#00ff88';
+        headerCtx.lineWidth = 4;
+        headerCtx.strokeRect(2, 2, 1496, 496);
+    </script>
+    
+    <div style="margin-top: 40px; padding: 20px; background: rgba(0,255,136,0.1); color: #00ff88; border-radius: 8px;">
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Right-click on each image above</li>
+            <li>Select "Save Image As..."</li>
+            <li>Save as:
+                <ul>
+                    <li>roostr-profile.png (top image)</li>
+                    <li>roostr-header.png (bottom image)</li>
+                </ul>
+            </li>
+            <li>Upload to X, Instagram, YouTube profiles</li>
+        </ol>
+    </div>
+    
+</body>
+</html>

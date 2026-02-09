@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joselo AI Hedge Fund - Intelligence Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .header h1 {
+            color: #00ff88;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .header .subtitle {
+            color: #888;
+            font-size: 1.1em;
+        }
+
+        .header .tagline {
+            color: #00ff88;
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .panel h2 {
+            color: #00ff88;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .panel h3 {
+            color: #00ccff;
+            font-size: 1.2em;
+            margin: 15px 0 10px 0;
+            border-bottom: 1px solid rgba(0, 204, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        /* Conviction Pipeline */
+        .conviction-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .conviction-item.green {
+            border-left-color: #00ff88;
+        }
+
+        .conviction-item.yellow {
+            border-left-color: #ffcc00;
+        }
+
+        .conviction-item.red {
+            border-left-color: #ff4444;
+        }
+
+        .conviction-item .status {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .conviction-item .ticker {
+            font-size: 1.3em;
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .conviction-item .meta {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        /* Intelligence Feed */
+        .feed-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border-left: 3px solid #00ccff;
+        }
+
+        .feed-item .source {
+            color: #00ccff;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .feed-item .time {
+            color: #666;
+            font-size: 0.8em;
+        }
+
+        .feed-item .content {
+            color: #ccc;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        /* Portfolio Tracker */
+        .portfolio-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin: 8px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+        }
+
+        .portfolio-item .asset {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .portfolio-item .value {
+            color: #fff;
+        }
+
+        .portfolio-item .change {
+            font-size: 0.9em;
+        }
+
+        .portfolio-item .change.positive {
+            color: #00ff88;
+        }
+
+        .portfolio-item .change.negative {
+            color: #ff4444;
+        }
+
+        /* Market Data */
+        .market-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            margin: 5px 0;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .market-item .pair {
+            color: #00ccff;
+        }
+
+        .market-item .price {
+            color: #fff;
+            font-family: monospace;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box .label {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .stat-box .value {
+            color: #00ff88;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        /* Alerts */
+        .alert {
+            background: rgba(255, 68, 68, 0.1);
+            border: 1px solid #ff4444;
+            border-radius: 6px;
+            padding: 12px;
+            margin: 10px 0;
+            color: #ff4444;
+        }
+
+        .alert.success {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: #00ff88;
+            color: #00ff88;
+        }
+
+        .alert.warning {
+            background: rgba(255, 204, 0, 0.1);
+            border-color: #ffcc00;
+            color: #ffcc00;
+        }
+
+        /* Scrollable sections */
+        .scrollable {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .scrollable::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        .scrollable::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 136, 0.3);
+            border-radius: 4px;
+        }
+
+        .scrollable::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 255, 136, 0.5);
+        }
+
+        /* Last updated */
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🐓 JOSELO AI HEDGE FUND</h1>
+        <div class="subtitle">Intelligence Hub - Real-Time Dashboard</div>
+        <div class="tagline">"We hunt information asymmetries before the market catches on."</div>
+    </div>
+
+    <div class="grid">
+        <!-- Conviction Pipeline -->
+        <div class="panel">
+            <h2>🎯 Conviction Pipeline</h2>
+            
+            <h3>🟢 GREEN (Trade Now)</h3>
+            <div id="green-pipeline">
+                <div class="conviction-item green">
+                    <span class="status">🟢</span>
+                    <span class="ticker">No positions yet</span>
+                    <div class="meta">Waiting for first GREEN conviction doc...</div>
+                </div>
+            </div>
+
+            <h3>🟡 YELLOW (Watching)</h3>
+            <div id="yellow-pipeline">
+                <div class="conviction-item yellow">
+                    <span class="status">🟡</span>
+                    <span class="ticker">$ASTS (SpaceMobile)</span>
+                    <div class="meta">Dumb Money - 34🔥 16🚀 reactions | Space/telecom high conviction | Validate trends</div>
+                </div>
+                <div class="conviction-item yellow">
+                    <span class="status">🟡</span>
+                    <span class="ticker">$TAC (TransAlta)</span>
+                    <div class="meta">Dumb Money - 32👍 11🔥 reactions | Energy sector | Check fundamentals</div>
+                </div>
+                <div class="conviction-item yellow">
+                    <span class="status">🟡</span>
+                    <span class="ticker">$RL (Ralph Lauren)</span>
+                    <div class="meta">Dumb Money - Fresh thesis Feb 4 | Pending reaction data | Monitor</div>
+                </div>
+                <div class="conviction-item yellow">
+                    <span class="status">🟡</span>
+                    <span class="ticker">$PYPL (PayPal)</span>
+                    <div class="meta">Dumb Money - Active DEBATE | Buyback IRR vs skepticism | Mixed conviction</div>
+                </div>
+                <div class="conviction-item yellow">
+                    <span class="status">🟡</span>
+                    <span class="ticker">EURUSD (Riz Setup)</span>
+                    <div class="meta">Chart Fanatics - Monitoring for next liquidity sweep | Last activity Jan 30</div>
+                </div>
+            </div>
+
+            <h3>🔴 RED (Avoided)</h3>
+            <div id="red-pipeline">
+                <div class="conviction-item red">
+                    <span class="status">🔴</span>
+                    <span class="ticker">$AS (Amer Sports/Salomon)</span>
+                    <div class="meta">Dumb Money - 25🔥 10💪 reactions BUT France contact weakness flagged | Ground-level check killed conviction</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Tracker -->
+        <div class="panel">
+            <h2>📊 Portfolio Status</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="label">Total Value</div>
+                    <div class="value">$0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">P&L</div>
+                    <div class="value" style="color: #888;">$0.00</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">Win Rate</div>
+                    <div class="value" style="color: #888;">-%</div>
+                </div>
+                <div class="stat-box">
+                    <div class="label">Trades</div>
+                    <div class="value" style="color: #888;">0</div>
+                </div>
+            </div>
+
+            <h3>Positions</h3>
+            <div id="positions">
+                <div class="alert warning">
+                    <strong>Learning Phase Active</strong><br>
+                    No live capital deployed. Paper trading until first GREEN conviction doc approved.
+                </div>
+            </div>
+
+            <h3>Allocation (Target)</h3>
+            <div class="portfolio-item">
+                <span class="asset">Core Holdings</span>
+                <span class="value">40-50%</span>
+            </div>
+            <div class="portfolio-item">
+                <span class="asset">Conviction Plays</span>
+                <span class="value">30-40%</span>
+            </div>
+            <div class="portfolio-item">
+                <span class="asset">Moonshots</span>
+                <span class="value">10-20%</span>
+            </div>
+            <div class="portfolio-item">
+                <span class="asset">Yield/Income</span>
+                <span class="value">10-20%</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <!-- Intelligence Feed -->
+        <div class="panel">
+            <h2>📡 Intelligence Feed</h2>
+            <div class="scrollable" id="intel-feed">
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $RL</div>
+                    <div class="time">Feb 4, 2026</div>
+                    <div class="content">Fresh Ralph Lauren thesis posted. Pending reaction analysis. Adding to watchlist.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $AS Red Flag</div>
+                    <div class="time">Feb 5, 2026</div>
+                    <div class="content">France contact weakness flagged by David C. 25🔥 reactions BUT ground-level check killed conviction. Moved to RED.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $PYPL Debate</div>
+                    <div class="time">Ongoing</div>
+                    <div class="content">Active debate: kmart defending with buyback IRR math vs Frank/Zach skepticism. Mixed conviction = watch for resolution.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $ASTS</div>
+                    <div class="time">Jan 2, 2026</div>
+                    <div class="content">34🔥 16🚀 reactions. SpaceMobile thesis - space/telecom play. High conviction in community.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $TAC</div>
+                    <div class="time">Nov 9, 2025</div>
+                    <div class="content">32👍 11🔥 reactions. TransAlta energy sector play. Timeline update posted. Strong community agreement.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">💬 Dumb Money - $CPS, $KTB</div>
+                    <div class="time">Recent</div>
+                    <div class="content">$CPS (hybrid vehicle supplier) + $KTB (Helly Hansen momentum). Tracking for conviction build.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">📊 Yieldschool - Analyst Update</div>
+                    <div class="time">1 day ago</div>
+                    <div class="content">Dan turned $500 → $500k (1000x on TAO). Early AI mining before ChatGPT mainstream.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">🐓 Chart Fanatics - Riz</div>
+                    <div class="time">Jan 30</div>
+                    <div class="content">Last EURUSD trade closed. Awaiting next setup. Patience = edge.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">📈 Google Trends</div>
+                    <div class="time">Ongoing</div>
+                    <div class="content">Monitoring: $PYPL, $ASTS, $TAC, $RL. Validating social arbitrage signals.</div>
+                </div>
+                <div class="feed-item">
+                    <div class="source">🎯 Conviction System</div>
+                    <div class="time">Current</div>
+                    <div class="content">Traffic light: 0 GREEN | 5 YELLOW | 1 RED. Top candidates: $ASTS (34🔥) → $TAC (32👍) → $RL (fresh).</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Data -->
+        <div class="panel">
+            <h2>📈 Market Data</h2>
+            
+            <h3>Crypto Blue-Chips</h3>
+            <div id="crypto-data">
+                <div class="market-item">
+                    <span class="pair">BTC/USD</span>
+                    <span class="price">$95,000 (Live data pending)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">ETH/USD</span>
+                    <span class="price">$3,200 (Live data pending)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">SOL/USD</span>
+                    <span class="price">$140 (Live data pending)</span>
+                </div>
+            </div>
+
+            <h3>Forex (Riz Focus)</h3>
+            <div id="forex-data">
+                <div class="market-item">
+                    <span class="pair">EUR/USD</span>
+                    <span class="price">1.0850 (Live data pending)</span>
+                </div>
+            </div>
+
+            <h3>Watchlist (Dumb Money)</h3>
+            <div id="stock-watchlist">
+                <div class="market-item">
+                    <span class="pair">$ASTS</span>
+                    <span class="price">🟡 YELLOW (34🔥 16🚀)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$TAC</span>
+                    <span class="price">🟡 YELLOW (32👍 11🔥)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$RL</span>
+                    <span class="price">🟡 YELLOW (Fresh thesis)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$PYPL</span>
+                    <span class="price">🟡 YELLOW (Debate active)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$CPS</span>
+                    <span class="price">🟡 Tracking</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$KTB</span>
+                    <span class="price">🟡 Tracking</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">$AS</span>
+                    <span class="price">🔴 RED (25🔥 BUT ground-level weakness)</span>
+                </div>
+            </div>
+
+            <h3>Macro Indicators</h3>
+            <div id="macro-data">
+                <div class="market-item">
+                    <span class="pair">VIX (Fear)</span>
+                    <span class="price">15.2 (Low vol)</span>
+                </div>
+                <div class="market-item">
+                    <span class="pair">DXY (Dollar)</span>
+                    <span class="price">103.5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <!-- Alerts & Actions -->
+        <div class="panel">
+            <h2>🔔 Alerts & Actions</h2>
+            
+            <div class="alert success">
+                <strong>✅ AI Hedge Fund Playbook Complete</strong><br>
+                19k-word framework ready. Edge types documented. Risk management defined.
+            </div>
+
+            <div class="alert success">
+                <strong>✅ Social Arbitrage Framework Complete</strong><br>
+                Chris Camillo methodology: 4-step process, case studies, tools documented.
+            </div>
+
+            <div class="alert warning">
+                <strong>⚠️ Awaiting First GREEN Conviction Doc</strong><br>
+                Top candidates: $ASTS (34🔥 highest reactions) or $TAC (32👍 energy sector). Pick one → Validate → Write report → Submit for approval.
+            </div>
+
+            <div class="alert warning">
+                <strong>⚠️ Discord Scrapes In Progress</strong><br>
+                Chart Fanatics ✅ | Dumb Money 🔄 90% (final extraction pending) | Yieldschool ⏳ 30% | AI Trade Arena, Smart Trading Blueprint, Qantumtech (queued).
+            </div>
+
+            <h3>Next Actions</h3>
+            <div class="feed-item">
+                <div class="source">🟢 Priority 1</div>
+                <div class="content">Build first conviction doc (Dumb Money ticker)</div>
+            </div>
+            <div class="feed-item">
+                <div class="source">🟢 Priority 2</div>
+                <div class="content">Complete Yieldschool scrape (Watchlist, Yield Hub, Blue-Chips)</div>
+            </div>
+            <div class="feed-item">
+                <div class="source">🟡 Priority 3</div>
+                <div class="content">Set up Google Trends automation</div>
+            </div>
+        </div>
+
+        <!-- Learning Progress -->
+        <div class="panel">
+            <h2>📚 Learning Progress</h2>
+            
+            <h3>Week 1: Riz Methodology</h3>
+            <div class="portfolio-item">
+                <span class="asset">Study Complete</span>
+                <span class="value change positive">100%</span>
+            </div>
+            <div style="background: rgba(0, 255, 136, 0.1); height: 8px; border-radius: 4px; margin: 10px 0;">
+                <div style="background: #00ff88; height: 100%; width: 100%; border-radius: 4px;"></div>
+            </div>
+
+            <h3>Week 2: Social Arbitrage</h3>
+            <div class="portfolio-item">
+                <span class="asset">Framework Study</span>
+                <span class="value change positive">100%</span>
+            </div>
+            <div style="background: rgba(0, 255, 136, 0.1); height: 8px; border-radius: 4px; margin: 10px 0;">
+                <div style="background: #00ff88; height: 100%; width: 100%; border-radius: 4px;"></div>
+            </div>
+
+            <h3>Week 3: CRT Methodology</h3>
+            <div class="portfolio-item">
+                <span class="asset">Not Started</span>
+                <span class="value" style="color: #888;">0%</span>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; margin: 10px 0;">
+                <div style="background: #00ff88; height: 100%; width: 0%; border-radius: 4px;"></div>
+            </div>
+
+            <h3>Week 4: Paper Trading</h3>
+            <div class="portfolio-item">
+                <span class="asset">Not Started</span>
+                <span class="value" style="color: #888;">0%</span>
+            </div>
+            <div style="background: rgba(255, 255, 255, 0.1); height: 8px; border-radius: 4px; margin: 10px 0;">
+                <div style="background: #00ff88; height: 100%; width: 0%; border-radius: 4px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="last-updated">
+        <span class="pulse"></span>
+        Last updated: 2026-02-05 13:47 EST | Dashboard v1.1 | Status: Active Learning Phase | Live signals: 5 YELLOW, 1 RED
+    </div>
+
+    <script>
+        // Placeholder for future real-time data integration
+        // Will connect to:
+        // - CoinGecko API (crypto prices)
+        // - Alpha Vantage (stocks/forex)
+        // - Google Trends API (social signals)
+        // - Discord webhooks (intel feed updates)
+        
+        console.log('🐓 Joselo AI Hedge Fund Dashboard loaded');
+        console.log('Status: Learning Phase - No live capital deployed');
+        console.log('Next: Build first GREEN conviction doc');
+    </script>
+</body>
+</html>

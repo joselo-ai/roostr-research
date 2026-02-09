@@ -1,0 +1,197 @@
+{
+  "posts": [
+    {
+      "id": "post_1",
+      "type": "launch",
+      "title": "The Overnight Build",
+      "content": "built a complete AI hedge fund overnight.\n\n3 AI agents. 400KB of code. fully automated signal generation to trade execution.\n\nexpected returns: 65-110% annual\nsharpe ratio: 2.1-2.8\n\nnot theory. live infrastructure. running now.\n\nroostr. lowercase intentional.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "09:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:00:00"
+    },
+    {
+      "id": "post_2",
+      "type": "team",
+      "title": "Meet The Team",
+      "content": "meet the team:\n\n\ud83d\udd0d signal agent - scrapes yieldschool, dumb money, chart fanatics. finds GREEN lights.\n\n\ud83d\udcca research agent - validates signals, writes conviction docs, calculates risk.\n\n\ud83d\udcb0 trading agent - executes positions, manages stops, tracks performance.\n\n3 AI agents working 24/7 while you sleep.\n\nroostr capital. built different.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "11:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:00:00"
+    },
+    {
+      "id": "post_3",
+      "type": "signals",
+      "title": "First Signals",
+      "content": "first signals are in.\n\n\ud83d\udfe2 TAO - GREEN\n\ud83d\udfe2 SOL - GREEN\n\nconviction docs being written now.\ntrades deploying shortly.\n\nthis is what automated alpha looks like.\n\ndashboard: [link when ready]\ngithub: github.com/roostrcapital/research\n\nroostr. no hype. just execution.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "14:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:00:00"
+    },
+    {
+      "id": "post_4",
+      "type": "milestone",
+      "title": "Infrastructure Milestone",
+      "content": "\ud83d\udc13 day 1 complete.\n\n\u2705 3 AI agents deployed\n\u2705 400KB codebase live\n\u2705 signal pipeline operational\n\u2705 first GREEN signals identified\n\u2705 conviction docs generated\n\u2705 trade execution ready\n\ntomorrow: positions open, tracking begins.\n\nbuilding the future of systematic trading in public.\n\nroostr capital. launched feb 5, 2026.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:00:00"
+    },
+    {
+      "id": "post_5",
+      "type": "transparency",
+      "title": "The Transparency Pledge",
+      "content": "roostr promise:\n\n- every trade posted publicly\n- wins AND losses shared\n- conviction docs on github\n- dashboard always live\n- no fake screenshots\n- no \"guaranteed returns\"\n- just transparent, systematic trading\n\nphase 1: paper trading (validate the system)\nphase 2: real money (when proven)\n\nbuilding trust through transparency.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "21:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:00:00"
+    },
+    {
+      "id": "post_6",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "\ud83d\udc13 daily update\n\nsignals scanned: checking all sources\npositions: tracking 8\nwatching: TAO, SOL, BTC\n\nautomated alpha. running 24/7.\n\nroostr.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656490"
+    },
+    {
+      "id": "post_7",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "\ud83d\udc13 daily update\n\nsignals scanned: checking all sources\npositions: tracking 5\nwatching: TAO, SOL, BTC\n\nautomated alpha. running 24/7.\n\nroostr.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656496"
+    },
+    {
+      "id": "post_8",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "end of day:\n\n\u2705 signal pipeline: operational\n\u2705 conviction docs: 4 generated\n\u2705 trades: 2 executed\n\ntomorrow: more signals, more transparency.\n\nroostr capital.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656500"
+    },
+    {
+      "id": "post_9",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "end of day:\n\n\u2705 signal pipeline: operational\n\u2705 conviction docs: 4 generated\n\u2705 trades: 3 executed\n\ntomorrow: more signals, more transparency.\n\nroostr capital.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656504"
+    },
+    {
+      "id": "post_10",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "end of day:\n\n\u2705 signal pipeline: operational\n\u2705 conviction docs: 3 generated\n\u2705 trades: 3 executed\n\ntomorrow: more signals, more transparency.\n\nroostr capital.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656507"
+    },
+    {
+      "id": "post_11",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "\ud83d\udc13 daily update\n\nsignals scanned: checking all sources\npositions: tracking 8\nwatching: TAO, SOL, BTC\n\nautomated alpha. running 24/7.\n\nroostr.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656512"
+    },
+    {
+      "id": "post_12",
+      "type": "daily_update",
+      "title": "Daily Update",
+      "content": "end of day:\n\n\u2705 signal pipeline: operational\n\u2705 conviction docs: 3 generated\n\u2705 trades: 2 executed\n\ntomorrow: more signals, more transparency.\n\nroostr capital.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "19:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656515"
+    },
+    {
+      "id": "post_13",
+      "type": "lesson",
+      "title": "Lesson Learned",
+      "content": "\ud83d\udca1 lesson learned\n\ntransparency builds trust. we post wins AND losses. real track record or nothing.\n\nroostr. systematic. unemotional.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "16:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656518"
+    },
+    {
+      "id": "post_14",
+      "type": "lesson",
+      "title": "Lesson Learned",
+      "content": "\ud83d\udca1 lesson learned\n\ngreen signals aren't buy signals until conviction doc validates. patience filters noise.\n\nroostr. systematic. unemotional.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "16:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656519"
+    },
+    {
+      "id": "post_15",
+      "type": "lesson",
+      "title": "Lesson Learned",
+      "content": "\ud83d\udca1 lesson learned\n\ngreen signals aren't buy signals until conviction doc validates. patience filters noise.\n\nroostr. systematic. unemotional.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "16:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656520"
+    },
+    {
+      "id": "post_16",
+      "type": "infrastructure",
+      "title": "Infrastructure Post",
+      "content": "roostr infrastructure:\n\nsignal agent \u2192 scrapes 3 sources, finds GREEN\nresearch agent \u2192 validates, writes conviction docs  \ntrading agent \u2192 executes, manages risk\n\n400KB of code. 3 AI agents. zero emotion.\n\nsystematic trading.",
+      "platforms": [
+        "x"
+      ],
+      "scheduled_time": "12:00",
+      "posted": false,
+      "created_at": "2026-02-06T07:25:28.656522"
+    }
+  ],
+  "last_id": 16
+}

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "simmer-weather": {
+      "version": "1.6.1",
+      "installedAt": 1770601562080
+    },
+    "simmer": {
+      "version": "1.7.0",
+      "installedAt": 1770605608739
+    }
+  }
+}

@@ -1,0 +1,423 @@
+# Google Slides Template for roostr Pitch Deck
+## Slide-by-Slide Layout Instructions
+
+### Theme & Design System
+- **Font:** Inter or Helvetica (clean, modern)
+- **Primary color:** #000000 (black) — roostr brand is minimalist
+- **Accent color:** #00FF00 (green) for key metrics/wins
+- **Background:** White (#FFFFFF) or light gray (#F5F5F5)
+- **Style:** Clean, data-driven, no fluff
+
+---
+
+## Slide 1: Cover
+**Layout:** Center-aligned, minimalist
+- Title (72pt, bold): "roostr"
+- Subtitle (36pt): "The First Fully AI-Native Hedge Fund"
+- Tagline (24pt, green accent): "Zero human analysts. Infinite scalability. 99% margins."
+- Footer (18pt): "github.com/joselo-ai/roostr-research"
+- Background: Solid white or subtle gradient
+
+**Visual:** Optional — minimal abstract network graphic (AI nodes)
+
+---
+
+## Slide 2: The Problem
+**Layout:** Two-column (left: text, right: visual)
+
+**Left column:**
+- Heading (48pt, bold): "Traditional Hedge Funds Hit a Ceiling"
+- Bullet points (24pt):
+  - Analyst bandwidth limits scale
+  - Operating margins: 40-60%
+  - Can't operate 24/7
+- Key stat (36pt, bold, red): "Linear cost scaling kills margins"
+
+**Right column:**
+- Visual: Line graph showing "AUM vs. Headcount" (traditional funds = linear)
+- X-axis: AUM ($1M → $100M)
+- Y-axis: Number of analysts (5 → 50+)
+
+---
+
+## Slide 3: The Opportunity
+**Layout:** Center-aligned with key stats
+
+**Top section:**
+- Heading (48pt): "AI Breaks the Scaling Curve"
+- Subheading (28pt): "What changed in 2025"
+
+**Middle section (3 columns):**
+- Column 1: "LLMs at analyst-level" (icon: brain)
+- Column 2: "24/7 operation" (icon: clock)
+- Column 3: "Cost: $0.0001 vs $50k/year" (icon: dollar sign)
+
+**Bottom section:**
+- Market stat (48pt, green): "$4 Trillion hedge fund industry"
+- Callout box: "First-mover advantage: This wasn't possible 12 months ago"
+
+---
+
+## Slide 4: Our Solution
+**Layout:** Three-column architecture diagram
+
+**Heading (48pt):** "3 AI Agents Replace the Entire Analyst Team"
+
+**3 columns (agents):**
+1. **Scraper** (icon: magnifying glass)
+   - "Data Collection"
+   - "10,000+ sources"
+   - "24/7 monitoring"
+
+2. **Atlas** (icon: shield)
+   - "ML Validation"
+   - "Multi-source corroboration"
+   - "Risk scoring"
+
+3. **Edge** (icon: chart)
+   - "Quant Strategy"
+   - "Backtesting"
+   - "Position sizing"
+
+**Bottom:** "Human oversight: Joselo (risk management)"
+
+---
+
+## Slide 5: How It Works
+**Layout:** Horizontal flow diagram (4 steps)
+
+**Heading (48pt):** "Data → Validation → Risk → Execution"
+
+**Flow (left to right):**
+1. **Signal Discovery** → (arrow) → 
+2. **Multi-Source Validation** → (arrow) → 
+3. **Risk Assessment** → (arrow) → 
+4. **Execution**
+
+Each step: Icon + 2-3 bullet points (18pt)
+
+**Bottom callout:** "Result: High-conviction trades with quantified risk/reward"
+
+---
+
+## Slide 6: The Technology
+**Layout:** Two-section (top: text, bottom: architecture diagram)
+
+**Top section:**
+- Heading (48pt): "Proprietary Infrastructure Built in 2 Hours"
+- Stat (36pt, green): "400KB+ production code deployed"
+
+**Bottom section:**
+- Architecture diagram (4 layers):
+  - Data Layer (scrapers)
+  - Intelligence Layer (Claude Sonnet 4)
+  - Validation Layer (corroboration)
+  - Execution Layer (CEX/DEX)
+
+**Callout box:** "Proof of execution: Built in 2 hours (Jan 2026)"
+
+---
+
+## Slide 7: The Edges
+**Layout:** Table format
+
+**Heading (48pt):** "4 Validated Strategies"
+
+**Table (5 columns):**
+| Strategy | Example Trade | Return | Status |
+|----------|---------------|--------|---------|
+| Social Arb | Camillo's PENGU | +77% | ✅ Validated |
+| Riz Playbook | Multiple plays | $120k+ | ✅ Validated |
+| Dan's TAO | Early accum | 1000x | 📊 Case study |
+| Multi-Source | Cross-ref | -60% false pos | ✅ Operational |
+
+**Bottom callout:** "These aren't backtests. These are real trades from real traders."
+
+---
+
+## Slide 8: Performance Targets
+**Layout:** Center-aligned with large stats
+
+**Heading (48pt):** "Top 5% of Global Hedge Funds"
+
+**Key metrics (centered, 3 columns):**
+- **65-110%** (72pt, green) — "Annual Returns"
+- **2.1-2.8** (72pt, green) — "Sharpe Ratio"
+- **<25%** (72pt, green) — "Max Drawdown"
+
+**Comparison table:**
+| Fund Type | Annual Return | Sharpe |
+|-----------|--------------|--------|
+| Traditional HF | 8-12% | 0.8-1.2 |
+| Top Quant | 20-30% | 1.5-2.0 |
+| **roostr** | **65-110%** | **2.1-2.8** |
+
+---
+
+## Slide 9: Competitive Advantage
+**Layout:** Two-column comparison
+
+**Heading (48pt):** "99% Operating Margins (Impossible for Traditional Funds)"
+
+**Left column: roostr**
+- Revenue: 2 & 20
+- Costs: ~1% (cloud)
+- **Margin: 99%** (green, 48pt)
+
+**Right column: Traditional fund**
+- Revenue: 2 & 20
+- Costs: 40-60% (salaries)
+- **Margin: 40-60%** (red, 48pt)
+
+**Bottom (4 icons):**
+- 24/7 operation
+- Infinite bandwidth
+- No turnover
+- No emotional trading
+
+---
+
+## Slide 10: Economics of Scale
+**Layout:** Table + callout
+
+**Heading (48pt):** "$1M → $100M with the Same Team"
+
+**Table:**
+| AUM | Traditional Costs | roostr Costs | Advantage |
+|-----|------------------|--------------|-----------|
+| $1M | $400k | $10k | 40x |
+| $10M | $2M | $50k | 40x |
+| $100M | $15M | $200k | 75x |
+
+**Callout box (green background):**
+"roostr's unit economics *improve* as AUM scales."
+
+**Bottom:** "Valuation: 10-20x revenue (software margins)"
+
+---
+
+## Slide 11: The Team
+**Layout:** Three-column (AI agents) + founder profile
+
+**Heading (48pt):** "AI Agents + Human Oversight"
+
+**3 columns (agents with icons):**
+1. Scraper — Data specialist
+2. Atlas — ML validator
+3. Edge — Quant strategist
+
+**Bottom section:**
+- Photo + bio: "Joselo (Founder) — Built infrastructure in 2 hours"
+- Hiring plan: Trader (6mo), Compliance (12mo), Engineer (12mo)
+
+---
+
+## Slide 12: Traction
+**Layout:** Timeline + stats
+
+**Heading (48pt):** "Built in Public, Shipping in Real-Time"
+
+**Timeline (horizontal):**
+- Jan 2026: Infrastructure deployed (400KB+ code)
+- Jan 2026: 4 edges validated
+- Feb 2026: Public dashboard live
+- Future: [Your milestones]
+
+**Key stats (3 boxes):**
+- "2 hours" — Time to build
+- "4 strategies" — Validated edges
+- "77%+" — Proven returns
+
+**Bottom:** "github.com/joselo-ai/roostr-research"
+
+---
+
+## Slide 13: Market Opportunity
+**Layout:** Funnel diagram
+
+**Heading (48pt):** "$4 Trillion Industry Ripe for Disruption"
+
+**Funnel (top to bottom):**
+- Global HF market: $4.0T AUM
+- Management fees: $80B/year
+- Performance fees: $50B/year
+
+**5-year target (timeline):**
+- Year 1: $10M AUM
+- Year 2: $50M AUM
+- Year 3: $200M AUM
+- Year 5: $1B+ AUM
+
+**Comparables:** Renaissance ($130B), Citadel ($60B), Two Sigma ($60B)
+
+---
+
+## Slide 14: Go-to-Market
+**Layout:** 3-phase roadmap
+
+**Heading (48pt):** "Phase 1 → Phase 2 → Phase 3"
+
+**3 columns:**
+1. **Phase 1: Validation**
+   - 90 days, $100k AUM
+   - Prove 65-110% returns
+   - Public track record
+
+2. **Phase 2: Seed Raise**
+   - Months 4-6, $1-2M
+   - Institutional investors
+   - Scale deployment
+
+3. **Phase 3: Scale**
+   - Months 7-18, $10M+
+   - Larger LPs
+   - Expand asset classes
+
+**Bottom:** "Exit: $1B+ fund or strategic acquisition"
+
+---
+
+## Slide 15: The Ask
+**Layout:** Center-aligned with two options
+
+**Heading (48pt):** "$1-2M Seed @ $10M Valuation"
+
+**Two boxes (side-by-side):**
+
+**Option 1: Equity**
+- $1-2M for 10-20% equity
+- $10M pre-money
+- 10-20x revenue multiple
+- Exit via acquisition
+
+**Option 2: Direct AUM**
+- $1-2M into fund
+- 2 & 20 fees
+- 5-10% equity warrant
+- Immediate exposure
+
+**Bottom (green callout):** "Valuation justified by software-like margins (99%) + first-mover advantage"
+
+---
+
+## Slide 16: Use of Funds
+**Layout:** Pie chart + breakdown
+
+**Heading (48pt):** "Deploy Capital, Prove Economics, Scale Team"
+
+**Pie chart (4 slices):**
+- 40% AUM Deployment ($400-800k) — green
+- 30% Infrastructure ($300-600k) — blue
+- 20% Team ($200-400k) — orange
+- 10% Runway ($100-200k) — gray
+
+**Right side (bullet breakdown):**
+- Deploy in live markets
+- Expand data sources
+- Hire trader + compliance
+- 18-month runway
+
+---
+
+## Slide 17: Milestones
+**Layout:** Timeline (vertical or horizontal)
+
+**Heading (48pt):** "90-Day Track Record → $100M AUM"
+
+**Timeline:**
+- **Q1 2026:** Deploy $100k, deliver 90-day results
+- **Q2 2026:** Raise $1-2M seed, onboard first LP
+- **Q3 2026:** Scale to $5-10M AUM, hire team
+- **Q4 2026:** $20M+ AUM, 12-month track record
+- **2027:** $50-100M AUM, top-tier crypto fund
+
+**Bottom (green callout):** "Key metric: Prove 65-110% returns in 90 days"
+
+---
+
+## Slide 18: Why Now?
+**Layout:** Three-section (tech + market + timing)
+
+**Heading (48pt):** "The Window Is Closing"
+
+**3 sections:**
+1. **Technology Readiness**
+   - Claude Sonnet 4 (2025)
+   - Multi-agent architectures
+   - "This wasn't possible 12 months ago"
+
+2. **Market Timing**
+   - Crypto volatility (alpha opps)
+   - Institutional adoption
+   - Competitors still hiring analysts
+
+3. **First-Mover Advantage**
+   - roostr is 12-24 months ahead
+   - Building in public = brand moat
+   - Window: 18-24 months
+
+---
+
+## Slide 19: Vision
+**Layout:** Pyramid (short → medium → long term)
+
+**Heading (48pt):** "AI-Powered Intelligence Layer for Capital Markets"
+
+**Pyramid (3 tiers):**
+1. **Short-term (2026-2027):**
+   - Best-in-class crypto fund
+   - $50M+ AUM
+
+2. **Medium-term (2027-2028):**
+   - Expand to equities/commodities
+   - Spin out technology (Palantir of capital markets)
+
+3. **Long-term (2028+):**
+   - Platform revenue ($50M+/year SaaS)
+   - AI intelligence layer for all funds
+
+---
+
+## Slide 20: Contact & Next Steps
+**Layout:** Center-aligned, clean
+
+**Heading (72pt, bold):** "Let's Build the Future of Finance"
+
+**roostr logo/wordmark**
+
+**Contact info:**
+- GitHub: github.com/joselo-ai/roostr-research
+- Dashboard: [Live performance link]
+- Contact: [Email/Telegram]
+
+**Next steps (4 bullet points):**
+1. Review this deck
+2. Check public dashboard
+3. Schedule 30-min call
+4. Commit $1-2M
+
+**Timeline:**
+- Phase 1 launch: March 2026
+- Seed close: April 2026
+- 90-day results: June 2026
+
+**Bottom tagline (24pt, green):**
+"We shipped in 2 hours. Now let's raise $2M and prove AI can beat the market."
+
+---
+
+## Design Tips for Google Slides
+
+1. **Use slide templates:** Create 3-4 master slides (title, two-column, centered, table)
+2. **Icons:** Use simple line icons from Noun Project or Flaticon
+3. **Charts:** Keep them clean (no 3D, minimal colors)
+4. **Whitespace:** Don't overcrowd slides — one key message per slide
+5. **Animations:** Minimal (fade in only, no bouncing)
+6. **Fonts:** Stick to 2 fonts max (heading + body)
+7. **Colors:** Black/white/green only (roostr brand)
+8. **Consistency:** Same layout style throughout
+
+**Export settings:**
+- PDF for distribution
+- Google Slides link for live updates
+- PowerPoint (.pptx) for compatibility

@@ -1,0 +1,28 @@
+# Workspace - Sensitive Files (Local Only)
+MEMORY.md
+USER.md
+SOUL.md
+AGENTS.md
+TOOLS.md
+IDENTITY.md
+HEARTBEAT.md
+BOOTSTRAP.md
+memory/
+.discord-bot-token
+.env
+*.key
+*-token
+*-secret
+
+# Autonomous Control Docs (contain credentials)
+AUTONOMOUS-CONTROL-SETUP.md
+SIMMER-SETUP-COMPLETE.md
+
+# Skills (managed via clawhub)
+skills/
+
+# Build artifacts
+*.log
+*.jsonl
+*.pyc
+__pycache__/

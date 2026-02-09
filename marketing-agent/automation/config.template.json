@@ -1,0 +1,10 @@
+{
+  "x_api_key": "YOUR_X_API_KEY",
+  "x_api_secret": "YOUR_X_API_SECRET",
+  "x_access_token": "YOUR_X_ACCESS_TOKEN",
+  "x_access_secret": "YOUR_X_ACCESS_SECRET",
+  "instagram_username": "roostrcapital",
+  "instagram_password": "YOUR_INSTAGRAM_PASSWORD",
+  "dry_run": true,
+  "_comment": "Set dry_run to false when ready to post for real. Leave as true for testing."
+}

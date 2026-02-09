@@ -1,0 +1,18 @@
+🐓 **roostr Daily Summary**
+Feb 09, 2026 11:19 AM EST
+
+**📊 Portfolio:**
+Total Deployed: $17,500
+Current Value: $16,241
+🔴 Net P&L: $-1259 (-7.2%)
+
+**📍 Positions:**
+🔴 **TAO:** $156.18
+   Entry: $176.05 | Qty: 56.8
+   P&L: $-1129 (-11.3%)
+
+🔴 **SOL:** $85.01
+   Entry: $86.51 | Qty: 86.7
+   P&L: $-130 (-1.7%)
+
+Dashboard: https://joselo-ai.github.io/roostr-research/trading/dashboard.html

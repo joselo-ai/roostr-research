@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joselo Trading Terminal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+            background: #0a0e27;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #3d4575;
+        }
+        
+        h1 {
+            color: #00ff88;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+        
+        .status-bar {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #888;
+        }
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .indicator.red { background: #ff4444; }
+        .indicator.yellow { background: #ffaa00; }
+        .indicator.green { background: #00ff88; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .panel {
+            background: #151932;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #2d3561;
+        }
+        
+        .panel h2 {
+            color: #00ff88;
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #2d3561;
+        }
+        
+        .conviction-item {
+            background: #1a1f3a;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        
+        .conviction-item.green { border-left-color: #00ff88; }
+        .conviction-item.yellow { border-left-color: #ffaa00; }
+        .conviction-item.red { border-left-color: #ff4444; }
+        
+        .conviction-item h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .conviction-item p {
+            color: #888;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .badge.green { background: #00ff8844; color: #00ff88; }
+        .badge.yellow { background: #ffaa0044; color: #ffaa00; }
+        .badge.red { background: #ff444444; color: #ff4444; }
+        
+        .intel-feed {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .intel-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #1a1f3a;
+            border-radius: 6px;
+            border-left: 3px solid #3d4575;
+        }
+        
+        .intel-item .source {
+            color: #00ff88;
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        
+        .intel-item .content {
+            color: #ccc;
+            font-size: 13px;
+        }
+        
+        .intel-item .timestamp {
+            color: #666;
+            font-size: 11px;
+            margin-top: 4px;
+        }
+        
+        .progress-bar {
+            background: #1a1f3a;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00ff88 0%, #00cc6a 100%);
+            transition: width 0.3s;
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            color: #888;
+            font-size: 13px;
+        }
+        
+        .checklist li.done {
+            color: #00ff88;
+            text-decoration: line-through;
+        }
+        
+        .checklist li:before {
+            content: "□ ";
+            margin-right: 8px;
+        }
+        
+        .checklist li.done:before {
+            content: "✓ ";
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stat-box {
+            background: #1a1f3a;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-box .label {
+            color: #888;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .stat-box .value {
+            color: #00ff88;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .full-width {
+            grid-column: 1 / -1;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #0a0e27;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #3d4575;
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4d5585;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐓 JOSELO TRADING TERMINAL</h1>
+            <div class="status-bar">
+                <div class="status-item">
+                    <div class="indicator red"></div>
+                    <span>LEARNING PHASE</span>
+                </div>
+                <div class="status-item">
+                    <span>|</span>
+                </div>
+                <div class="status-item">
+                    <span>NO LIVE TRADES</span>
+                </div>
+                <div class="status-item">
+                    <span>|</span>
+                </div>
+                <div class="status-item">
+                    <span>Started: 2026-02-05</span>
+                </div>
+                <div class="status-item">
+                    <span>|</span>
+                </div>
+                <div class="status-item">
+                    <span>Capital: TBD</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- CONVICTION PIPELINE -->
+            <div class="panel">
+                <h2>🚦 CONVICTION PIPELINE</h2>
+                
+                <div class="conviction-item green" style="display: none;">
+                    <h3><span class="badge green">GREEN</span> None Ready</h3>
+                    <p>No trades meet all criteria yet. Continue learning phase.</p>
+                </div>
+                
+                <div class="conviction-item yellow">
+                    <h3><span class="badge yellow">YELLOW</span> PYPL - Contrarian Value</h3>
+                    <p><strong>Thesis:</strong> kmart's buyback IRR math compelling despite community bearish sentiment</p>
+                    <p><strong>Entry:</strong> Waiting for $42-44 or Frank sentiment flip</p>
+                    <p><strong>Status:</strong> Monitoring price + community chat</p>
+                </div>
+                
+                <div class="conviction-item yellow">
+                    <h3><span class="badge yellow">YELLOW</span> Riz EURUSD Setup</h3>
+                    <p><strong>Thesis:</strong> Copy WordsofRizdom's next liquidity sweep trade</p>
+                    <p><strong>Entry:</strong> TBD (waiting for his next post)</p>
+                    <p><strong>Status:</strong> Learning his methodology first, no trade yet</p>
+                </div>
+                
+                <div class="conviction-item red">
+                    <h3><span class="badge red">RED</span> AS - Amer Sports</h3>
+                    <p><strong>Thesis:</strong> Salomon XT-6 viral, 25 fire reactions</p>
+                    <p><strong>Counter-signal:</strong> France contact says "not doing well in Europe"</p>
+                    <p><strong>Status:</strong> AVOID - on-ground intel contradicts hype</p>
+                </div>
+            </div>
+
+            <!-- LEARNING PROGRESS -->
+            <div class="panel">
+                <h2>📚 LEARNING PROGRESS</h2>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #fff;">Week 1: Riz Methodology</strong>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 10%;"></div>
+                    </div>
+                    <ul class="checklist">
+                        <li>What are liquidity sweeps?</li>
+                        <li>Daily/weekly structure analysis</li>
+                        <li>Compound entry sizing</li>
+                        <li>Risk management (0.5-1%)</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #fff;">Week 2: Social Arb Framework</strong>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <ul class="checklist">
+                        <li>Engagement → price correlation</li>
+                        <li>On-ground intel validation</li>
+                        <li>When to fade vs follow crowd</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <strong style="color: #fff;">Week 3-4: CRT + Paper Trading</strong>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- LIVE INTEL FEED -->
+            <div class="panel">
+                <h2>📡 LIVE INTEL FEED</h2>
+                <div class="intel-feed">
+                    <div class="intel-item">
+                        <div class="source">Chart Fanatics • riz</div>
+                        <div class="content">No new posts since Jan 30. Last: Long EURUSD after liquidity sweep to left. Waiting for next setup.</div>
+                        <div class="timestamp">2026-02-05 12:00 EST</div>
+                    </div>
+                    
+                    <div class="intel-item">
+                        <div class="source">Dumb Money • conviction-doc-chat</div>
+                        <div class="content">$PYPL debate: kmart doubling down $42-44 (buyback IRR math). Frank: "wouldn't buy at any price". Community divided.</div>
+                        <div class="timestamp">2026-02-05 11:50 EST</div>
+                    </div>
+                    
+                    <div class="intel-item">
+                        <div class="source">Dumb Money • conviction-doc-chat</div>
+                        <div class="content">$AS concern: France contact says Salomon "not doing well in Europe". Counter-signal to 25-fire thesis. AVOID.</div>
+                        <div class="timestamp">2026-02-04 06:57 EST</div>
+                    </div>
+                    
+                    <div class="intel-item">
+                        <div class="source">Dumb Money • conviction-doc-chat</div>
+                        <div class="content">$KTB update: Gordo notes quiet 10% climb. Helly Hansen data strong. Article calls it "40% undervalued".</div>
+                        <div class="timestamp">2026-02-03 17:04 EST</div>
+                    </div>
+                    
+                    <div class="intel-item">
+                        <div class="source">Chart Fanatics • trade-ideas</div>
+                        <div class="content">Surush posted 15R, 800+ pips using CRT (Current Range Theory). Need to study this methodology.</div>
+                        <div class="timestamp">2026-02-04 13:34 EST</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STATS & METRICS -->
+            <div class="panel">
+                <h2>📊 STATISTICS</h2>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="label">Green Trades</div>
+                        <div class="value">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Watching</div>
+                        <div class="value">2</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Avoided</div>
+                        <div class="value">1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Days Learning</div>
+                        <div class="value">1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Total P&L</div>
+                        <div class="value">$0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="label">Win Rate</div>
+                        <div class="value">—</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 25px;">
+                    <strong style="color: #fff; display: block; margin-bottom: 10px;">Key Metrics from Discord</strong>
+                    <div style="font-size: 13px; color: #888; line-height: 1.8;">
+                        <div>• Riz: $120k/year, EURUSD only, 0.5-1% risk</div>
+                        <div>• Surush: 15R in one day (CRT method)</div>
+                        <div>• Social arb: 30+ reactions = crowded</div>
+                        <div>• PYPL: 9 👍 but divided community</div>
+                        <div>• AS: 25 🔥 but France counter-signal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel full-width">
+            <h2>🎯 TODAY'S FOCUS (2026-02-05)</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 15px;">
+                <div>
+                    <strong style="color: #00ff88; display: block; margin-bottom: 8px;">Morning</strong>
+                    <ul class="checklist">
+                        <li class="done">Scrape Chart Fanatics</li>
+                        <li class="done">Scrape Dumb Money</li>
+                        <li class="done">Create intel log</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color: #ffaa00; display: block; margin-bottom: 8px;">Midday</strong>
+                    <ul class="checklist">
+                        <li>Study Riz's Jan 15-30 trades</li>
+                        <li>Research liquidity sweeps</li>
+                        <li>Document methodology</li>
+                    </ul>
+                </div>
+                <div>
+                    <strong style="color: #888; display: block; margin-bottom: 8px;">Evening</strong>
+                    <ul class="checklist">
+                        <li>Build dashboard UI</li>
+                        <li>Update MASTER-TRACKER</li>
+                        <li>Prepare tomorrow's plan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

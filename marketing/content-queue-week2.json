@@ -1,0 +1,208 @@
+{
+  "posts": [
+    {
+      "id": "w2-1",
+      "day": "Sunday",
+      "date": "2026-02-08",
+      "time": "21:00 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "thread_start",
+      "content": "Week 2 begins.\n\nThree positions deploying Monday:\n\n$ALL (Allstate) - Value\n$PGR (Progressive) - Value\n$KTB (Kontoor Brands) - Social Arb\n\nWhy these three. Why now.\n\nThread 🧵",
+      "posted": false,
+      "scheduled_date": "2026-02-08",
+      "note": "Pre-deployment thread starter - sets up Monday deployment"
+    },
+    {
+      "id": "w2-2",
+      "day": "Sunday",
+      "date": "2026-02-08",
+      "time": "21:01 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "thread_reply",
+      "reply_to": "w2-1",
+      "content": "$ALL: Allstate Corporation\n\nP/E: 5.45 (vs S&P 500 22x)\nROE: 39.52%\nDebt/Eq: 0.48\nAnalyst target: $260 (+25%)\n\n75% discount to market. $4B buyback just announced.\n\nInsurance sector deeply undervalued.\n\nConviction: 10/10.",
+      "posted": false,
+      "scheduled_date": "2026-02-08",
+      "note": "ALL thesis - fundamental value play, highest conviction"
+    },
+    {
+      "id": "w2-3",
+      "day": "Sunday",
+      "date": "2026-02-08",
+      "time": "21:02 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "thread_reply",
+      "reply_to": "w2-2",
+      "content": "$PGR: Progressive Corporation\n\nP/E: 10.51 (vs S&P 500 22x)\nROE: 40.45%\nMarket share: Growing steadily\nEarnings momentum: 5 consecutive beats\n\nDefensive + growth combination.\nBest-in-class insurance operator.\n\nConviction: 9/10.",
+      "posted": false,
+      "scheduled_date": "2026-02-08",
+      "note": "PGR thesis - defensive growth value play"
+    },
+    {
+      "id": "w2-4",
+      "day": "Sunday",
+      "date": "2026-02-08",
+      "time": "21:03 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "thread_reply",
+      "reply_to": "w2-3",
+      "content": "$KTB: Kontoor Brands (Wrangler/Lee/Helly Hansen)\n\nDumb Money signal: 18 👍 + 4 🔥\nROE: 49.11%\nUpside to analyst target: +26%\n\nHelly Hansen integration ahead of schedule.\n\"Up 10% quietly, 40% undervalued\" - Discord tracking.\n\nSocial arbitrage before Wall Street notices.",
+      "posted": false,
+      "scheduled_date": "2026-02-08",
+      "note": "KTB thesis - social arb play"
+    },
+    {
+      "id": "w2-5",
+      "day": "Monday",
+      "date": "2026-02-09",
+      "time": "09:00 EST",
+      "slot": "morning",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "🟢 Deployed.\n\n$ALL: $20,000 @ ~$208 (96 shares) - 10/10\n$PGR: $15,000 @ ~$201 (75 shares) - 9/10\n$KTB: $10,000 @ ~$67 (149 shares) - 7.5/10\n\nTotal: $45,000 capital deployed (45% of portfolio)\nConviction-weighted sizing\nStop losses set.\n\nLet's work.",
+      "posted": false,
+      "scheduled_date": "2026-02-09",
+      "note": "Deployment announcement - Monday morning"
+    },
+    {
+      "id": "w2-6",
+      "day": "Monday",
+      "date": "2026-02-09",
+      "time": "19:00 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "End of day 1:\n\n$ALL: [price] ([+/-]%)\n$PGR: [price] ([+/-]%)\n$KTB: [price] ([+/-]%)\n\nThree positions live.\nStops active.\n\nNothing to do.\n\nPortfolio: $[total] ([+/-]% day)",
+      "posted": false,
+      "scheduled_date": "2026-02-09",
+      "note": "First position update - fill in real prices at posting time"
+    },
+    {
+      "id": "w2-6",
+      "day": "Tuesday",
+      "date": "2026-02-10",
+      "time": "12:00 EST",
+      "slot": "midday",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "How we validate signals:\n\n1️⃣ Social: Dumb Money Discord reactions (18+ = strong)\n2️⃣ Fundamental: Screener (P/E, ROE, debt)\n3️⃣ Technical: Chart structure + volume\n4️⃣ Catalyst: Earnings, news, insider activity\n5️⃣ Analyst: Consensus + recent upgrades\n\nMulti-source or no trade.",
+      "posted": false,
+      "scheduled_date": "2026-02-10",
+      "note": "Signal methodology - educational content"
+    },
+    {
+      "id": "w2-7",
+      "day": "Wednesday",
+      "date": "2026-02-11",
+      "time": "14:00 EST",
+      "slot": "afternoon",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "Why $ALL over other value stocks:\n\nScreened 75 candidates.\nFiltered: P/E < 15, ROE > 15%, strong balance sheet\nRemaining: 5 stocks\n\nALL won:\n• Lowest P/E (5.45 vs sector 12x)\n• Highest ROE (39.52%)\n• $4B buyback just announced\n• 75% discount to S&P multiple\n\nConviction: 10/10.\n\nProcess > gut feeling.",
+      "posted": false,
+      "scheduled_date": "2026-02-11",
+      "note": "Research insight - ALL selection process"
+    },
+    {
+      "id": "w2-8",
+      "day": "Thursday",
+      "date": "2026-02-12",
+      "time": "11:00 EST",
+      "slot": "morning",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "Conviction-weighted position sizing:\n\nPortfolio: $100k\n\n$ALL (10/10): 20% = $20k\n$PGR (9/10): 15% = $15k\n$KTB (7.5/10): 10% = $10k\n\nHigher conviction = bigger size.\n\nMax risk per position: 2%\nTotal deployment: 45%\nCash reserve: 55%\n\nAggression scales with conviction.",
+      "posted": false,
+      "scheduled_date": "2026-02-12",
+      "note": "Risk management transparency - conviction-weighted sizing"
+    },
+    {
+      "id": "w2-9",
+      "day": "Thursday",
+      "date": "2026-02-12",
+      "time": "19:00 EST",
+      "slot": "evening",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "Why social arbitrage works:\n\nChris Camillo's Dorel Industries play (2020):\n\n• March: COVID lockdowns begin\n• Social media: Parents panic-buying bikes for kids\n• Dorel: Major bike manufacturer\n• Entry: $3.50\n• Exit: $22\n• Return: 629%\n\nWall Street saw it 3 months later.\n\nEdge = speed of information.",
+      "posted": false,
+      "scheduled_date": "2026-02-12",
+      "note": "Social arb education - real case study"
+    },
+    {
+      "id": "w2-10",
+      "day": "Friday",
+      "date": "2026-02-14",
+      "time": "16:00 EST",
+      "slot": "afternoon",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "content": "Week 1 recap:\n\n$ALL: [entry] → [current] ([+/-]%)\n$PGR: [entry] → [current] ([+/-]%)\n$KTB: [entry] → [current] ([+/-]%)\n\nPortfolio: $[total] ([+/-]% week)\n\nWhat worked:\n• [lesson 1]\n• [lesson 2]\n\nWhat didn't:\n• [lesson 3]\n\nTransparency > ego.\n\nFull breakdown Sunday.",
+      "posted": false,
+      "scheduled_date": "2026-02-14",
+      "note": "Week 1 recap - fill in real performance data"
+    }
+  ],
+  "metadata": {
+    "phase": 2,
+    "week": "Feb 9-15, 2026",
+    "theme": "First capital deployment - ALL + PGR + KTB",
+    "created": "2026-02-08T17:07:00Z",
+    "updated": "2026-02-08T22:59:00Z",
+    "total_posts": 11,
+    "platforms": ["twitter"],
+    "deployment_positions": {
+      "ALL": {
+        "ticker": "$ALL",
+        "company": "Allstate Corporation",
+        "type": "Value",
+        "conviction": "10/10",
+        "entry": 208,
+        "shares": 96,
+        "capital": 20000,
+        "stop_pct": -8,
+        "target1": 260,
+        "catalyst": "$4B buyback announced Feb 6"
+      },
+      "PGR": {
+        "ticker": "$PGR",
+        "company": "Progressive Corporation",
+        "type": "Value",
+        "conviction": "9/10",
+        "entry": 201,
+        "shares": 75,
+        "capital": 15000,
+        "stop_pct": -8,
+        "target1": 250,
+        "catalyst": "Market share gains + earnings momentum"
+      },
+      "KTB": {
+        "ticker": "$KTB",
+        "company": "Kontoor Brands",
+        "type": "Social Arb",
+        "conviction": "7.5/10",
+        "entry": 67,
+        "shares": 149,
+        "capital": 10000,
+        "stop_pct": -10,
+        "target1": 84,
+        "catalyst": "Dumb Money signal (18 👍 + 4 🔥)"
+      }
+    },
+    "schedule_notes": {
+      "Sunday": "Pre-deployment thread (4 tweets) - ALL, PGR, KTB theses",
+      "Monday": "Deployment announcement (morning) + first update (evening)",
+      "Tue-Thu": "Educational content - methodology, research, case studies",
+      "Friday": "Week 1 recap with real performance data (all 3 positions)"
+    },
+    "brand_voice": {
+      "tone": "Calm, precise, disciplined",
+      "avoid": "Hype, promises, 🚀 emojis, FOMO language",
+      "use": "Data, transparency, process, lessons learned"
+    }
+  }
+}

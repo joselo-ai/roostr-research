@@ -1,0 +1,83 @@
+{
+  "NVDA": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 4
+      }
+    ],
+    "avg_mentions": 4.0
+  },
+  "PLTR": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "PE": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "BYD": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "TSLA": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "EPYC": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "AMD": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "T": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  },
+  "IONQ": {
+    "history": [
+      {
+        "timestamp": "2026-02-08T17:30:04.076331",
+        "mentions": 1
+      }
+    ],
+    "avg_mentions": 1.0
+  }
+}

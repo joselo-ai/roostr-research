@@ -1,0 +1,18 @@
+# API credentials - NEVER commit these
+config.json
+
+# Logs
+*.log
+posting_log.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual env
+venv/
+ENV/

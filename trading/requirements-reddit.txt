@@ -1,0 +1,5 @@
+# Reddit Scraper Dependencies
+# Install with: pip install -r requirements-reddit.txt
+
+praw>=7.7.1          # Python Reddit API Wrapper
+textblob>=0.17.1     # Sentiment analysis
