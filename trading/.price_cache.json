@@ -2,32 +2,32 @@
   "TAO": {
     "ticker": "TAO",
     "coingecko_id": "bittensor",
-    "price": 162.17,
-    "price_change_24h": -3.1510294086907793,
-    "market_cap": 1555239476.729044,
-    "last_updated": "2026-02-09T14:59:59",
+    "price": 162.04,
+    "price_change_24h": -2.719411068102351,
+    "market_cap": 1555204586.7298882,
+    "last_updated": "2026-02-09T15:04:55",
     "source": "coingecko",
-    "timestamp": "2026-02-09T15:00:00.658372"
+    "timestamp": "2026-02-09T15:05:00.579806"
   },
   "SOL": {
     "ticker": "SOL",
     "coingecko_id": "solana",
-    "price": 87.93,
-    "price_change_24h": -0.4884989297205709,
-    "market_cap": 49902314272.65823,
-    "last_updated": "2026-02-09T14:59:58",
+    "price": 87.85,
+    "price_change_24h": -0.5747658440680289,
+    "market_cap": 49861942929.0578,
+    "last_updated": "2026-02-09T15:04:55",
     "source": "coingecko",
-    "timestamp": "2026-02-09T15:00:00.658385"
+    "timestamp": "2026-02-09T15:05:00.579817"
   },
   "ALL": {
     "ticker": "ALL",
     "coingecko_id": "fetch-ai",
-    "price": 0.162732,
-    "price_change_24h": -1.0582884967750095,
-    "market_cap": 371507224.1939556,
-    "last_updated": "2026-02-09T14:59:59",
+    "price": 0.16257,
+    "price_change_24h": -1.1568786075208068,
+    "market_cap": 371193429.0240544,
+    "last_updated": "2026-02-09T15:04:56",
     "source": "coingecko",
-    "timestamp": "2026-02-09T15:00:00.658392"
+    "timestamp": "2026-02-09T15:05:00.579823"
   },
   "PGR": {
     "ticker": "PGR",
@@ -37,7 +37,7 @@
     "market_cap": 7584.199455941055,
     "last_updated": "2026-01-31T18:58:28",
     "source": "coingecko",
-    "timestamp": "2026-02-09T15:00:00.658399"
+    "timestamp": "2026-02-09T15:05:00.579828"
   },
-  "timestamp": "2026-02-09T15:00:00.658407"
+  "timestamp": "2026-02-09T15:05:00.579835"
 }
