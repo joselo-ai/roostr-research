@@ -1,0 +1,14 @@
+End of day 1 (Feb 9):
+
+$TAO: $161.03 (-8.1% from entry)
+$SOL: $87.01 (+0.6% from entry)
+
+Portfolio: -$810 (-4.6% today)
+
+Conviction unchanged. Dan's 1000x thesis on TAO doesn't break on a 2% daily dip. SOL holding strong.
+
+Stops active. Nothing to do.
+
+Building in public = showing red days too. 🐓
+
+Dashboard: github.com/joselo-ai/roostr-research
