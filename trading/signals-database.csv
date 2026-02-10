@@ -1,6 +1,6 @@
 Ticker,Source,Date_Found,Price_Entry,Conviction_Score,Status,Deployed,Position_Size,Stop_Loss,Target_1,Target_2,Current_Price,PnL_Dollars,PnL_Percent,Notes
-TAO,Yieldschool-Dan,2026-02-06,176.05,9,GREEN,YES,10000,140.84,211.26,264.08,154.27,-1237,-12.37,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.
-SOL,Yieldschool-YieldHub,2026-02-06,86.51,8,GREEN,YES,7500,73.53,103.81,121.11,82.62,-337,-4.50,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source validated.
+TAO,Yieldschool-Dan,2026-02-06,176.05,9,GREEN,YES,10000,140.84,211.26,264.08,153.67,-1271,-12.71,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.
+SOL,Yieldschool-YieldHub,2026-02-06,86.51,8,GREEN,YES,7500,73.53,103.81,121.11,82.46,-351,-4.68,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source validated.
 ASTS,DumbMoney,2026-02-06,,5,YELLOW,NO,,,,,101.62,,,SpaceMobile satellite-to-cell. 34🔥 16🚀 reactions. RISK-ADJUSTED 5/10: Overvalued ($101.62 > $81.64 analyst target). Wait for pullback to $85-90 or FCC catalyst. Beta 2.71 = extreme volatility. See conviction doc.
 RNDR,Yieldschool-MidCaps,2026-02-06,,7,YELLOW,NO,,,,,,,AI rendering narrative heating up. GPU compute play.,
 EURUSD,ChartFanatics-Riz,2026-02-06,,9,YELLOW,NO,,,,,,,Riz monitoring for liquidity sweep setup. No entry signal yet - patience required.,

@@ -1,0 +1,26 @@
+[
+  {
+    "ticker": "ASTS",
+    "status": "ERROR",
+    "error": "The request failed: Google returned a response with code 429",
+    "validated": false
+  },
+  {
+    "ticker": "PLTR",
+    "status": "ERROR",
+    "error": "The request failed: Google returned a response with code 429",
+    "validated": false
+  },
+  {
+    "ticker": "NVDA",
+    "status": "ERROR",
+    "error": "The request failed: Google returned a response with code 429",
+    "validated": false
+  },
+  {
+    "ticker": "GME",
+    "status": "ERROR",
+    "error": "The request failed: Google returned a response with code 429",
+    "validated": false
+  }
+]
