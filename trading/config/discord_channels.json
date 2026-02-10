@@ -1,0 +1,21 @@
+{
+  "chart_fanatics": {
+    "guild_name": "Chart Fanatics",
+    "channels": {
+      "riz-trades": "CHANNEL_ID_HERE",
+      "general": "CHANNEL_ID_HERE"
+    },
+    "watch_traders": [
+      "Riz",
+      "trader1",
+      "trader2",
+      "trader3",
+      "trader4",
+      "trader5",
+      "trader6",
+      "trader7",
+      "trader8",
+      "trader9"
+    ]
+  }
+}

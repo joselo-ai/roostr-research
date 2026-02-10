@@ -1,6 +1,6 @@
 Ticker,Source,Date_Found,Price_Entry,Conviction_Score,Status,Deployed,Position_Size,Stop_Loss,Target_1,Target_2,Current_Price,PnL_Dollars,PnL_Percent,Notes
-TAO,Yieldschool-Dan,2026-02-06,176.05,9,GREEN,YES,10000,140.84,211.26,264.08,158.88,-975,-9.75,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.
-SOL,Yieldschool-YieldHub,2026-02-06,86.51,8,GREEN,YES,7500,73.53,103.81,121.11,86.42,-8,-0.10,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source validated.
+TAO,Yieldschool-Dan,2026-02-06,176.05,9,GREEN,YES,10000,140.84,211.26,264.08,160.67,-874,-8.74,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.
+SOL,Yieldschool-YieldHub,2026-02-06,86.51,8,GREEN,YES,7500,73.53,103.81,121.11,86.93,36,0.49,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source validated.
 ASTS,DumbMoney,2026-02-06,,5,YELLOW,NO,,,,,101.62,,,SpaceMobile satellite-to-cell. 34🔥 16🚀 reactions. RISK-ADJUSTED 5/10: Overvalued ($101.62 > $81.64 analyst target). Wait for pullback to $85-90 or FCC catalyst. Beta 2.71 = extreme volatility. See conviction doc.
 RNDR,Yieldschool-MidCaps,2026-02-06,,7,YELLOW,NO,,,,,,,AI rendering narrative heating up. GPU compute play.,
 EURUSD,ChartFanatics-Riz,2026-02-06,,9,YELLOW,NO,,,,,,,Riz monitoring for liquidity sweep setup. No entry signal yet - patience required.,
@@ -17,6 +17,8 @@ EPYC,Reddit,2026-02-08,,8,YELLOW,NO,,,,,,,,Reddit mentions: 1 (r/stocks) | Senti
 AMD,Reddit,2026-02-08,,8,YELLOW,NO,,,,,,,,Reddit mentions: 1 (r/stocks) | Sentiment: neutral (0.0) | Engagement: 678↑ 156💬 | Top post: $AMD strong position in data center CPUs...
 T,Reddit,2026-02-08,,5,YELLOW,NO,,,,,,,,Reddit mentions: 1 (r/investing) | Sentiment: neutral (0.0) | Engagement: 445↑ 98💬 | Top post: Dividend play: $T AT&T yield 6.5%...
 IONQ,Reddit,2026-02-08,,5,YELLOW,NO,,,,,,,,Reddit mentions: 1 (r/stockmarket) | Sentiment: neutral (0.0) | Engagement: 234↑ 67💬 | Top post: Small caps heating up - $IONQ quantum computing pl...
+ALL,Value-Research,2026-02-08,208.25,9.5,GREEN,YES,20000,187.43,260.00,,0.16,-19984,-99.92,RISK-ADJUSTED 9.5/10: Ultra-low P/E 5.37 + Q4 net income DOUBLED. Target $239.29 (+17%). Dividend 2.08%. Beta 0.23 = defensive. Convert paper to real capital at $204 or $200-202 dip. See conviction doc.
+PGR,Value-Research,2026-02-08,201.00,8.5,GREEN,YES,15000,180.90,250.00,,0.00,-15000,-100.00,RISK-ADJUSTED 8.5/10: Massive 6.87% dividend yield! P/E 10.51. Target $242.55 (+20%). Caution: insider selling + earnings estimate cuts. Apr 15 earnings catalyst. Currently +0.64% profit. See conviction doc.
 EOG,Value-Research,2026-02-08,,7.5,YELLOW,NO,,,145,,114.06,,,RISK-ADJUSTED 7.5/10: Best upside (+28% to $145) BUT wait for Feb 24 earnings. Well productivity concerns + analyst downgrades. P/E 11.33 fair value. Entry $122-125 if beats. See conviction doc.
 TRV,Value-Research,2026-02-08,,8,YELLOW,NO,,,330,,300.31,,,"Travelers - P/E 10.95, Strong Q4 beat, analysts raising targets. Current $300.31, target $330 (+9%). Low risk value play. Deploy 3-5% allocation NOW. Earnings Apr 16."
 LULU,Value-Research,2026-02-08,,7,YELLOW,NO,,,220,,,,,"Lululemon - P/E 12.02, ROE 41.02%, Target $220 (+27%)"

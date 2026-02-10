@@ -80,6 +80,15 @@
       "reply_to": null,
       "posted_at": "2026-02-09T16:17:00Z",
       "note": "Week 2 deployment announcement - Monday morning (standalone post)"
+    },
+    {
+      "id": "w2-5",
+      "content": "Day 1 complete.\n\n$ALL, $PGR, $KTB all deployed.\nStops active at -8% to -10%.\n\nMarkets closed. Positions monitored.\nNothing to adjust.\n\nFull P&L update tomorrow morning.",
+      "platforms": ["twitter"],
+      "tweet_url": "https://x.com/roostrcapital/status/2021011610068795518",
+      "reply_to": "https://x.com/roostrcapital/status/2020895027312910507",
+      "posted_at": "2026-02-10T00:00:00Z",
+      "note": "Week 2 Monday evening - Day 1 position update"
     }
   ]
 }
