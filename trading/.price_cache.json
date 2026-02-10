@@ -2,22 +2,22 @@
   "TAO": {
     "ticker": "TAO",
     "coingecko_id": "bittensor",
-    "price": 159.89,
-    "price_change_24h": -2.262716294448209,
+    "price": 160.19,
+    "price_change_24h": -2.0911405636769893,
     "market_cap": 1532617420.39066,
-    "last_updated": "2026-02-09T20:09:53",
+    "last_updated": "2026-02-09T20:14:57",
     "source": "coingecko",
-    "timestamp": "2026-02-09T20:10:00.656144"
+    "timestamp": "2026-02-09T20:15:00.476177"
   },
   "SOL": {
     "ticker": "SOL",
     "coingecko_id": "solana",
-    "price": 86.61,
-    "price_change_24h": -0.41982879463448597,
+    "price": 86.8,
+    "price_change_24h": -0.11780125061307271,
     "market_cap": 49112781923.102715,
-    "last_updated": "2026-02-09T20:09:53",
+    "last_updated": "2026-02-09T20:14:53",
     "source": "coingecko",
-    "timestamp": "2026-02-09T20:10:00.656153"
+    "timestamp": "2026-02-09T20:15:00.476185"
   },
-  "timestamp": "2026-02-09T20:10:00.656158"
+  "timestamp": "2026-02-09T20:15:00.476190"
 }
