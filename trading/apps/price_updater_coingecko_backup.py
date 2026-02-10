@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Price Updater v2 - TradingView Integration
-Fetches TAO/SOL prices + technicals from TradingView and updates dashboard.html
-Run hourly via cron (no rate limits!)
+Price Updater - Real-time dashboard updates
+Fetches TAO/SOL prices from CoinGecko and updates dashboard.html
+Run hourly via cron (respects CoinGecko rate limits)
 """
 
-from tradingview_ta import TA_Handler, Interval
+import requests
 import json
 from datetime import datetime
 import re
@@ -17,6 +17,7 @@ sys.path.append('/Users/agentjoselo/.openclaw/workspace/command-center')
 from activity_logger import log_trading, log_automation
 
 
+COINGECKO_API = "https://api.coingecko.com/api/v3/simple/price"
 DASHBOARD_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/dashboard.html"
 POSITIONS_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/PAPER-TRADING-LOG.md"
 CACHE_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/.price_cache.json"
@@ -24,15 +25,13 @@ CACHE_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/.price_cache.json"
 # Position details
 POSITIONS = {
     "TAO": {
-        "symbol": "TAOUSD",
-        "exchange": "BINANCE",
+        "id": "bittensor",
         "entry": 176.05,
         "quantity": 56.8,
         "stop": 140.84
     },
     "SOL": {
-        "symbol": "SOLUSD",
-        "exchange": "BINANCE",
+        "id": "solana",
         "entry": 86.51,
         "quantity": 86.7,
         "stop": 73.53
@@ -61,42 +60,56 @@ def save_cache(prices):
         print(f"Warning: Failed to save cache: {e}")
 
 def fetch_prices():
-    """Fetch current prices + technicals from TradingView"""
-    prices = {}
+    """Fetch current prices from CoinGecko (with rate limit handling)"""
+    ids = ",".join([p["id"] for p in POSITIONS.values()])
     
-    for symbol, details in POSITIONS.items():
-        try:
-            handler = TA_Handler(
-                symbol=details["symbol"],
-                exchange=details["exchange"],
-                screener='crypto',
-                interval=Interval.INTERVAL_1_HOUR
-            )
-            analysis = handler.get_analysis()
-            
-            prices[symbol] = {
-                "price": analysis.indicators["close"],
-                "rsi": analysis.indicators.get("RSI", 0),
-                "recommendation": analysis.summary["RECOMMENDATION"],
-                "oscillators": analysis.oscillators["RECOMMENDATION"],
-                "moving_averages": analysis.moving_averages["RECOMMENDATION"]
-            }
-            
-        except Exception as e:
-            print(f"⚠️  Error fetching {symbol}: {e}")
-            # Try cache
+    try:
+        response = requests.get(
+            COINGECKO_API,
+            params={
+                "ids": ids,
+                "vs_currencies": "usd"
+            },
+            timeout=10
+        )
+        
+        # Handle rate limiting
+        if response.status_code == 429:
+            print("⚠️  CoinGecko rate limit hit (429 Too Many Requests). Using cached prices.")
             cache = load_cache()
-            if cache and symbol in cache.get("prices", {}):
-                prices[symbol] = cache["prices"][symbol]
-                print(f"   Using cached {symbol} from {cache.get('timestamp', 'unknown')}")
+            if cache:
+                age = (datetime.now() - datetime.fromisoformat(cache["timestamp"])).total_seconds() / 60
+                print(f"   Cache age: {age:.1f} minutes")
+                return cache["prices"]
             else:
+                print("   No cache available. Price update skipped.")
                 return None
-    
-    # Save to cache
-    if len(prices) == 2:
-        save_cache(prices)
-    
-    return prices
+        
+        response.raise_for_status()
+        data = response.json()
+        
+        prices = {}
+        for symbol, details in POSITIONS.items():
+            price = data.get(details["id"], {}).get("usd")
+            if price:
+                prices[symbol] = price
+        
+        # Save to cache for rate limit fallback
+        if prices:
+            save_cache(prices)
+        
+        return prices
+    except requests.exceptions.RequestException as e:
+        print(f"⚠️  Network error: {e}")
+        # Try cache as fallback
+        cache = load_cache()
+        if cache:
+            print(f"   Using cached prices from {cache['timestamp']}")
+            return cache["prices"]
+        return None
+    except Exception as e:
+        print(f"❌ Error fetching prices: {e}")
+        return None
 
 def calculate_pnl(symbol, current_price):
     """Calculate P&L for a position"""
@@ -118,7 +131,7 @@ def calculate_pnl(symbol, current_price):
 
 def update_dashboard(prices):
     """Update dashboard.html with current prices"""
-    if not prices or len(prices) != 2:
+    if not prices:
         return False
     
     # Read dashboard
@@ -126,8 +139,8 @@ def update_dashboard(prices):
         html = f.read()
     
     # Calculate totals
-    tao_pnl = calculate_pnl("TAO", prices["TAO"]["price"])
-    sol_pnl = calculate_pnl("SOL", prices["SOL"]["price"])
+    tao_pnl = calculate_pnl("TAO", prices["TAO"])
+    sol_pnl = calculate_pnl("SOL", prices["SOL"])
     total_pnl = tao_pnl["pnl_dollars"] + sol_pnl["pnl_dollars"]
     total_deployed = 17500
     total_pnl_percent = (total_pnl / total_deployed) * 100
@@ -143,7 +156,7 @@ def update_dashboard(prices):
     # Update Live Positions table - TAO
     html = re.sub(
         r'(<td style="padding: 10px; font-weight: 600;">TAO</td>\s*<td[^>]*>\$176\.05</td>\s*<td[^>]*>)\$[\d.]+',
-        f'\\1${prices["TAO"]["price"]:.2f}',
+        f'\\1${prices["TAO"]:.2f}',
         html
     )
     html = re.sub(
@@ -168,7 +181,7 @@ def update_dashboard(prices):
     # Update Live Positions table - SOL
     html = re.sub(
         r'(<td style="padding: 10px; font-weight: 600;">SOL</td>\s*<td[^>]*>\$86\.51</td>\s*<td[^>]*>)\$[\d.]+',
-        f'\\1${prices["SOL"]["price"]:.2f}',
+        f'\\1${prices["SOL"]:.2f}',
         html
     )
     html = re.sub(
@@ -209,40 +222,24 @@ def update_dashboard(prices):
     with open(DASHBOARD_PATH, 'w') as f:
         f.write(html)
     
-    print(f"✅ Dashboard updated: TAO ${prices['TAO']['price']:.2f}, SOL ${prices['SOL']['price']:.2f}, P&L ${total_pnl:.0f}")
-    print(f"   TAO: RSI {prices['TAO']['rsi']:.1f} | {prices['TAO']['recommendation']}")
-    print(f"   SOL: RSI {prices['SOL']['rsi']:.1f} | {prices['SOL']['recommendation']}")
-    
-    log_trading("Price update (TradingView)", {
-        "TAO": prices['TAO']['price'],
-        "TAO_RSI": prices['TAO']['rsi'],
-        "TAO_signal": prices['TAO']['recommendation'],
-        "SOL": prices['SOL']['price'],
-        "SOL_RSI": prices['SOL']['rsi'],
-        "SOL_signal": prices['SOL']['recommendation'],
-        "P&L": total_pnl
-    })
+    print(f"✅ Dashboard updated: TAO ${prices['TAO']:.2f}, SOL ${prices['SOL']:.2f}, P&L ${total_pnl:.0f}")
+    log_trading("Price update", {"TAO": prices['TAO'], "SOL": prices['SOL'], "P&L": total_pnl})
     return True
 
 def main():
-    print(f"🐓 Price Updater v2 (TradingView) - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🐓 Price Updater - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"   Frequency: Hourly (0 * * * *)")
     
     prices = fetch_prices()
     if prices and len(prices) == 2:
         update_dashboard(prices)
-        log_automation("Price update (TradingView)", {
-            "status": "success",
-            "TAO": prices["TAO"]["price"],
-            "TAO_RSI": prices["TAO"]["rsi"],
-            "SOL": prices["SOL"]["price"],
-            "SOL_RSI": prices["SOL"]["rsi"]
-        })
+        log_automation("Price update", {"status": "success", "TAO": prices["TAO"], "SOL": prices["SOL"]})
         return 0
     else:
+        # Graceful failure - not a critical error, just skip this update
         print("⚠️  Price update skipped (will retry next hour)")
-        log_automation("Price update", {"status": "skipped", "reason": "tradingview_error"})
-        return 0
+        log_automation("Price update", {"status": "skipped", "reason": "rate_limit_or_network_error"})
+        return 0  # Return 0 to avoid noisy error alerts
 
 if __name__ == "__main__":
     exit(main())
