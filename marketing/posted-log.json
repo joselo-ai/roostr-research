@@ -89,6 +89,15 @@
       "reply_to": "https://x.com/roostrcapital/status/2020895027312910507",
       "posted_at": "2026-02-10T00:00:00Z",
       "note": "Week 2 Monday evening - Day 1 position update"
+    },
+    {
+      "id": "w2-6",
+      "content": "How we validate signals:\n\n1️⃣ Social: Dumb Money Discord reactions (18+ = strong)\n2️⃣ Fundamental: Screener (P/E, ROE, debt)\n3️⃣ Technical: Chart structure + volume\n4️⃣ Catalyst: Earnings, news, insider activity\n5️⃣ Analyst: Consensus + recent upgrades\n\nMulti-source or no trade.",
+      "platforms": ["twitter"],
+      "tweet_url": "https://x.com/roostrcapital/status/2021630565884342429",
+      "reply_to": null,
+      "posted_at": "2026-02-11T17:00:00Z",
+      "note": "Week 2 Tuesday midday - Signal validation methodology (standalone)"
     }
   ]
 }
