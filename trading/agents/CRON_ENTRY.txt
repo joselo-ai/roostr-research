@@ -1,0 +1,6 @@
+# Social Arbitrage Agent - Daily scan at 9 AM EST
+0 9 * * * /Users/agentjoselo/.openclaw/workspace/trading/agents/run_social_scan.sh >> /Users/agentjoselo/.openclaw/workspace/trading/logs/social_arb.log 2>&1
+
+# To install:
+# crontab -e
+# Then paste the line above and save
