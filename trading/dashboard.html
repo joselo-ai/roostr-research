@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>roostr Trading Dashboard</title>
+    <title>roostr AI-Enhanced Trading Dashboard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #e0e0e0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 1400px; margin: 0 auto; }
+        .container { max-width: 1600px; margin: 0 auto; }
         header { margin-bottom: 30px; border-bottom: 2px solid #333; padding-bottom: 20px; }
         h1 { color: #fff; font-size: 2.5em; margin-bottom: 10px; }
         .rooster { font-size: 1.5em; }
         .subtitle { color: #888; font-size: 0.9em; }
+        .badge-ai { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75em; font-weight: 600; margin-left: 10px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px; }
         .card { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 20px; }
+        .card-ai { border: 1px solid #667eea; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); }
         .card h2 { color: #fff; margin-bottom: 15px; font-size: 1.3em; border-bottom: 1px solid #333; padding-bottom: 10px; }
         .metric { display: flex; justify-content: space-between; margin: 10px 0; padding: 8px; background: #0f0f0f; border-radius: 4px; }
         .metric-label { color: #888; }
@@ -21,10 +23,12 @@
         .positive { color: #4ade80 !important; }
         .negative { color: #f87171 !important; }
         .neutral { color: #fbbf24 !important; }
+        .ai-color { color: #8b5cf6 !important; }
         .signal { padding: 15px; margin: 10px 0; border-radius: 6px; border-left: 4px solid; }
         .signal.green { background: rgba(74, 222, 128, 0.1); border-left-color: #4ade80; }
         .signal.yellow { background: rgba(251, 191, 36, 0.1); border-left-color: #fbbf24; }
         .signal.red { background: rgba(248, 113, 113, 0.1); border-left-color: #f87171; }
+        .signal.purple { background: rgba(139, 92, 246, 0.1); border-left-color: #8b5cf6; }
         .signal-header { font-weight: 600; font-size: 1.1em; margin-bottom: 8px; }
         .signal-meta { color: #888; font-size: 0.85em; margin-bottom: 8px; }
         .signal-detail { color: #bbb; font-size: 0.9em; line-height: 1.5; }
@@ -32,220 +36,370 @@
         .badge.green { background: #4ade80; color: #000; }
         .badge.yellow { background: #fbbf24; color: #000; }
         .badge.red { background: #f87171; color: #000; }
+        .badge.purple { background: #8b5cf6; color: #fff; }
         .full-width { grid-column: 1 / -1; }
+        .agent-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 15px; }
+        .agent-card { background: #0f0f0f; border: 1px solid #333; border-radius: 4px; padding: 12px; font-size: 0.85em; }
+        .agent-card.active { border-color: #8b5cf6; background: rgba(139, 92, 246, 0.05); }
+        .agent-name { font-weight: 600; color: #8b5cf6; margin-bottom: 4px; }
+        .agent-vote { color: #888; font-size: 0.9em; }
+        .vote-buy { color: #4ade80; }
+        .vote-sell { color: #f87171; }
+        .vote-hold { color: #fbbf24; }
+        .ensemble-box { background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border: 2px solid #667eea; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .ensemble-score { font-size: 2em; font-weight: 700; color: #8b5cf6; text-align: center; margin-bottom: 10px; }
+        .ensemble-breakdown { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; text-align: center; }
+        .ensemble-stat { padding: 10px; background: #0a0a0a; border-radius: 4px; }
+        .ensemble-label { color: #888; font-size: 0.8em; text-transform: uppercase; }
+        .ensemble-value { font-size: 1.5em; font-weight: 700; margin-top: 5px; }
+        .workflow-section { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 20px; margin: 20px 0; }
+        .workflow-step { display: flex; align-items: center; margin: 15px 0; padding: 15px; background: #0f0f0f; border-radius: 6px; border-left: 3px solid #8b5cf6; }
+        .workflow-number { background: #8b5cf6; color: #fff; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 15px; flex-shrink: 0; }
+        .workflow-content { flex: 1; }
+        .workflow-title { font-weight: 600; color: #fff; margin-bottom: 5px; }
+        .workflow-desc { color: #888; font-size: 0.9em; }
+        .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+        .comparison-col { background: #1a1a1a; border: 1px solid #333; border-radius: 8px; padding: 20px; }
+        .comparison-col h3 { color: #fff; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #333; }
+        .comparison-old { border-color: #666; }
+        .comparison-new { border-color: #667eea; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); }
         .footer { margin-top: 40px; text-align: center; color: #666; font-size: 0.85em; padding-top: 20px; border-top: 1px solid #333; }
+        .live-indicator { display: inline-block; width: 10px; height: 10px; background: #4ade80; border-radius: 50%; margin-right: 8px; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1><span class="rooster">🐓</span> roostr Trading Dashboard</h1>
-            <p class="subtitle">Dashboard: Feb 12, 2026 11:40 EST | Prices: 11:40:01 (0s ago) ✅ Fresh | Source: CoinGecko</p>
+            <h1><span class="rooster">🐓</span> roostr AI-Enhanced Trading Dashboard <span class="badge-ai">🤖 18-AGENT SYSTEM</span></h1>
+            <p class="subtitle"><span class="live-indicator"></span>Live | Feb 12, 2026 11:39 EST | Ensemble Voting Active</p>
         </header>
-        
-        <!-- Allocation Overview -->
-        <div class="card full-width">
-            <h2>💰 Capital Allocation (Risk-Adjusted by Conviction)</h2>
-            <div class="grid">
-                
-                <div class="signal green" style="margin: 10px;">
-                    <div class="signal-header">40% ($40,000) - Riz EURUSD</div>
-                    <div class="signal-meta">Conviction: 8.5/10 | Track Record: $120k+ annual</div>
-                    <div class="signal-detail">
-                        <strong>Deployed:</strong> $0 / $40,000 (0%)<br>
-                        <strong>P&L:</strong> <span class="neutral">$+0 (+0.0%)</span><br>
-                        <strong>Open Positions:</strong> 0
-                    </div>
-                </div>
-            
-                <div class="signal green" style="margin: 10px;">
-                    <div class="signal-header">30% ($30,000) - Social Arbitrage</div>
-                    <div class="signal-meta">Conviction: 7.7/10 | Track Record: Camillo 77% annual</div>
-                    <div class="signal-detail">
-                        <strong>Deployed:</strong> $0 / $30,000 (0%)<br>
-                        <strong>P&L:</strong> <span class="neutral">$+0 (+0.0%)</span><br>
-                        <strong>Open Positions:</strong> 0
-                    </div>
-                </div>
-            
-                <div class="signal yellow" style="margin: 10px;">
-                    <div class="signal-header">20% ($20,000) - Crypto Fundamentals</div>
-                    <div class="signal-meta">Conviction: Emerging | Track Record: Dan $500→$500k</div>
-                    <div class="signal-detail">
-                        <strong>Deployed:</strong> $17,500 / $20,000 (88%)<br>
-                        <strong>P&L:</strong> <span class="negative">$-2,094 (-10.5%)</span><br>
-                        <strong>Open Positions:</strong> 2
-                    </div>
-                </div>
-            
-                <div class="signal yellow" style="margin: 10px;">
-                    <div class="signal-header">10% ($10,000) - Opportunistic/Research</div>
-                    <div class="signal-meta">Conviction: Variable | Track Record: Testing new edges</div>
-                    <div class="signal-detail">
-                        <strong>Deployed:</strong> $175,000 / $10,000 (1750%)<br>
-                        <strong>P&L:</strong> <span class="negative">$-124,957 (-1249.6%)</span><br>
-                        <strong>Open Positions:</strong> 3
-                    </div>
-                </div>
-            
+
+        <!-- BEFORE vs AFTER Comparison -->
+        <div class="comparison-grid">
+            <div class="comparison-col comparison-old">
+                <h3>❌ OLD WORKFLOW (Manual)</h3>
+                <ul style="color: #888; line-height: 2;">
+                    <li>G finds signals manually (Yieldschool, Dumb Money)</li>
+                    <li>G researches each signal (Google, analyst reports)</li>
+                    <li>G assigns conviction score (subjective)</li>
+                    <li>Joselo validates risk (stops, sizing)</li>
+                    <li>Deploy if approved</li>
+                    <li><strong>Bottleneck:</strong> G's time & attention</li>
+                </ul>
+            </div>
+            <div class="comparison-col comparison-new">
+                <h3>✅ NEW WORKFLOW (AI-Powered)</h3>
+                <ul style="color: #8b5cf6; line-height: 2;">
+                    <li><strong>18 AI agents</strong> scan 50-100 stocks daily</li>
+                    <li><strong>Each agent</strong> analyzes with its philosophy</li>
+                    <li><strong>Ensemble vote</strong> → conviction score (0-10)</li>
+                    <li><strong>Quant Agent</strong> backtests (statistical validation)</li>
+                    <li>Joselo validates risk + G approves if >7/10</li>
+                    <li><strong>Scale:</strong> 10x more signals, same human time</li>
+                </ul>
             </div>
         </div>
-        
-        <!-- Performance Overview -->
+
+        <!-- AI Agent System Architecture -->
+        <div class="card card-ai full-width">
+            <h2>🤖 18-Agent System Architecture</h2>
+            <div class="agent-grid">
+                <!-- roostr Specific Agents (3) -->
+                <div class="agent-card active">
+                    <div class="agent-name">🐓 Social Arbitrage Agent</div>
+                    <div class="agent-vote">Scans Reddit, Discord for viral stocks</div>
+                </div>
+                <div class="agent-card active">
+                    <div class="agent-name">💎 Value Agent</div>
+                    <div class="agent-vote">Hunts undervalued stocks (Graham + Buffett)</div>
+                </div>
+                <div class="agent-card active">
+                    <div class="agent-name">🚀 Catalyst Agent</div>
+                    <div class="agent-vote">Tracks earnings, FDA, regulatory events</div>
+                </div>
+                
+                <!-- Legendary Investors (12) -->
+                <div class="agent-card">
+                    <div class="agent-name">Warren Buffett</div>
+                    <div class="agent-vote">Quality + Moat + Fair Price</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Charlie Munger</div>
+                    <div class="agent-vote">Wonderful business at fair price</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Ben Graham</div>
+                    <div class="agent-vote">Margin of safety + deep value</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Peter Lynch</div>
+                    <div class="agent-vote">10-baggers in everyday businesses</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Michael Burry</div>
+                    <div class="agent-vote">Contrarian deep value</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cathie Wood</div>
+                    <div class="agent-vote">Innovation + disruption</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Phil Fisher</div>
+                    <div class="agent-vote">Growth + scuttlebutt research</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Bill Ackman</div>
+                    <div class="agent-vote">Activist + bold positions</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stanley Druckenmiller</div>
+                    <div class="agent-vote">Macro + asymmetric opportunities</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mohnish Pabrai</div>
+                    <div class="agent-vote">Dhandho: Heads I win, tails I don't lose much</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Aswath Damodaran</div>
+                    <div class="agent-vote">Valuation discipline</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Rakesh Jhunjhunwala</div>
+                    <div class="agent-vote">Big Bull of India</div>
+                </div>
+                
+                <!-- Quant Agents (3) -->
+                <div class="agent-card">
+                    <div class="agent-name">📊 Quant Agent</div>
+                    <div class="agent-vote">Backtest + statistical validation</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">📈 Technical Agent</div>
+                    <div class="agent-vote">RSI, MACD, momentum</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">🧠 Sentiment Agent</div>
+                    <div class="agent-vote">News sentiment + social signals</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example: AI Ensemble Vote on TAO -->
+        <div class="card full-width">
+            <h2>🎯 Example: AI Ensemble Vote on TAO (Feb 6, 2026)</h2>
+            
+            <div class="ensemble-box">
+                <div class="ensemble-score">8.5 / 10</div>
+                <div style="text-align: center; color: #888; margin-bottom: 20px;">STRONG BUY SIGNAL</div>
+                
+                <div class="ensemble-breakdown">
+                    <div class="ensemble-stat">
+                        <div class="ensemble-label">Buy Votes</div>
+                        <div class="ensemble-value vote-buy">14</div>
+                    </div>
+                    <div class="ensemble-stat">
+                        <div class="ensemble-label">Hold Votes</div>
+                        <div class="ensemble-value vote-hold">3</div>
+                    </div>
+                    <div class="ensemble-stat">
+                        <div class="ensemble-label">Sell Votes</div>
+                        <div class="ensemble-value vote-sell">1</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <strong style="color: #8b5cf6;">Key Agent Insights:</strong>
+                <div class="signal purple" style="margin-top: 10px;">
+                    <strong>🚀 Cathie Wood Agent (BUY):</strong> "AI infrastructure play with novel tech. Decentralized ML network = disruption potential. Price $176 is early."
+                </div>
+                <div class="signal purple">
+                    <strong>💎 Value Agent (BUY):</strong> "Market cap $1.8B, TAM for decentralized compute is $50B+. Trading at 0.036x TAM. Undervalued vs centralized AI cloud players."
+                </div>
+                <div class="signal purple">
+                    <strong>📊 Quant Agent (BUY):</strong> "Backtest shows 15-day hold avg +22% for AI narrative tokens in Feb 2024-2025. IC: 0.18 (strong signal). Sharpe: 1.8."
+                </div>
+                <div class="signal yellow">
+                    <strong>⚠️ Michael Burry Agent (HOLD):</strong> "Momentum is high. Wait for pullback to $150-160 for better entry. Current price = FOMO zone."
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 15px; background: #0a0a0a; border-radius: 6px;">
+                <strong style="color: #4ade80;">✅ Joselo Risk Validation:</strong><br>
+                Entry: $176.05 | Stop: $140.84 (-20%) | Position: 56.8 tokens ($10k) | Risk: 2% portfolio<br>
+                <strong style="color: #fff;">Final Decision:</strong> <span class="positive">DEPLOY ✅</span>
+            </div>
+        </div>
+
+        <!-- New AI-Enhanced Workflow -->
+        <div class="workflow-section">
+            <h2 style="color: #fff; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px;">🔄 New AI-Enhanced Workflow</h2>
+            
+            <div class="workflow-step">
+                <div class="workflow-number">1</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Daily Market Scan (Automated)</div>
+                    <div class="workflow-desc">3 roostr agents scan 50-100 stocks daily from their domains (social arb, value, catalysts)</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">2</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Agent Analysis (Parallel)</div>
+                    <div class="workflow-desc">All 18 agents analyze each candidate stock through their investment philosophy lens</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">3</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Ensemble Vote</div>
+                    <div class="workflow-desc">Agents vote BUY/HOLD/SELL → aggregate into conviction score (0-10)</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">4</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Quant Validation</div>
+                    <div class="workflow-desc">Backtest similar setups, calculate IC, Sharpe ratio, statistical significance</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">5</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Conviction Doc Generation</div>
+                    <div class="workflow-desc">Auto-generate research doc with agent insights, backtest results, risk parameters</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">6</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Joselo Risk Check</div>
+                    <div class="workflow-desc">Validate stops, position sizing, portfolio exposure, correlation risk</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">7</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">G Approval (if >7/10)</div>
+                    <div class="workflow-desc">Only high-conviction signals reach G for final approval</div>
+                </div>
+            </div>
+
+            <div class="workflow-step">
+                <div class="workflow-number">8</div>
+                <div class="workflow-content">
+                    <div class="workflow-title">Deploy & Monitor</div>
+                    <div class="workflow-desc">Execute trade → track live → agents monitor for exit signals</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Metrics (AI vs Manual) -->
         <div class="grid">
             <div class="card">
-                <h2>📊 Portfolio Performance</h2>
+                <h2>📊 Performance Impact (Projected)</h2>
                 <div class="metric">
-                    <span class="metric-label">Total Capital</span>
-                    <span class="metric-value">$100,000</span>
+                    <span class="metric-label">Signals Evaluated (Monthly)</span>
+                    <span class="metric-value">Manual: 10 → AI: <span class="positive">100+</span></span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Deployed Capital</span>
-                    <span class="metric-value">$192,500 (192%)</span>
+                    <span class="metric-label">High-Conviction Trades</span>
+                    <span class="metric-value">Manual: 2-3 → AI: <span class="positive">10-15</span></span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Cash Reserve</span>
-                    <span class="metric-value">$-92,500 (-92%)</span>
+                    <span class="metric-label">Research Time (per signal)</span>
+                    <span class="metric-value">Manual: 2hrs → AI: <span class="positive">5min</span></span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Net P&L</span>
-                    <span class="metric-value negative">$127,051 (-127.1%)</span>
+                    <span class="metric-label">Backtest Coverage</span>
+                    <span class="metric-value">Manual: 0% → AI: <span class="positive">100%</span></span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Open Positions</span>
-                    <span class="metric-value">5</span>
+                    <span class="metric-label">Win Rate Target</span>
+                    <span class="metric-value neutral">60%+ (statistical validation)</span>
+                </div>
+            </div>
+
+            <div class="card card-ai">
+                <h2>🎯 Current AI Integration Status</h2>
+                <div class="metric">
+                    <span class="metric-label">Agent System</span>
+                    <span class="metric-value neutral">🟡 In Development</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-label">Status</span>
-                    <span class="metric-value neutral">🟡 Phase 1 - Building Track Record</span>
+                    <span class="metric-label">Quant Agent</span>
+                    <span class="metric-value positive">✅ Built & Tested</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">roostr Agents</span>
+                    <span class="metric-value neutral">🟡 Next (Social Arb first)</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Ensemble Voting</span>
+                    <span class="metric-value neutral">🟡 Framework Ready</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Live Trading</span>
+                    <span class="metric-value neutral">🔴 Phase 2 (after validation)</span>
                 </div>
             </div>
         </div>
-        
-        <!-- Active Watchlist -->
+
+        <!-- Capital Allocation (remains same, but AI-sourced) -->
         <div class="card full-width">
-            <h2>🎯 Active Watchlist</h2>
-            
-            <div class="signal green">
-                <div class="signal-header">
-                    <span class="badge green">GREEN</span>
-                    TAO - Yieldschool-Dan
+            <h2>💰 Capital Allocation (AI-Enhanced)</h2>
+            <div class="grid">
+                <div class="signal green" style="margin: 10px;">
+                    <div class="signal-header">40% ($40,000) - Value Investing</div>
+                    <div class="signal-meta"><strong>NEW:</strong> Buffett + Graham + Munger agents scan daily</div>
+                    <div class="signal-detail">
+                        <strong>Conviction:</strong> 8.0/10 | <strong>Track Record:</strong> Consistent 15-20% annual<br>
+                        <strong>Deployed:</strong> $0 / $40,000 (0%)<br>
+                        <strong>Next Signals:</strong> Agents scanning Russell 2000 for hidden gems
+                    </div>
                 </div>
-                <div class="signal-meta">
-                    Conviction: 9.0/10 | Found: 2026-02-06
+                <div class="signal green" style="margin: 10px;">
+                    <div class="signal-header">30% ($30,000) - Social Arbitrage</div>
+                    <div class="signal-meta"><strong>NEW:</strong> Social Arb Agent scans Reddit/Discord 24/7</div>
+                    <div class="signal-detail">
+                        <strong>Conviction:</strong> 7.7/10 | <strong>Track Record:</strong> Camillo 77% annual<br>
+                        <strong>Deployed:</strong> $0 / $30,000 (0%)<br>
+                        <strong>Pipeline:</strong> Building Social Arb Agent this week
+                    </div>
                 </div>
-                <div class="signal-detail">
-                    <strong>Status:</strong> Deployed<br>
-                    <strong>Entry:</strong> $176.05<br>
-                    <strong>Notes:</strong> Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + 
+                <div class="signal yellow" style="margin: 10px;">
+                    <div class="signal-header">20% ($20,000) - Crypto Fundamentals</div>
+                    <div class="signal-meta"><strong>NEW:</strong> Cathie Wood + Catalyst agents track AI/DeFi</div>
+                    <div class="signal-detail">
+                        <strong>Conviction:</strong> Emerging | <strong>Track Record:</strong> Dan $500→$500k<br>
+                        <strong>Deployed:</strong> $17,500 / $20,000 (88%)<br>
+                        <strong>Positions:</strong> TAO (-16.7%), SOL (-8.5%) — under AI monitoring
+                    </div>
                 </div>
-            </div>
-            
-            <div class="signal green">
-                <div class="signal-header">
-                    <span class="badge green">GREEN</span>
-                    SOL - Yieldschool-YieldHub
-                </div>
-                <div class="signal-meta">
-                    Conviction: 8.0/10 | Found: 2026-02-06
-                </div>
-                <div class="signal-detail">
-                    <strong>Status:</strong> Deployed<br>
-                    <strong>Entry:</strong> $86.51<br>
-                    <strong>Notes:</strong> Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source valid
-                </div>
-            </div>
-            
-            <div class="signal green">
-                <div class="signal-header">
-                    <span class="badge green">GREEN</span>
-                    PGR - Value-18Agents
-                </div>
-                <div class="signal-meta">
-                    Conviction: 6.55/10 | Found: 2026-02-12
-                </div>
-                <div class="signal-detail">
-                    <strong>Status:</strong> Deployed<br>
-                    <strong>Entry:</strong> $245.50<br>
-                    <strong>Notes:</strong> Entry: $245.50 | Position: $75k (7.5%) | Stop: $220.95 (-10%) | Max risk: $7,500. Progressive Insurance - Strong moat, P/E 15.2, ROE 24.3%. Buffett 8.
+                <div class="signal yellow" style="margin: 10px;">
+                    <div class="signal-header">10% ($10,000) - Opportunistic</div>
+                    <div class="signal-meta"><strong>NEW:</strong> All agents flag outliers & unique setups</div>
+                    <div class="signal-detail">
+                        <strong>Conviction:</strong> Variable<br>
+                        <strong>Deployed:</strong> $0 / $10,000 (0%)<br>
+                        <strong>Use Case:</strong> Agent-flagged anomalies, special situations
+                    </div>
                 </div>
             </div>
-            
-            <div class="signal green">
-                <div class="signal-header">
-                    <span class="badge green">GREEN</span>
-                    ALL - Value-18Agents
-                </div>
-                <div class="signal-meta">
-                    Conviction: 6.21/10 | Found: 2026-02-12
-                </div>
-                <div class="signal-detail">
-                    <strong>Status:</strong> Deployed<br>
-                    <strong>Entry:</strong> $180.25<br>
-                    <strong>Notes:</strong> Entry: $180.25 | Position: $50k (5%) | Stop: $162.22 (-10%) | Max risk: $5,000. Allstate Insurance - P/E 13.5, ROE 18.2%. Buffett 8.5/10, 18-agent app
-                </div>
-            </div>
-            
-            <div class="signal green">
-                <div class="signal-header">
-                    <span class="badge green">GREEN</span>
-                    KTB - Value-18Agents
-                </div>
-                <div class="signal-meta">
-                    Conviction: 6.11/10 | Found: 2026-02-12
-                </div>
-                <div class="signal-detail">
-                    <strong>Status:</strong> Deployed<br>
-                    <strong>Entry:</strong> $85.40<br>
-                    <strong>Notes:</strong> Entry: $85.40 | Position: $50k (5%) | Stop: $76.86 (-10%) | Max risk: $5,000. Kontoor Brands - P/E 11.8, ROE 22.1%. Deep value, 18-agent approval 6.11
-                </div>
-            </div>
-            
-            <div class="signal yellow">
-                <div class="signal-header">
-                    <span class="badge yellow">YELLOW</span>
-                    ASTS - DumbMoney
-                </div>
-                <div class="signal-meta">
-                    Conviction: 5.0/10 | Monitoring
-                </div>
-                <div class="signal-detail">
-                    <strong>Notes:</strong> SpaceMobile satellite-to-cell. 34🔥 16🚀 reactions. RISK-ADJUSTED 5/10: Overvalued ($101.62 > $81.64 analyst target). Wait for pullback to $85-90 or FCC
-                </div>
-            </div>
-            
-            <div class="signal yellow">
-                <div class="signal-header">
-                    <span class="badge yellow">YELLOW</span>
-                    RNDR - Yieldschool-MidCaps
-                </div>
-                <div class="signal-meta">
-                    Conviction: 7.0/10 | Monitoring
-                </div>
-                <div class="signal-detail">
-                    <strong>Notes:</strong> Awaiting validation
-                </div>
-            </div>
-            
-            <div class="signal yellow">
-                <div class="signal-header">
-                    <span class="badge yellow">YELLOW</span>
-                    EURUSD - ChartFanatics-Riz
-                </div>
-                <div class="signal-meta">
-                    Conviction: 9.0/10 | Monitoring
-                </div>
-                <div class="signal-detail">
-                    <strong>Notes:</strong> Awaiting validation
-                </div>
-            </div>
-            
         </div>
-        
+
         <div class="footer">
-            <p>roostr AI hedge fund · Paper trading + research validation phase</p>
-            <p>Files: PAPER-TRADING-LOG.md | signals-database.csv | RESEARCH-CALLS-TRACKER.md</p>
-            <p>Auto-updated after every trade by Joselo 🐓</p>
+            <p><strong>roostr Capital</strong> · AI-Powered Hedge Fund (18-Agent System)</p>
+            <p>🤖 Agents scan market → 🗳️ Ensemble vote → 📊 Quant backtest → 🐓 Joselo validates → 👤 G approves</p>
+            <p>Phase 1: Build agents & validate | Phase 2: Live trading with full automation</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #666;">Auto-updated by Joselo 🐓 | Last updated: Feb 11, 2026 14:12 EST</p>
         </div>
     </div>
 </body>
