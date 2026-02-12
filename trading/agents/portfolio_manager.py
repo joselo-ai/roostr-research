@@ -125,27 +125,18 @@ class PortfolioManager:
     
     def _make_decision(self, conviction: float, legendary_consensus: str, quant_consensus: str) -> str:
         """
-        Make final BUY/SELL/HOLD decision based on conviction + consensus.
+        Make final BUY/SELL/HOLD decision based on conviction score.
         
-        Logic:
-        - Conviction >= 7.5 + both consensus BUY → BUY
-        - Conviction >= 7.0 + majority BUY → BUY
-        - Conviction <= 3.5 + both consensus SELL → SELL
-        - Conviction <= 4.0 + majority SELL → SELL
+        Logic (SIMPLIFIED - trust conviction score):
+        - Conviction >= 6.0 → BUY
+        - Conviction <= 4.0 → SELL  
         - Otherwise → HOLD
-        """
-        both_buy = legendary_consensus == "BUY" and quant_consensus == "BUY"
-        both_sell = legendary_consensus == "SELL" and quant_consensus == "SELL"
-        majority_buy = (legendary_consensus == "BUY" or quant_consensus == "BUY")
-        majority_sell = (legendary_consensus == "SELL" or quant_consensus == "SELL")
         
-        if conviction >= 7.5 and both_buy:
+        Conviction score already incorporates all 16 agent opinions.
+        """
+        if conviction >= 6.0:
             return "BUY"
-        elif conviction >= 7.0 and majority_buy:
-            return "BUY"
-        elif conviction <= 3.5 and both_sell:
-            return "SELL"
-        elif conviction <= 4.0 and majority_sell:
+        elif conviction <= 4.0:
             return "SELL"
         else:
             return "HOLD"
@@ -280,7 +271,7 @@ class PortfolioManager:
         - 7.5/10 = 10%
         - <7/10 = No deployment
         """
-        if decision != "BUY" or conviction < 7.0:
+        if decision != "BUY" or conviction < 6.0:
             return None
         
         # Conviction-based allocation
@@ -290,6 +281,8 @@ class PortfolioManager:
             pct_allocation = 0.15  # 15%
         elif conviction >= 7.5:
             pct_allocation = 0.10  # 10%
+        elif conviction >= 6.5:
+            pct_allocation = 0.075  # 7.5%
         else:
             pct_allocation = 0.05  # 5%
         
@@ -333,9 +326,9 @@ class RiskManager:
         adjusted_conviction = conviction
         
         # Check 1: Is conviction high enough to deploy?
-        if conviction < 7.0:
-            concerns.append("Conviction <7.0, too low to deploy capital")
-            adjusted_conviction = min(conviction, 5.0)
+        if conviction < 6.0:
+            concerns.append("Conviction <6.0, below deployment threshold")
+            # Don't cap - let portfolio manager decide
         
         # Check 2: Asset class risk
         asset_class = signal.get('asset_class', '')

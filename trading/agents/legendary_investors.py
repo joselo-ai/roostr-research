@@ -47,10 +47,10 @@ class LegendaryInvestor:
     
     def _calculate_conviction(self, strengths: List[str], concerns: List[str]) -> float:
         """Calculate conviction score based on strengths vs concerns"""
-        # Simple heuristic: start at 5, +1 per strength, -1 per concern
-        conviction = 5.0
-        conviction += len(strengths) * 0.5
-        conviction -= len(concerns) * 0.5
+        # Start at 5.5, +1.0 per strength, -0.75 per concern (more generous)
+        conviction = 5.5
+        conviction += len(strengths) * 1.0
+        conviction -= len(concerns) * 0.75
         return max(0.0, min(10.0, conviction))
 
 
@@ -97,7 +97,7 @@ class WarrenBuffett(LegendaryInvestor):
         conviction = self._calculate_conviction(strengths, concerns)
         
         # Vote logic
-        if conviction >= 7:
+        if conviction >= 5:
             vote = "BUY"
         elif conviction <= 3:
             vote = "SELL"

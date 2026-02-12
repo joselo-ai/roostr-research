@@ -1,0 +1,617 @@
+{
+  "timestamp": "2026-02-12T10:33:21.681317",
+  "total_signals": 3,
+  "signals": [
+    {
+      "ticker": "PGR",
+      "timestamp": "2026-02-12T10:33:21.681009",
+      "signal_source": "Value Screener",
+      "catalyst": "Progressive Insurance - Strong competitive moat in auto insurance. Consistent earnings growth 10+ years. Trading at P/E 15.2 vs industry 18.5 (20% discount = margin of safety). ROE 24.3% (excellent capital efficiency). Management quality exceptional (Buffett-style capital allocation). Steady cash flow generation. Stop loss at -10% ($220.95). Undervalued quality business, long-term hold.",
+      "entry_price": 245.5,
+      "legendary_investors": {
+        "consensus": "HOLD",
+        "avg_conviction": 6.75,
+        "votes": {
+          "BUY": 4,
+          "SELL": 0,
+          "HOLD": 8
+        },
+        "individual_opinions": [
+          {
+            "investor": "Warren Buffett",
+            "conviction": 8.5,
+            "vote": "BUY",
+            "reasoning": "Warren Buffett evaluates PGR: Strengths include Strong competitive moat, Consistent earnings growth, Quality management team. Overall conviction: 8.5/10.",
+            "strengths": [
+              "Strong competitive moat",
+              "Consistent earnings growth",
+              "Quality management team"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Charlie Munger",
+            "conviction": 7.5,
+            "vote": "BUY",
+            "reasoning": "Charlie Munger on PGR: Mental models suggest strong fundamentals. Conviction: 7.5/10.",
+            "strengths": [
+              "Strong business fundamentals",
+              "Long-term value creation story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Michael Burry",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Michael Burry on PGR: Contrarian setup with value. Conviction: 6.5/10.",
+            "strengths": [
+              "Contrarian opportunity"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Ben Graham",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Ben Graham on PGR: Margin of safety exists. Conviction: 6.5/10.",
+            "strengths": [
+              "Margin of safety present"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Mohnish Pabrai",
+            "conviction": 7.5,
+            "vote": "BUY",
+            "reasoning": "Mohnish Pabrai on PGR: Heads I win, tails limited loss. Conviction: 7.5/10.",
+            "strengths": [
+              "Downside protection built-in",
+              "Following proven investors"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Cathie Wood",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Cathie Wood on PGR: Disruptive innovation at scale. Conviction: 6.5/10.",
+            "strengths": [
+              "Long-term transformation story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Phil Fisher",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Phil Fisher on PGR: Thorough scuttlebutt research. Conviction: 6.5/10.",
+            "strengths": [
+              "Competitive advantage identified"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Peter Lynch",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Peter Lynch on PGR: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+            "strengths": [
+              "Growth story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Bill Ackman",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Bill Ackman on PGR: Not bold enough. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Stanley Druckenmiller",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Stanley Druckenmiller on PGR: No clear macro edge. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Aswath Damodaran",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Aswath Damodaran on PGR: Story supported by numbers. Conviction: 6.5/10.",
+            "strengths": [
+              "Numbers back the story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Rakesh Jhunjhunwala",
+            "conviction": 7.5,
+            "vote": "BUY",
+            "reasoning": "Rakesh Jhunjhunwala on PGR: Long-term growth story. Conviction: 7.5/10.",
+            "strengths": [
+              "Growth market opportunity",
+              "Long-term value creation"
+            ],
+            "concerns": []
+          }
+        ]
+      },
+      "quant_agents": {
+        "consensus": "HOLD",
+        "avg_score": 6.25,
+        "votes": {
+          "BUY": 2,
+          "SELL": 0,
+          "HOLD": 2
+        },
+        "individual_opinions": [
+          {
+            "agent": "Valuation Agent",
+            "score": 8.0,
+            "recommendation": "BUY",
+            "reasoning": "PGR appears undervalued relative to intrinsic value",
+            "metrics": {
+              "undervalued_signal": true,
+              "overvalued_signal": false,
+              "fair_value_signal": false
+            }
+          },
+          {
+            "agent": "Sentiment Agent",
+            "score": 5,
+            "recommendation": "HOLD",
+            "reasoning": "PGR neutral sentiment",
+            "metrics": {
+              "reddit_score": 0,
+              "discord_score": 0,
+              "overall_sentiment": 5
+            }
+          },
+          {
+            "agent": "Fundamentals Agent",
+            "score": 7.0,
+            "recommendation": "BUY",
+            "reasoning": "PGR strong fundamentals with catalyst",
+            "metrics": {
+              "strong_fundamentals": true,
+              "weak_fundamentals": false,
+              "catalyst_present": false
+            }
+          },
+          {
+            "agent": "Technicals Agent",
+            "score": 5.0,
+            "recommendation": "HOLD",
+            "reasoning": "PGR neutral technical picture",
+            "metrics": {
+              "bullish_technicals": false,
+              "bearish_technicals": false,
+              "momentum": false
+            }
+          }
+        ]
+      },
+      "combined_conviction": 6.55,
+      "risk_validated_conviction": 6.55,
+      "risk_concerns": [],
+      "final_decision": "BUY",
+      "conviction_rating": "\ud83d\udfe1 MEDIUM",
+      "reasoning": "**Decision: BUY** (Conviction: 6.55/10)\n\n**Legendary Investors:** 4/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 2/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Multi-agent consensus supports deployment. Risk/reward favorable. Position sizing follows conviction.\n",
+      "position_sizing": {
+        "conviction": 6.55,
+        "pct_allocation": "7.5%",
+        "position_size": "$75,000",
+        "stop_loss": "-10.0%",
+        "max_risk": "$7,500",
+        "entry_price": 245.5,
+        "stop_price": 220.95
+      }
+    },
+    {
+      "ticker": "ALL",
+      "timestamp": "2026-02-12T10:33:21.681128",
+      "signal_source": "Value Screener",
+      "catalyst": "Allstate Insurance - Undervalued quality insurer. Strong brand moat. P/E 13.5 (cheap vs peers). ROE 18.2%. Consistent cash flow. Management focus on shareholder returns. Stop loss at -10% ($162.23). Ben Graham-style value play with margin of safety.",
+      "entry_price": 180.25,
+      "legendary_investors": {
+        "consensus": "HOLD",
+        "avg_conviction": 6.19,
+        "votes": {
+          "BUY": 1,
+          "SELL": 0,
+          "HOLD": 11
+        },
+        "individual_opinions": [
+          {
+            "investor": "Warren Buffett",
+            "conviction": 8.5,
+            "vote": "BUY",
+            "reasoning": "Warren Buffett evaluates ALL: Strengths include Strong competitive moat, Consistent earnings growth, Quality management team. Overall conviction: 8.5/10.",
+            "strengths": [
+              "Strong competitive moat",
+              "Consistent earnings growth",
+              "Quality management team"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Charlie Munger",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Charlie Munger on ALL: Mental models suggest strong fundamentals. Conviction: 6.5/10.",
+            "strengths": [
+              "Strong business fundamentals"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Michael Burry",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Michael Burry on ALL: Contrarian setup with value. Conviction: 6.5/10.",
+            "strengths": [
+              "Contrarian opportunity"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Ben Graham",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Ben Graham on ALL: Margin of safety exists. Conviction: 6.5/10.",
+            "strengths": [
+              "Margin of safety present"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Mohnish Pabrai",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Mohnish Pabrai on ALL: Heads I win, tails limited loss. Conviction: 6.5/10.",
+            "strengths": [
+              "Downside protection built-in"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Cathie Wood",
+            "conviction": 4.75,
+            "vote": "HOLD",
+            "reasoning": "Cathie Wood on ALL: Not innovative enough. Conviction: 4.75/10.",
+            "strengths": [],
+            "concerns": [
+              "Value play, not growth/innovation"
+            ]
+          },
+          {
+            "investor": "Phil Fisher",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Phil Fisher on ALL: Need deeper research. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Peter Lynch",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Peter Lynch on ALL: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+            "strengths": [
+              "Consumer-facing business"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Bill Ackman",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Bill Ackman on ALL: Not bold enough. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Stanley Druckenmiller",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Stanley Druckenmiller on ALL: No clear macro edge. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Aswath Damodaran",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Aswath Damodaran on ALL: Story supported by numbers. Conviction: 6.5/10.",
+            "strengths": [
+              "Numbers back the story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Rakesh Jhunjhunwala",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Rakesh Jhunjhunwala on ALL: Not long-term enough. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          }
+        ]
+      },
+      "quant_agents": {
+        "consensus": "HOLD",
+        "avg_score": 6.25,
+        "votes": {
+          "BUY": 2,
+          "SELL": 0,
+          "HOLD": 2
+        },
+        "individual_opinions": [
+          {
+            "agent": "Valuation Agent",
+            "score": 8.0,
+            "recommendation": "BUY",
+            "reasoning": "ALL appears undervalued relative to intrinsic value",
+            "metrics": {
+              "undervalued_signal": true,
+              "overvalued_signal": false,
+              "fair_value_signal": false
+            }
+          },
+          {
+            "agent": "Sentiment Agent",
+            "score": 5,
+            "recommendation": "HOLD",
+            "reasoning": "ALL neutral sentiment",
+            "metrics": {
+              "reddit_score": 0,
+              "discord_score": 0,
+              "overall_sentiment": 5
+            }
+          },
+          {
+            "agent": "Fundamentals Agent",
+            "score": 7.0,
+            "recommendation": "BUY",
+            "reasoning": "ALL strong fundamentals with catalyst",
+            "metrics": {
+              "strong_fundamentals": true,
+              "weak_fundamentals": false,
+              "catalyst_present": false
+            }
+          },
+          {
+            "agent": "Technicals Agent",
+            "score": 5.0,
+            "recommendation": "HOLD",
+            "reasoning": "ALL neutral technical picture",
+            "metrics": {
+              "bullish_technicals": false,
+              "bearish_technicals": false,
+              "momentum": false
+            }
+          }
+        ]
+      },
+      "combined_conviction": 6.21,
+      "risk_validated_conviction": 6.21,
+      "risk_concerns": [],
+      "final_decision": "BUY",
+      "conviction_rating": "\ud83d\udfe1 MEDIUM",
+      "reasoning": "**Decision: BUY** (Conviction: 6.21/10)\n\n**Legendary Investors:** 1/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 2/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Multi-agent consensus supports deployment. Risk/reward favorable. Position sizing follows conviction.\n",
+      "position_sizing": {
+        "conviction": 6.21,
+        "pct_allocation": "5.0%",
+        "position_size": "$50,000",
+        "stop_loss": "-10.0%",
+        "max_risk": "$5,000",
+        "entry_price": 180.25,
+        "stop_price": 162.22
+      }
+    },
+    {
+      "ticker": "KTB",
+      "timestamp": "2026-02-12T10:33:21.681219",
+      "signal_source": "Value Screener",
+      "catalyst": "Kontoor Brands (Wrangler, Lee jeans) - Undervalued consumer brand. P/E 11.8 (very cheap). ROE 22.1%. Strong free cash flow. Brand moat in denim. Trading below intrinsic value. Stop loss at -10% ($76.86). Deep value opportunity.",
+      "entry_price": 85.4,
+      "legendary_investors": {
+        "consensus": "HOLD",
+        "avg_conviction": 6.02,
+        "votes": {
+          "BUY": 1,
+          "SELL": 0,
+          "HOLD": 11
+        },
+        "individual_opinions": [
+          {
+            "investor": "Warren Buffett",
+            "conviction": 6.5,
+            "vote": "BUY",
+            "reasoning": "Warren Buffett evaluates KTB: Strengths include Strong competitive moat. Overall conviction: 6.5/10.",
+            "strengths": [
+              "Strong competitive moat"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Charlie Munger",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Charlie Munger on KTB: Mental models suggest strong fundamentals. Conviction: 6.5/10.",
+            "strengths": [
+              "Strong business fundamentals"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Michael Burry",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Michael Burry on KTB: Contrarian setup with value. Conviction: 6.5/10.",
+            "strengths": [
+              "Contrarian opportunity"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Ben Graham",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Ben Graham on KTB: Margin of safety exists. Conviction: 6.5/10.",
+            "strengths": [
+              "Margin of safety present"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Mohnish Pabrai",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Mohnish Pabrai on KTB: Heads I win, tails limited loss. Conviction: 6.5/10.",
+            "strengths": [
+              "Downside protection built-in"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Cathie Wood",
+            "conviction": 4.75,
+            "vote": "HOLD",
+            "reasoning": "Cathie Wood on KTB: Not innovative enough. Conviction: 4.75/10.",
+            "strengths": [],
+            "concerns": [
+              "Value play, not growth/innovation"
+            ]
+          },
+          {
+            "investor": "Phil Fisher",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Phil Fisher on KTB: Need deeper research. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Peter Lynch",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Peter Lynch on KTB: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+            "strengths": [
+              "Consumer-facing business"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Bill Ackman",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Bill Ackman on KTB: Not bold enough. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Stanley Druckenmiller",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Stanley Druckenmiller on KTB: No clear macro edge. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          },
+          {
+            "investor": "Aswath Damodaran",
+            "conviction": 6.5,
+            "vote": "HOLD",
+            "reasoning": "Aswath Damodaran on KTB: Story supported by numbers. Conviction: 6.5/10.",
+            "strengths": [
+              "Numbers back the story"
+            ],
+            "concerns": []
+          },
+          {
+            "investor": "Rakesh Jhunjhunwala",
+            "conviction": 5.5,
+            "vote": "HOLD",
+            "reasoning": "Rakesh Jhunjhunwala on KTB: Not long-term enough. Conviction: 5.5/10.",
+            "strengths": [],
+            "concerns": []
+          }
+        ]
+      },
+      "quant_agents": {
+        "consensus": "HOLD",
+        "avg_score": 6.25,
+        "votes": {
+          "BUY": 2,
+          "SELL": 0,
+          "HOLD": 2
+        },
+        "individual_opinions": [
+          {
+            "agent": "Valuation Agent",
+            "score": 8.0,
+            "recommendation": "BUY",
+            "reasoning": "KTB appears undervalued relative to intrinsic value",
+            "metrics": {
+              "undervalued_signal": true,
+              "overvalued_signal": false,
+              "fair_value_signal": false
+            }
+          },
+          {
+            "agent": "Sentiment Agent",
+            "score": 5,
+            "recommendation": "HOLD",
+            "reasoning": "KTB neutral sentiment",
+            "metrics": {
+              "reddit_score": 0,
+              "discord_score": 0,
+              "overall_sentiment": 5
+            }
+          },
+          {
+            "agent": "Fundamentals Agent",
+            "score": 7.0,
+            "recommendation": "BUY",
+            "reasoning": "KTB strong fundamentals with catalyst",
+            "metrics": {
+              "strong_fundamentals": true,
+              "weak_fundamentals": false,
+              "catalyst_present": false
+            }
+          },
+          {
+            "agent": "Technicals Agent",
+            "score": 5.0,
+            "recommendation": "HOLD",
+            "reasoning": "KTB neutral technical picture",
+            "metrics": {
+              "bullish_technicals": false,
+              "bearish_technicals": false,
+              "momentum": false
+            }
+          }
+        ]
+      },
+      "combined_conviction": 6.11,
+      "risk_validated_conviction": 6.11,
+      "risk_concerns": [],
+      "final_decision": "BUY",
+      "conviction_rating": "\ud83d\udfe1 MEDIUM",
+      "reasoning": "**Decision: BUY** (Conviction: 6.11/10)\n\n**Legendary Investors:** 0/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 2/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Multi-agent consensus supports deployment. Risk/reward favorable. Position sizing follows conviction.\n",
+      "position_sizing": {
+        "conviction": 6.11,
+        "pct_allocation": "5.0%",
+        "position_size": "$50,000",
+        "stop_loss": "-10.0%",
+        "max_risk": "$5,000",
+        "entry_price": 85.4,
+        "stop_price": 76.86
+      }
+    }
+  ]
+}
