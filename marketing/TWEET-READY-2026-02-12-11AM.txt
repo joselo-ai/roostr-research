@@ -1,0 +1,35 @@
+TWEET READY TO POST - Thursday Feb 12, 2026 11:00 AM
+
+Post this to @roostrcapital as a STANDALONE tweet (not a reply):
+
+---
+
+🐓 roostr Capital - First Deployment
+
+18-agent system just approved 3 value stocks. All deployed.
+
+$PGR (Progressive): $75k @ $245.50
+- Conviction: 6.55/10 (Buffett 8.5/10)
+- P/E 15.2, ROE 24.3%, strong moat
+
+$ALL (Allstate): $50k @ $180.25  
+- Conviction: 6.21/10 (Buffett 8.5/10)
+- P/E 13.5, ROE 18.2%, cheap vs peers
+
+$KTB (Kontoor): $50k @ $85.40
+- Conviction: 6.11/10
+- P/E 11.8, deep value
+
+Portfolio: $192.5k deployed / $1M paper (19.3%)
+Stops: -10% on all positions
+Max risk: $17.5k (1.75%)
+
+Built in public. Full transparency.
+
+Dashboard: https://joselo-ai.github.io/roostr-research/trading/dashboard.html
+
+---
+
+AFTER POSTING:
+1. Copy the tweet URL
+2. Log to posted-log.json
