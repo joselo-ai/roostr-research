@@ -1,0 +1,26 @@
+TWEET READY TO POST - Thursday Feb 12, 2026 9:00 AM
+
+Post this to @roostrcapital as a STANDALONE tweet (not a reply):
+
+---
+
+Position sizing = conviction scoring:
+
+Portfolio: $100k
+
+$ALL (10/10): $20k (20%) — Highest conviction
+$PGR (9/10): $15k (15%) — Second highest
+$KTB (7.5/10): $10k (10%) — Diversification
+
+Size follows conviction.
+Stops at -8% to -10%.
+Max loss if all hit stops: $3.8k (3.8%).
+
+Risk-adjusted by score.
+
+---
+
+AFTER POSTING:
+1. Copy the tweet URL
+2. Update content-queue.json (mark w2-8 as posted=true, add tweet_url)
+3. Update posted-log.json (add entry with timestamp)
