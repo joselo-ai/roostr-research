@@ -193,10 +193,12 @@
       "slot": "afternoon",
       "platforms": ["twitter"],
       "type": "standalone",
-      "content": "Why $ALL over 75 other value stocks:\n\nScreened entire market.\nFiltered: P/E < 15, ROE > 15%, Debt/Eq < 0.5\n\nAllstate dominated:\n• P/E: 5.45 (cheapest in screen)\n• ROE: 39.52% (exceptional profitability)\n• Fresh catalyst: $4B buyback just announced\n• 10/10 conviction\n\nData > opinions.",
-      "posted": false,
+      "content": "Why $ALL over 75 other value stocks:\n\nScreened entire market.\nFiltered: P/E < 15, ROE > 15%, Debt/Eq < 0.5\n\nAllstate dominated:\n• P/E: 5.45 (cheapest)\n• ROE: 39.52% (exceptional)\n• Fresh catalyst: $4B buyback announced\n• 10/10 conviction\n\nData > opinion.",
+      "posted": true,
+      "posted_at": "2026-02-12T21:01:45Z",
+      "tweet_url": "https://x.com/roostrcapital/status/2022053449681314006",
       "scheduled_date": "2026-02-11",
-      "note": "Research insight - ALL selection process (UPDATED from ACGL)"
+      "note": "Research insight - ALL selection process ✅ POSTED"
     },
     {
       "id": "w2-8",
@@ -240,12 +242,12 @@
   ],
   "metadata": {
     "created": "2026-02-06T12:38:00Z",
-    "updated": "2026-02-11T17:00:00Z",
+    "updated": "2026-02-12T21:01:45Z",
     "total_posts": 17,
     "week1_status": "8/8 posted - COMPLETE",
-    "week2_status": "6/10 posted - TRACKING LIVE",
+    "week2_status": "7/10 posted - TRACKING LIVE",
     "thread_start": "https://x.com/roostrcapital/status/2019540291141922995",
-    "latest_tweet": "https://x.com/roostrcapital/status/2021630565884342429",
+    "latest_tweet": "https://x.com/roostrcapital/status/2022053449681314006",
     "platforms": ["twitter"],
     "schedule": {
       "morning": "09:00 EST",
@@ -254,6 +256,6 @@
       "evening": "19:00 EST"
     },
     "week2_theme": "First capital deployment - ALL + PGR + KTB",
-    "next_action": "Wednesday 2 PM: Why $ALL selection process (w2-7)"
+    "next_action": "Thursday 11 AM: Position sizing methodology (w2-8)"
   }
 }
