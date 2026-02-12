@@ -19,13 +19,6 @@ POSITIONS = {
         "entry": 176.05,
         "quantity": 56.8,
         "stop": 140.84
-    },
-    "SOL": {
-        "symbol": "SOLUSD",
-        "exchange": "BINANCE",
-        "entry": 86.51,
-        "quantity": 86.7,
-        "stop": 73.53
     }
 }
 
