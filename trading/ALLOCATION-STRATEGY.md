@@ -1,12 +1,12 @@
 # roostr Capital Allocation Strategy
-**Date:** Feb 5, 2026  
-**Total Capital:** $100,000 (Phase 1)
+**Date:** Feb 12, 2026  
+**Total Capital:** $1,000,000 (Paper Trading)
 
 ---
 
 ## 🎯 Risk-Adjusted Allocation (By Conviction)
 
-### 40% ($40,000) - Value Investing (Stocks)
+### 40% ($400,000) - Value Investing (Stocks)
 **Conviction:** 🟢 GREEN (8.0/10)  
 **Edge:** Undervalued quality stocks + margin of safety  
 **Track Record:** Buffett, Graham, Munger methodology  
@@ -22,14 +22,14 @@
 
 **Capital Deployment:**
 - 3-5 quality stocks at a time
-- $8-15k per position
+- $80-150k per position
 - Focus: Strong fundamentals, undervalued, margin of safety
 - Sources: Value screeners, earnings reports, insider buying
 - Hold through volatility (patient capital)
 
 ---
 
-### 30% ($30,000) - Social Arbitrage (Stocks)
+### 30% ($300,000) - Social Arbitrage (Stocks)
 **Conviction:** 🟢 GREEN (7.7/10)  
 **Edge:** Consumer behavior → earnings lag  
 **Track Record:** Camillo 77% annual (2006-2020)  
@@ -45,13 +45,13 @@
 
 **Capital Deployment:**
 - 2-3 positions at a time
-- $10-15k per position
-- Max 2% risk ($600 max loss per trade)
+- $100-150k per position
+- Max 2% risk ($6,000 max loss per trade)
 - Examples: $ASTS (when GREEN), Celsius-style plays, bike boom signals
 
 ---
 
-### 20% ($20,000) - Crypto Fundamentals
+### 20% ($200,000) - Crypto Fundamentals
 **Conviction:** 🟡 YELLOW (emerging)  
 **Edge:** Early fundamental research + airdrop farming  
 **Track Record:** Dan's $500→$500k on TAO (1000x)  
@@ -73,7 +73,7 @@
 
 ---
 
-### 10% ($10,000) - Opportunistic/Research
+### 10% ($100,000) - Opportunistic/Research
 **Conviction:** 🟡 YELLOW (variable)  
 **Edge:** TBD - developing new edges  
 **Risk:** Accept total loss  
@@ -87,8 +87,8 @@
 - $ASTS-style speculative plays
 
 **Capital Deployment:**
-- $ASTS when it goes GREEN (if pullback to $80-95)
-- New Discord signal testing
+- $ASTS when it goes GREEN (if pullback to $80-95) - up to $50k
+- New Discord signal testing - $20-30k positions
 - Dividend value plays (when stock edge built)
 - Accept this could go to $0
 
@@ -98,18 +98,18 @@
 
 | Bucket | Capital | Conviction | Edge Type | Risk/Trade |
 |--------|---------|------------|-----------|------------|
-| Value Stocks | $40,000 | 🟢 8.0/10 | Value Investing | 2-3% |
-| Social Arb | $30,000 | 🟢 7.7/10 | Behavioral | 2% |
-| Crypto | $20,000 | 🟡 Emerging | Fundamental | Accept 50% DD |
-| Opportunistic | $10,000 | 🟡 Variable | Experimental | Accept 100% loss |
-| **TOTAL** | **$100,000** | - | - | - |
+| Value Stocks | $400,000 | 🟢 8.0/10 | Value Investing | 2-3% |
+| Social Arb | $300,000 | 🟢 7.7/10 | Behavioral | 2% |
+| Crypto | $200,000 | 🟡 Emerging | Fundamental | Accept 50% DD |
+| Opportunistic | $100,000 | 🟡 Variable | Experimental | Accept 100% loss |
+| **TOTAL** | **$1,000,000** | - | - | - |
 
 ---
 
 ## 🚦 Phased Deployment Plan
 
-### Phase 1: $100k (Current - Feb 2026)
-**Goal:** Validate methodology, build 90-day track record
+### Phase 1: $1M Paper (Current - Feb 2026)
+**Goal:** Validate methodology at scale, build 90-day track record
 
 **Success Criteria:**
 - Net returns: >20%
@@ -120,36 +120,37 @@
 **Timeline:** 90 days (ends ~May 2026)
 
 **Outcome triggers:**
-- ✅ Success → Deploy Phase 2 ($100k more)
-- ⚠️ Mixed → Rebalance buckets, continue Phase 1
-- ❌ Failure → Pause, review methodology, paper trade longer
+- ✅ Success → Deploy real capital (start with $100k real)
+- ⚠️ Mixed → Rebalance buckets, continue paper trading
+- ❌ Failure → Pause, review methodology, rebuild
 
 ---
 
-### Phase 2: $200k Total (After 90 days)
-**Trigger:** Phase 1 shows >20% returns + <15% drawdown
+### Phase 2: Real Capital Deployment (After 90 days)
+**Trigger:** Phase 1 shows >20% returns + <15% drawdown on paper
 
 **Deployment:**
-- Double successful buckets
-- Cut/reduce underperformers
-- Add stock edge bucket (if discovered)
+- Start with $100k real capital
+- Allocate based on bucket performance
+- Scale winners, cut underperformers
+- Maintain paper trading for research bucket
 
-**New Allocation Example (if all buckets successful):**
-- $80k Value Stocks (40%)
-- $60k Social Arb (30%)
-- $40k Crypto (20%)
-- $20k Opportunistic (10%)
+**Real Capital Allocation Example (if all buckets successful):**
+- $40k Value Stocks (40%)
+- $30k Social Arb (30%)
+- $20k Crypto (20%)
+- $10k Opportunistic (10%)
 
 ---
 
-### Phase 3: $400k+ (After 6 months)
-**Trigger:** Phase 2 validates scaled deployment
+### Phase 3: Scale Real Capital (After 6 months real trading)
+**Trigger:** Real capital deployment validates paper results
 
 **Strategy:**
-- Allocate based on actual performance (not theory)
+- Scale based on actual performance (not theory)
 - Cut losers aggressively
 - Scale winners proportionally
-- Consider adding institutional capital
+- Consider adding external capital
 
 ---
 
