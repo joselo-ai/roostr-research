@@ -1,14 +1,14 @@
 {
-  "total_actions": 465,
+  "total_actions": 471,
   "by_category": {
-    "trading": 247,
+    "trading": 248,
     "marketing": 2,
     "research": 2,
-    "automation": 210,
+    "automation": 215,
     "decision": 4
   },
   "by_status": {
-    "success": 465
+    "success": 471
   },
-  "last_updated": "2026-02-14T17:00:08.184638"
+  "last_updated": "2026-02-14T18:00:06.219925"
 }
