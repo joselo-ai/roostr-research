@@ -1,5 +1,5 @@
 Ticker,Source,Date_Found,Price_Entry,Conviction_Score,Status,Deployed,Position_Size,Stop_Loss,Target_1,Target_2,Current_Price,PnL_Dollars,PnL_Percent,Notes,Date_Entry,Agent_Decision,Agent_Conviction,Agent_Evaluated,Asset_Class
-TAO,Yieldschool-Dan,2026-02-06,176.05,9.0,GREEN,YES,10000.0,140.84,211.26,264.08,190.73,834,8.34,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.,,,,,
+TAO,Yieldschool-Dan,2026-02-06,176.05,9.0,GREEN,YES,10000.0,140.84,211.26,264.08,192.34,925,9.25,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Max risk: $2000 (2% portfolio). Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.,,,,,
 SOL,Yieldschool-YieldHub,2026-02-06,86.51,8.0,CLOSED,NO,7500.0,73.53,103.81,121.11,77.3,-798.0,-10.65,"Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source validated. | EXITED: \$77.30 (Feb 12, 2026 5:30 PM) | P&L: -\$798.0 (-10.65%) | Reason: Opportunity cost - free capital for better signals",2026-02-12T17:30:00,,,,
 ASTS,DumbMoney,2026-02-06,,5.0,YELLOW,NO,,,,,101.62,,,SpaceMobile satellite-to-cell. 34🔥 16🚀 reactions. RISK-ADJUSTED 5/10: Overvalued ($101.62 > $81.64 analyst target). Wait for pullback to $85-90 or FCC catalyst. Beta 2.71 = extreme volatility. See conviction doc.,,,,,
 RNDR,Yieldschool-MidCaps,2026-02-06,,7.0,YELLOW,NO,,,,,,,AI rendering narrative heating up. GPU compute play.,,,,,,
@@ -22,11 +22,11 @@ TRV,Value-Research,2026-02-08,,8.0,YELLOW,NO,,,330.0,,300.31,,,"Travelers - P/E 
 LULU,Value-Research,2026-02-08,,7.0,YELLOW,NO,,,220.0,,,,,"Lululemon - P/E 12.02, ROE 41.02%, Target $220 (+27%)",,,,,
 ASTS,Reddit-wallstreetbets,2026-02-11,,10.0,Monitoring,,,,,,,,,FCC approval expected Q1 2026,,,,,
 PGR,Value-18Agents,2026-02-12,245.5,6.55,GREEN,YES,75000.0,220.95,,,0.00,-75000,-100.00,"Entry: $245.50 | Position: $75k (7.5%) | Stop: $220.95 (-10%) | Max risk: $7,500. Progressive Insurance - Strong moat, P/E 15.2, ROE 24.3%. Buffett 8.5/10, 18-agent approval 6.55/10.",2026-02-12,BUY,6.55,2026-02-12 10:33,stock
-ALL,Value-18Agents,2026-02-12,180.25,6.21,GREEN,YES,50000.0,162.22,,,0.18,-49951,-99.90,"Entry: $180.25 | Position: $50k (5%) | Stop: $162.22 (-10%) | Max risk: $5,000. Allstate Insurance - P/E 13.5, ROE 18.2%. Buffett 8.5/10, 18-agent approval 6.21/10.",2026-02-12,BUY,6.21,2026-02-12 10:33,stock
+ALL,Value-18Agents,2026-02-12,180.25,6.21,GREEN,YES,50000.0,162.22,,,0.18,-49950,-99.90,"Entry: $180.25 | Position: $50k (5%) | Stop: $162.22 (-10%) | Max risk: $5,000. Allstate Insurance - P/E 13.5, ROE 18.2%. Buffett 8.5/10, 18-agent approval 6.21/10.",2026-02-12,BUY,6.21,2026-02-12 10:33,stock
 KTB,Value-18Agents,2026-02-12,85.4,6.11,GREEN,YES,50000.0,76.86,,,85.4,0.0,0.0,"Entry: $85.40 | Position: $50k (5%) | Stop: $76.86 (-10%) | Max risk: $5,000. Kontoor Brands - P/E 11.8, ROE 22.1%. Deep value, 18-agent approval 6.11/10.",2026-02-12,BUY,6.11,2026-02-12 10:33,stock
 ASTS,Reddit-wallstreetbets,2026-02-12,,10.0,Monitoring,,,,,,,,,FCC approval expected Q1 2026,,,,,
-TAO,Manual,2026-02-13,178.51,7.0,GREEN,YES,15000.0,151.73,,,190.73,1027,6.85,Add to position (momentum),2026-02-13,BUY,7.0,2026-02-13 19:49,stock
+TAO,Manual,2026-02-13,178.51,7.0,GREEN,YES,15000.0,151.73,,,192.34,1162,7.75,Add to position (momentum),2026-02-13,BUY,7.0,2026-02-13 19:49,stock
 ASTS,Manual,2026-02-13,4.2,10.0,GREEN,YES,200000.0,3.57,,,4.2,0,0.0,FCC approval Q1 2026,2026-02-13,BUY,10.0,2026-02-13 19:49,stock
 PGR,Manual,2026-02-13,245.5,6.55,GREEN,YES,75000.0,220.95,,,0.00,-75000,-100.00,Progressive Insurance,2026-02-13,BUY,6.55,2026-02-13 19:49,stock
-ALL,Manual,2026-02-13,180.25,6.21,GREEN,YES,50000.0,162.22,,,0.18,-49951,-99.90,Allstate,2026-02-13,BUY,6.21,2026-02-13 19:49,stock
+ALL,Manual,2026-02-13,180.25,6.21,GREEN,YES,50000.0,162.22,,,0.18,-49950,-99.90,Allstate,2026-02-13,BUY,6.21,2026-02-13 19:49,stock
 KTB,Manual,2026-02-13,85.4,6.11,GREEN,YES,50000.0,76.86,,,85.4,0,0.0,Kontoor Brands,2026-02-13,BUY,6.11,2026-02-13 19:49,stock
