@@ -1,15 +1,15 @@
-🎯 Daily Deployment Priorities - 2026-02-12 08:00 EST
+🎯 Daily Deployment Priorities - 2026-02-13 08:00 EST
 ============================================================
 
 1. ASTS (Score: 4.00)
    Conviction: 10.0/10 | Catalyst: 8.0/10 | Entry: 5.0/10
    FCC approval expected Q1 2026
 
-2. EURUSD (Score: 2.25)
-   Conviction: 9.0/10 | Catalyst: 5.0/10 | Entry: 5.0/10
-   
+2. ASTS (Score: 4.00)
+   Conviction: 10.0/10 | Catalyst: 8.0/10 | Entry: 5.0/10
+   FCC approval expected Q1 2026
 
-3. PLTR (Score: 2.25)
-   Conviction: 9.0/10 | Catalyst: 5.0/10 | Entry: 5.0/10
-   Reddit mentions: 1 (r/stocks) | Sentiment: neutral (0.0) | Engagement: 1250↑ 234💬 | Top post: $PLTR Palantir - Government contracts accelerating...
+3. SOL (Score: 3.20)
+   Conviction: 8.0/10 | Catalyst: 5.0/10 | Entry: 8.0/10
+   Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Max risk: $1127 (1.1% portfolio). Layer-1 with strong DeFi ecosystem. Multi-source valid
 
