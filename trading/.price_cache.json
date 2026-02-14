@@ -1,33 +1,19 @@
 {
-  "TAO": {
-    "ticker": "TAO",
-    "coingecko_id": "bittensor",
-    "price": 181.62,
-    "price_change_24h": 17.850526914229103,
-    "market_cap": 1723213255.0795763,
-    "last_updated": "2026-02-13T19:44:57",
-    "source": "coingecko",
-    "timestamp": "2026-02-13T19:45:00.980887"
+  "prices": {
+    "TAO": {
+      "price": 181.691236,
+      "rsi": 86.52214266205439,
+      "recommendation": "STRONG_BUY",
+      "oscillators": "NEUTRAL",
+      "moving_averages": "STRONG_BUY"
+    },
+    "SOL": {
+      "price": 84.99,
+      "rsi": 71.12951616491745,
+      "recommendation": "BUY",
+      "oscillators": "NEUTRAL",
+      "moving_averages": "STRONG_BUY"
+    }
   },
-  "PGR": {
-    "ticker": "PGR",
-    "coingecko_id": "upgrates",
-    "price": 8.41e-06,
-    "price_change_24h": null,
-    "market_cap": 7584.199455941055,
-    "last_updated": "2026-01-31T18:58:28",
-    "source": "coingecko",
-    "timestamp": "2026-02-13T19:45:00.980903"
-  },
-  "ALL": {
-    "ticker": "ALL",
-    "coingecko_id": "fetch-ai",
-    "price": 0.165777,
-    "price_change_24h": 4.865036390000331,
-    "market_cap": 377366580.4115035,
-    "last_updated": "2026-02-13T19:44:58",
-    "source": "coingecko",
-    "timestamp": "2026-02-13T19:45:00.980914"
-  },
-  "timestamp": "2026-02-13T19:45:00.980921"
+  "timestamp": "2026-02-13T20:00:07.419051"
 }
