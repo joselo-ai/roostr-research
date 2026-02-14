@@ -1,0 +1,14 @@
+{
+  "agent_id": "quant_fundamentals",
+  "display_name": "uQuant fundamentals",
+  "cluster": "quantitative",
+  "doctrine": {
+    "soul_statement": "Quantitative quant_fundamentals analysis",
+    "edge_hypothesis": "Data-driven edge for quant_fundamentals"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Signal 1", "Signal 2"],
+    "conviction_factors": {"metric1": 0.5, "metric2": 0.5}
+  },
+  "disqualifiers": ["Data quality issues"]
+}

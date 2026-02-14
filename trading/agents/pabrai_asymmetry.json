@@ -1,0 +1,14 @@
+{
+  "agent_id": "pabrai_asymmetry",
+  "display_name": "upabrai - asymmetry",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent pabrai_asymmetry philosophy",
+    "edge_hypothesis": "Edge hypothesis for pabrai_asymmetry"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}

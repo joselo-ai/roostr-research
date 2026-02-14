@@ -1,0 +1,14 @@
+{
+  "agent_id": "synthesizer",
+  "display_name": "usynthesizer",
+  "cluster": "synthesizer",
+  "doctrine": {
+    "soul_statement": "Quantitative synthesizer analysis",
+    "edge_hypothesis": "Data-driven edge for synthesizer"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Signal 1", "Signal 2"],
+    "conviction_factors": {"metric1": 0.5, "metric2": 0.5}
+  },
+  "disqualifiers": ["Data quality issues"]
+}

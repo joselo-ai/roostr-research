@@ -1,0 +1,14 @@
+{
+  "agent_id": "damodaran_valuation",
+  "display_name": "udamodaran - valuation",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent damodaran_valuation philosophy",
+    "edge_hypothesis": "Edge hypothesis for damodaran_valuation"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}

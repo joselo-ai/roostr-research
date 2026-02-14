@@ -1,0 +1,14 @@
+{
+  "agent_id": "fisher_scuttlebutt",
+  "display_name": "ufisher - scuttlebutt",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent fisher_scuttlebutt philosophy",
+    "edge_hypothesis": "Edge hypothesis for fisher_scuttlebutt"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}

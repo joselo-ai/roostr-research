@@ -1,0 +1,14 @@
+{
+  "agent_id": "druckenmiller_macro",
+  "display_name": "udruckenmiller - macro",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent druckenmiller_macro philosophy",
+    "edge_hypothesis": "Edge hypothesis for druckenmiller_macro"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}

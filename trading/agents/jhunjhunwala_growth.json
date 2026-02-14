@@ -1,0 +1,14 @@
+{
+  "agent_id": "jhunjhunwala_growth",
+  "display_name": "ujhunjhunwala - growth",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent jhunjhunwala_growth philosophy",
+    "edge_hypothesis": "Edge hypothesis for jhunjhunwala_growth"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}

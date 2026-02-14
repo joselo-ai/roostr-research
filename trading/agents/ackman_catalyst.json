@@ -1,0 +1,14 @@
+{
+  "agent_id": "ackman_catalyst",
+  "display_name": "uackman - catalyst",
+  "cluster": "fundamental",
+  "doctrine": {
+    "soul_statement": "Agent ackman_catalyst philosophy",
+    "edge_hypothesis": "Edge hypothesis for ackman_catalyst"
+  },
+  "decision_rules": {
+    "buy_triggers": ["Trigger 1", "Trigger 2"],
+    "conviction_factors": {"factor1": 0.5, "factor2": 0.5}
+  },
+  "disqualifiers": ["Disqualifier 1"]
+}
