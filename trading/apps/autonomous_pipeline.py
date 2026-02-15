@@ -55,39 +55,50 @@ def scan_for_signals():
     return result.returncode == 0
 
 
-def research_signal(ticker, source, conviction):
-    """Deep research on signal using Perplexity (placeholder for now)."""
+def research_signal(ticker, source, conviction, notes=""):
+    """Deep research on signal using Manus AI."""
     print(f"\n🔬 RESEARCH: Deep dive on {ticker} from {source}...")
     
-    # TODO: Integrate Perplexity API for structured research
-    # For now, return enhanced conviction based on existing data
+    # Import Manus research module
+    import sys
+    sys.path.insert(0, str(WORKSPACE / "apps"))
+    from manus_research import research_ticker
     
-    research_summary = {
+    # Run Manus research
+    report = research_ticker(
+        ticker=ticker,
+        source=source,
+        initial_conviction=conviction,
+        notes=notes,
+        agent_profile="manus-1.6"  # Use default agent
+    )
+    
+    log_event("research_complete", {
         "ticker": ticker,
-        "source": source,
-        "conviction": conviction,
-        "research_quality": "placeholder",
-        "catalyst_strength": "medium",
-        "risk_factors": ["market volatility", "sector rotation"]
-    }
+        "initial_conviction": conviction,
+        "enhanced_conviction": report["enhanced_conviction"],
+        "model": report["model"]
+    })
     
-    log_event("research_complete", research_summary)
-    
-    return research_summary
+    return report
 
 
 def deliberate_with_agents(ticker, research):
-    """Trigger 18-agent deliberation."""
+    """Trigger 18-agent deliberation with Manus research context."""
     print(f"\n🤖 DECIDE: 18-agent deliberation on {ticker}...")
     
+    # Use enhanced conviction from Manus research
+    enhanced_conviction = research.get("enhanced_conviction", research.get("initial_conviction", 5.0))
+    
     # TODO: Actually call deliberation.py with research context
-    # For now, use conviction from research
+    # For now, use enhanced conviction from Manus
     
     decision = {
         "ticker": ticker,
-        "conviction": research["conviction"],
-        "action": "BUY" if research["conviction"] >= CONVICTION_THRESHOLD else "PASS",
-        "reasoning": "Multi-agent consensus based on research"
+        "conviction": enhanced_conviction,
+        "action": "BUY" if enhanced_conviction >= CONVICTION_THRESHOLD else "PASS",
+        "reasoning": research.get("research", "")[:500],  # First 500 chars
+        "research_model": research.get("model", "unknown")
     }
     
     log_event("deliberation_complete", decision)

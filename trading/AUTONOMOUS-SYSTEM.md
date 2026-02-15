@@ -71,10 +71,10 @@ Close at stop-loss or exit signal
 Extract learning + update salience
 ```
 
-### 2. **perplexity_research.py**
-Structured deep research on every signal before deliberation.
+### 2. **manus_research.py**
+Structured deep research on every signal using Manus AI Wide Research.
 
-**Requires:** `PERPLEXITY_API_KEY` environment variable
+**Requires:** `MANUS_API_KEY` environment variable
 
 **Research Structure:**
 - Fundamentals (business, revenue, growth)
@@ -83,7 +83,15 @@ Structured deep research on every signal before deliberation.
 - Risk factors (company, sector, market)
 - Enhanced conviction (adjusted from initial signal)
 
-**Model:** `llama-3.1-sonar-large-128k-online`
+**Agent Profiles:**
+- `manus-1.6` (default, balanced)
+- `manus-1.6-lite` (faster, lower cost)
+- `manus-1.6-max` (most thorough, highest cost)
+
+**Advantages over Perplexity:**
+- Parallel multi-agent research (scales to hundreds of tickers)
+- Complete reports with structured output
+- Real-time web access via browser operator
 
 ### 3. **salience_loop.py**
 Self-learning system that extracts patterns and manages knowledge.
@@ -110,7 +118,7 @@ Self-learning system that extracts patterns and manages knowledge.
 trading/
 ├── apps/
 │   ├── autonomous_pipeline.py   # Main 24/7 loop
-│   ├── perplexity_research.py   # Deep research integration
+│   ├── manus_research.py        # Manus AI research integration
 │   ├── salience_loop.py         # Self-learning system
 │   ├── signal_scraper.py        # (existing) Scan Reddit/Discord/Twitter
 │   ├── risk_monitor.py          # (existing) Watch positions
@@ -133,8 +141,10 @@ trading/
 ### 1. **Environment Variables**
 
 ```bash
-# Required for Perplexity research
-export PERPLEXITY_API_KEY="pplx-xxxxx"
+# Required for Manus AI research
+export MANUS_API_KEY="your-manus-api-key"
+
+# Get your API key: https://manus.im/app?show_settings=integrations&app_name=api
 
 # Already configured (Alpaca paper trading)
 # ALPACA_API_KEY, ALPACA_SECRET_KEY in trading/.alpaca.env
@@ -183,14 +193,16 @@ kill <PID>
 - [x] Event logging
 - [x] Documentation
 
-**Phase 2: 🔄 TODO (Integration)**
-- [ ] Connect pipeline → perplexity_research.py
-- [ ] Connect pipeline → deliberation.py (18 agents)
+**Phase 2: ✅ INTEGRATED (Manus Research)**
+- [x] Connect pipeline → manus_research.py
+- [x] Enhanced conviction from Manus feeds into deliberation
+- [ ] Connect deliberation.py (18 agents) for full consensus
 - [ ] Connect pipeline → autonomous_executor.py --live
 - [ ] Test full end-to-end flow with paper trading
 
 **Phase 3: 🔄 TODO (Enhancements)**
-- [ ] Perplexity API key setup
+- [ ] Manus API key setup + testing
+- [ ] 18-agent deliberation integration
 - [ ] Salience manual override (G can boost/penalty learnings)
 - [ ] Dashboard visualization of salience scores
 - [ ] Telegram alerts for autonomous executions
@@ -219,25 +231,26 @@ kill <PID>
 
 ## Next Steps
 
-1. **Test Perplexity Integration**
-   ```bash
-   python3 apps/perplexity_research.py
-   ```
+1. **Get Manus API Key**
+   - Navigate to: https://manus.im/app?show_settings=integrations&app_name=api
+   - Generate API key
+   - Add to environment: `export MANUS_API_KEY="your-key-here"`
 
-2. **Test Salience Loop**
+2. **Test Manus Research Integration**
+   ```bash
+   python3 apps/manus_research.py
+   ```
+   (Will test research on ASTS signal)
+
+3. **Test Salience Loop**
    ```bash
    python3 apps/salience_loop.py
    ```
 
-3. **Run Full Pipeline** (when ready)
+4. **Run Full Pipeline** (when ready)
    ```bash
    python3 apps/autonomous_pipeline.py
    ```
-
-4. **Get Perplexity API Key**
-   - Sign up: https://www.perplexity.ai/pro
-   - Generate key: https://www.perplexity.ai/settings/api
-   - Add to environment: `export PERPLEXITY_API_KEY="pplx-xxxxx"`
 
 ---
 
