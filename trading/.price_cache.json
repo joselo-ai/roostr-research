@@ -1,19 +1,19 @@
 {
   "prices": {
     "TAO": {
-      "price": 190.611322,
-      "rsi": 59.97508431271272,
-      "recommendation": "BUY",
-      "oscillators": "NEUTRAL",
+      "price": 191.944878,
+      "rsi": 62.438396759992195,
+      "recommendation": "STRONG_BUY",
+      "oscillators": "BUY",
       "moving_averages": "STRONG_BUY"
     },
     "SOL": {
-      "price": 85.12,
-      "rsi": 34.98286095410076,
+      "price": 85.73,
+      "rsi": 41.67129507678951,
       "recommendation": "SELL",
       "oscillators": "NEUTRAL",
-      "moving_averages": "STRONG_SELL"
+      "moving_averages": "SELL"
     }
   },
-  "timestamp": "2026-02-15T23:00:09.111248"
+  "timestamp": "2026-02-16T00:00:05.748811"
 }
