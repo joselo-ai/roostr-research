@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Price Updater v2 - TradingView Integration
-Fetches TAO/SOL prices + technicals from TradingView and updates dashboard.html
+Fetches TAO/SOL prices + technicals from TradingView and updates index.html
 Run hourly via cron (no rate limits!)
 """
 
@@ -17,7 +17,7 @@ sys.path.append('/Users/agentjoselo/.openclaw/workspace/command-center')
 from activity_logger import log_trading, log_automation
 
 
-DASHBOARD_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/dashboard.html"
+DASHBOARD_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/index.html"
 POSITIONS_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/PAPER-TRADING-LOG.md"
 CACHE_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/.price_cache.json"
 
@@ -117,7 +117,7 @@ def calculate_pnl(symbol, current_price):
     }
 
 def update_dashboard(prices):
-    """Update dashboard.html with current prices"""
+    """Update index.html with current prices"""
     if not prices or len(prices) != 2:
         return False
     
