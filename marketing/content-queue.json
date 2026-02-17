@@ -238,14 +238,29 @@
       "posted": false,
       "scheduled_date": "2026-02-14",
       "note": "Week 1 recap - fill in real performance data (3 positions)"
+    },
+    {
+      "id": "w3-1",
+      "day": "Tuesday",
+      "date": "2026-02-17",
+      "time": "16:00 EST",
+      "slot": "afternoon",
+      "platforms": ["twitter"],
+      "type": "standalone",
+      "reply_to": "https://x.com/roostrcapital/status/2022053449681314006",
+      "content": "Week 3 begins.\n\n$ALL, $PGR, $KTB — 6 days deployed.\n\nMarkets gave us volatility. Insurance got repriced. Retail shifted.\n\nPosition updates + lessons learned incoming.\n\nFirst rule: let winners run, cut losers fast.\n\n🐓",
+      "posted": false,
+      "scheduled_date": "2026-02-17",
+      "note": "Week 3 start - Performance update teaser (PENDING MANUAL POST)"
     }
   ],
   "metadata": {
     "created": "2026-02-06T12:38:00Z",
-    "updated": "2026-02-12T21:01:45Z",
-    "total_posts": 17,
+    "updated": "2026-02-17T16:00:00Z",
+    "total_posts": 18,
     "week1_status": "8/8 posted - COMPLETE",
-    "week2_status": "7/10 posted - TRACKING LIVE",
+    "week2_status": "7/10 posted - NEEDS COMPLETION",
+    "week3_status": "0/1 posted - AUTOMATION BLOCKED",
     "thread_start": "https://x.com/roostrcapital/status/2019540291141922995",
     "latest_tweet": "https://x.com/roostrcapital/status/2022053449681314006",
     "platforms": ["twitter"],
@@ -256,6 +271,7 @@
       "evening": "19:00 EST"
     },
     "week2_theme": "First capital deployment - ALL + PGR + KTB",
-    "next_action": "Thursday 11 AM: Position sizing methodology (w2-8)"
+    "week3_theme": "Performance tracking + market adaptation",
+    "next_action": "MANUAL POST NEEDED: See MANUAL-POST-NEEDED-2026-02-17-16-00.txt"
   }
 }

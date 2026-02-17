@@ -1,0 +1,41 @@
+ROOSTR AFTERNOON POST - Tuesday, Feb 17, 2026 @ 4:00 PM EST
+================================================================
+
+SLOT: afternoon
+TYPE: standalone
+REPLY_TO: https://x.com/roostrcapital/status/2022053449681314006 (latest thread)
+
+CONTENT:
+--------
+Week 3 begins.
+
+$ALL, $PGR, $KTB — 6 days deployed.
+
+Markets gave us volatility. Insurance got repriced. Retail shifted.
+
+Position updates + lessons learned incoming.
+
+First rule: let winners run, cut losers fast.
+
+🐓
+
+--------
+
+POST MANUALLY TO: https://twitter.com/roostrcapital
+
+AFTER POSTING:
+1. Copy the tweet URL
+2. Update content-queue.json (add this as id "w3-1", mark posted=true)
+3. Update posted-log.json with URL and timestamp
+
+REASON FOR MANUAL:
+Browser automation unavailable (OpenClaw browser control service offline)
+
+CONTEXT:
+- Week 2 content ended Feb 14
+- This is first Week 3 post
+- Theme: Position performance + market adaptation
+- Next posts should cover: individual position P&L, lessons, new signals
+
+Generated: 2026-02-17 16:00:00 EST
+Cron Job: fcf7001e-3e62-4870-831e-a2b35e2bae16
