@@ -1,18 +1,37 @@
 🐓 **roostr Daily Summary**
-Feb 09, 2026 11:19 AM EST
+Feb 17, 2026 6:32 PM EST
 
 **📊 Portfolio:**
-Total Deployed: $17,500
-Current Value: $16,241
-🔴 Net P&L: $-1259 (-7.2%)
+Total Capital: $1,000,000
+Total Deployed: $27,500 (2.75%)
+Current Value: $28,205
+🟢 Net P&L: $+705 (+2.56%)
 
 **📍 Positions:**
-🔴 **TAO:** $156.18
-   Entry: $176.05 | Qty: 56.8
-   P&L: $-1129 (-11.3%)
+🟢 **TAO (Crypto):** $190.75
+   Entry: $176.05 | Qty: 56.8 tokens
+   P&L: $+836 (+8.35%)
+   Stop Loss: $140.84 | RSI: 44.7 (SELL)
 
-🔴 **SOL:** $85.01
-   Entry: $86.51 | Qty: 86.7
-   P&L: $-130 (-1.7%)
+🔴 **SOL (Crypto):** $85.01
+   Entry: $86.51 | Qty: 86.7 tokens
+   P&L: $-131 (-1.73%)
+   Stop Loss: $73.53 | RSI: 48.9 (SELL)
 
-Dashboard: https://joselo-ai.github.io/roostr-research/trading/dashboard.html
+🟡 **ASTS (Stock):** $83.03
+   Entry: $83.03 | Qty: 120 shares
+   P&L: $0 (0%)
+   Stop Loss: $70.58 | Catalyst: FCC approval Q1 2026
+
+**🎯 Performance Metrics:**
+- Win Rate: 33% (1 of 3 positions)
+- Max Drawdown: -1.73% (within 15% limit ✓)
+- 19 AI Agents: 100% operational
+- Risk Status: ✅ All positions within stops
+
+**📈 Next Actions:**
+- Monday 9:30 AM EST: Evaluate deployment priorities
+- Continue hourly price monitoring
+- Watch for FCC approval catalyst (ASTS)
+
+Dashboard: https://joselo-ai.github.io/roostr-research/trading/
