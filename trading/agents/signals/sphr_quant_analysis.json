@@ -1,0 +1,95 @@
+{
+  "ticker": "SPHR",
+  "timestamp": "2026-02-17T14:49:38.903941",
+  "agents": {
+    "valuation": {
+      "agent_name": "Quant Valuation",
+      "ticker": "SPHR",
+      "conviction": 3.33,
+      "action": "SELL",
+      "rationale": "I assess SPHR as overvalued based on quantitative analysis. P/E ratio of 155.34 suggests premium pricing. P/B of 1.83 indicates market expects growth. EV/EBITDA of 25.02 reflects market premium.",
+      "key_metrics": {
+        "pe_ratio": 155.34,
+        "pe_score": 1.5,
+        "pb_ratio": 1.83,
+        "pb_score": 7.0,
+        "ev_ebitda": 25.02,
+        "ebitda_score": 1.5,
+        "current_price": 114.95,
+        "market_cap": 4080968704,
+        "conviction": 3.33
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-17T14:49:39.312608"
+    },
+    "technicals": {
+      "agent_name": "Quant Technicals",
+      "ticker": "SPHR",
+      "conviction": 5.5,
+      "action": "BUY",
+      "rationale": "I see SPHR as moderately bullish from a technical perspective. RSI at 70.1 is overbought (bearish), MACD shows bullish crossover, and price is above 50 DMA (bullish). Volume trends are above average volume.",
+      "key_metrics": {
+        "rsi": 70.1,
+        "rsi_signal": "overbought (bearish)",
+        "macd": 4.4069,
+        "macd_signal": "bullish crossover",
+        "ma_50": 94.22,
+        "ma_200": null,
+        "current_price": 114.95,
+        "ma_signal": "above 50 DMA (bullish)",
+        "volume_signal": "above average volume",
+        "conviction": 5.5
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-17T14:49:39.547427"
+    },
+    "fundamentals": {
+      "agent_name": "Quant Fundamentals",
+      "ticker": "SPHR",
+      "conviction": 6.1,
+      "action": "BUY",
+      "rationale": "I assess SPHR fundamentals as strong. ROE of 1.51% shows moderate returns. Debt/Equity at 43.05 indicates conservative leverage. Revenue growing at 27.9%. Profit margins at 2.74%.",
+      "key_metrics": {
+        "roe": 1.51,
+        "roe_score": 2.0,
+        "debt_to_equity": 43.05,
+        "debt_score": 7.5,
+        "fcf_yield": 8.24,
+        "fcf_score": 9.0,
+        "revenue_growth": 27.9,
+        "growth_score": 9.0,
+        "profit_margin": 2.74,
+        "margin_score": 3.0,
+        "conviction": 6.1
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-17T14:49:39.562605"
+    },
+    "sentiment": {
+      "agent_name": "Quant Sentiment",
+      "ticker": "SPHR",
+      "conviction": 5.5,
+      "action": "BUY",
+      "rationale": "I see moderately bullish sentiment for SPHR. News sentiment shows 10 recent articles with mixed tone. Overall crowd sentiment is moderately bullish.",
+      "key_metrics": {
+        "news_score": 5.0,
+        "news_count": 10,
+        "momentum_score": 6.0,
+        "conviction": 5.5
+      },
+      "data_quality": "MEDIUM",
+      "timestamp": "2026-02-17T14:49:39.884049"
+    }
+  },
+  "summary": {
+    "consensus": "STRONG BUY",
+    "avg_conviction": 5.11,
+    "vote_distribution": {
+      "BUY": 3,
+      "SELL": 1,
+      "HOLD": 0,
+      "ABSTAIN": 0
+    },
+    "data_quality": "HIGH"
+  }
+}

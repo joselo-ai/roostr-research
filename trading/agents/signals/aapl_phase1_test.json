@@ -1,0 +1,40 @@
+{
+  "ticker": "AAPL",
+  "tests": {
+    "agent_count": {
+      "expected": 4,
+      "actual": 4,
+      "passed": true
+    },
+    "no_abstain": {
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    "data_driven_scores": {
+      "expected": "All agents with non-default scores",
+      "actual": "3/4 agents",
+      "passed": false
+    },
+    "data_quality": {
+      "expected": "HIGH or MEDIUM",
+      "actual": "HIGH",
+      "passed": true
+    },
+    "output_format": {
+      "expected": "All required fields present",
+      "passed": true
+    },
+    "valid_actions": {
+      "expected": "All actions in [BUY, SELL, HOLD, ABSTAIN]",
+      "passed": true
+    }
+  },
+  "summary": {
+    "phase1_passed": false,
+    "tests_passed": 5,
+    "tests_total": 6,
+    "consensus": "HOLD",
+    "avg_conviction": 4.44
+  }
+}
