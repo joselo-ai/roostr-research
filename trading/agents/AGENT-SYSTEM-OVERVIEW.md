@@ -1,4 +1,4 @@
-# roostr Capital - 18-Agent Trading System
+# roostr Capital - 19-Agent Trading System
 **The First AI-Run Hedge Fund**
 
 ---
@@ -7,13 +7,13 @@
 
 **Problem:** Human traders have bias, limited perspectives, and can't scale.
 
-**Solution:** 18 AI agents analyze every trade through different investment philosophies. No single agent decides. Democratic voting → conviction score → deploy only high-conviction signals.
+**Solution:** 19 AI agents analyze every trade through different investment philosophies. No single agent decides. Democratic voting → conviction score → deploy only high-conviction signals.
 
 **Result:** Algorithmic decision-making with full transparency. Scales infinitely (evaluate 1000 stocks/day with same quality).
 
 ---
 
-## 🤖 The 18 Agents
+## 🤖 The 19 Agents
 
 ### 12 Legendary Investor Agents
 
@@ -39,10 +39,32 @@ Each agent embodies a legendary investor's philosophy and evaluates every signal
 3. **Fundamentals Agent** - ROE, debt/equity, free cash flow. Is the business healthy?
 4. **Sentiment Agent** - Reddit, Twitter, news sentiment. Is the crowd bullish or bearish?
 
-### 2 Risk/Portfolio Managers
+### 3 Risk/Portfolio Managers
 
-1. **Joselo (Risk Manager)** - Validate stops, position sizing, portfolio exposure. Reject if risk too high.
-2. **Portfolio Manager** - Synthesize all 18 opinions → final conviction score → deploy or hold.
+1. **Joselo (Risk Manager)** - Governance gatekeeper. Validate stops, position sizing, portfolio exposure. Reject if risk too high.
+2. **John C. Hull (Quantitative Risk)** - Mathematical risk architect. VaR, Greeks, tail risk, correlation matrices, stress testing.
+3. **Portfolio Manager** - Synthesize all 19 opinions → final conviction score → deploy or hold.
+
+#### Hull's Risk Framework (Feb 17, 2026)
+
+**Quantitative Risk Metrics:**
+- **VaR (Value at Risk)**: 1-day VaR ≤ 2% of capital (95% confidence), 10-day VaR for regulatory compliance
+- **Expected Shortfall (CVaR)**: Average loss in worst 5% scenarios ≤ 3% of capital
+- **Greeks Exposure**: Track delta (directional), gamma (convexity), vega (volatility sensitivity), theta (time decay)
+- **Correlation Matrix**: Monitor pairwise correlations, flag if avg >0.7 (hidden concentration risk)
+- **Tail Risk**: Kurtosis/skewness analysis to catch fat-tail events VaR misses
+
+**Stress Testing (5 Macro Scenarios):**
+1. 2008 Financial Crisis (-40% equities, +200% VIX spike)
+2. 2020 COVID Crash (-35% equities, liquidity freeze)
+3. 1987 Black Monday (-22% single day crash)
+4. 2022 Rate Shock (+400bps rates, growth stock collapse)
+5. Crypto Winter 2022 (-70% crypto, contagion to tech)
+
+**Integration with Joselo:**
+- Joselo = Rules & governance (position size, stops, exposure limits)
+- Hull = Mathematical quantification (VaR, tail risk, correlation, stress tests)
+- Combined = Comprehensive risk management (qualitative + quantitative)
 
 ---
 
