@@ -1,0 +1,76 @@
+
+╔════════════════════════════════════════════════════════════════════╗
+║                                                                    ║
+║            🎭  18 LEGENDARY INVESTORS DEBATE SYSTEM  🎭            ║
+║                                                                    ║
+║  ┌──────────────────────────────────────────────────────────┐   ║
+║  │  Where Warren Buffett, Michael Burry, Cathie Wood, and  │   ║
+║  │  15 other legendary minds battle over trading signals   │   ║
+║  └──────────────────────────────────────────────────────────┘   ║
+║                                                                    ║
+║  STATUS: ✅ COMPLETE & TESTED                                     ║
+║  AGENTS: 18/18 (All DNA cards created and validated)              ║
+║  TESTS:  5/5 passing                                              ║
+║                                                                    ║
+║  ┌─────────────────── THE 18 LEGENDS ────────────────────┐       ║
+║  │                                                         │       ║
+║  │  🎩 Warren Buffett       🔬 Phil Fisher               │       ║
+║  │  🧠 Charlie Munger       🏪 Peter Lynch               │       ║
+║  │  🔍 Michael Burry        ⚡ Bill Ackman               │       ║
+║  │  📊 Benjamin Graham      🌊 Stan Druckenmiller        │       ║
+║  │  🎯 Mohnish Pabrai       📈 Aswath Damodaran          │       ║
+║  │  🚀 Cathie Wood          🐂 Rakesh Jhunjhunwala       │       ║
+║  │                                                         │       ║
+║  │  💰 Valuation Agent      📉 Technicals Agent          │       ║
+║  │  📱 Sentiment Agent      🛡️ Risk Manager              │       ║
+║  │  📊 Fundamentals Agent   ⚖️ Portfolio Manager          │       ║
+║  │                                                         │       ║
+║  └─────────────────────────────────────────────────────────┘       ║
+║                                                                    ║
+║  🚀 QUICK START:                                                   ║
+║     cd trading/agents                                              ║
+║     ./debate.sh                                                    ║
+║                                                                    ║
+║  📚 DOCUMENTATION:                                                 ║
+║     • QUICKSTART.md          - Start here                          ║
+║     • README-18-AGENTS-DEBATE.md - Full docs                       ║
+║     • DELIVERY_SUMMARY.md    - What was built                      ║
+║     • INDEX.md               - File navigation                     ║
+║                                                                    ║
+║  🧪 TEST FIRST:                                                    ║
+║     python3 test_debate_system.py                                  ║
+║                                                                    ║
+║  ⚙️ CORE FILES:                                                    ║
+║     • debate_orchestrator.py  - Main orchestrator                  ║
+║     • discord_utils.py        - Discord integration                ║
+║     • run_debate.py          - CLI launcher                        ║
+║     • investors/*.json       - 18 DNA cards                        ║
+║                                                                    ║
+║  📊 EXAMPLE SIGNALS:                                               ║
+║     • signals/asts_signal.json                                     ║
+║     • signals/example_value_stock.json                             ║
+║                                                                    ║
+║  🎯 WHAT HAPPENS:                                                  ║
+║     1. Post signal to Discord #18-agents-debate                    ║
+║     2. Spawn 18 sub-agents (real OpenClaw sessions)                ║
+║     3. Each agent analyzes & posts to Discord                      ║
+║     4. Agents read each other's posts & respond                    ║
+║     5. Tally votes: BUY/HOLD/SELL                                  ║
+║     6. Calculate consensus & conviction                            ║
+║     7. Post final report to #research                              ║
+║                                                                    ║
+║  ⏱️ TIMING:                                                         ║
+║     • Quick debate (1 round): ~2 minutes                           ║
+║     • Standard debate (2 rounds): ~5 minutes [RECOMMENDED]         ║
+║     • Deep debate (3 rounds): ~10 minutes                          ║
+║                                                                    ║
+║  🎭 READY TO DEPLOY:                                               ║
+║                                                                    ║
+║     The theater is built.                                          ║
+║     The legends are ready.                                         ║
+║     The stage awaits your signal.                                  ║
+║                                                                    ║
+║     Let the battle of ideas begin. 🎭                              ║
+║                                                                    ║
+╚════════════════════════════════════════════════════════════════════╝
+

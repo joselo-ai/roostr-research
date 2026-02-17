@@ -1,0 +1,74 @@
+{
+  "pipeline": {
+    "name": "Content Factory",
+    "version": "1.0.0",
+    "description": "Autonomous multi-agent pipeline for viral content generation"
+  },
+  "agents": {
+    "research": {
+      "enabled": true,
+      "schedule": "0 9,17 * * *",
+      "schedule_description": "Runs at 9 AM and 5 PM EST daily",
+      "top_stories": 7,
+      "search_queries": [
+        "trending AI news today",
+        "trending cryptocurrency trading news",
+        "viral tech stories today",
+        "trending startup business news"
+      ]
+    },
+    "script_writer": {
+      "enabled": true,
+      "trigger": "event",
+      "trigger_description": "Monitors #trending-stories for new posts",
+      "scripts_per_run": 3,
+      "formats": ["educational", "entertaining", "controversy", "tutorial"]
+    },
+    "thumbnail_generator": {
+      "enabled": true,
+      "trigger": "event",
+      "trigger_description": "Monitors #scripts for new posts",
+      "thumbnails_per_run": 2,
+      "model": "dall-e-3",
+      "size": "1792x1024",
+      "quality": "hd",
+      "style": "vivid"
+    },
+    "package_assembler": {
+      "enabled": true,
+      "trigger": "event",
+      "trigger_description": "Monitors all channels for complete packages",
+      "packages_per_run": 5
+    }
+  },
+  "discord": {
+    "channels": {
+      "trending_stories": "1472690048192348412",
+      "scripts": "1472690073639321750",
+      "thumbnails": "1472690097672421571",
+      "ready_to_publish": "1472690120372126028"
+    },
+    "guild_id": "1469016616711884907"
+  },
+  "scoring_weights": {
+    "virality": 0.3,
+    "relevance": 0.4,
+    "freshness": 0.2,
+    "engagement_potential": 0.1
+  },
+  "relevant_keywords": [
+    "ai", "artificial intelligence", "chatgpt", "openai", "llm", "machine learning",
+    "trading", "stocks", "crypto", "bitcoin", "ethereum", "market", "finance",
+    "tech", "startup", "business", "entrepreneur", "innovation",
+    "automation", "productivity", "saas", "software"
+  ],
+  "output": {
+    "thumbnail_dir": "generated_thumbnails",
+    "log_dir": "logs"
+  },
+  "timing": {
+    "delay_between_agents_seconds": 10,
+    "message_fetch_limit": 15,
+    "request_timeout_seconds": 60
+  }
+}

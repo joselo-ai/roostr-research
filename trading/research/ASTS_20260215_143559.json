@@ -1,0 +1,11 @@
+{
+  "ticker": "ASTS",
+  "source": "Reddit-wallstreetbets",
+  "initial_conviction": 10.0,
+  "enhanced_conviction": 10.0,
+  "research": "Placeholder research for ASTS.\n\nManus API key not configured.\nUsing initial conviction: 10.0/10\n\nNotes: FCC approval Q1 2026",
+  "timestamp": "2026-02-15T14:35:59.017098",
+  "model": "placeholder",
+  "task_id": null,
+  "task_url": null
+}

@@ -1,0 +1,41 @@
+🚨 MANUAL POST NEEDED - 4 PM Afternoon Slot (Feb 16, 2026)
+
+AUTOMATION FAILED: Browser automation unavailable, Selenium ChromeDriver errors
+
+WHAT TO POST: w2-8 (Position sizing methodology)
+
+REPLY TO: https://x.com/roostrcapital/status/2022053449681314006
+
+TWEET CONTENT:
+---
+Position sizing = conviction scoring:
+
+Portfolio: $100k
+
+$ALL (10/10): $20k (20%) — Highest conviction
+$PGR (9/10): $15k (15%) — Second highest
+$KTB (7.5/10): $10k (10%) — Diversification
+
+Size follows conviction.
+Stops at -8% to -10%.
+Max loss if all hit stops: $3.8k (3.8%).
+
+Risk-adjusted by score.
+---
+
+INSTRUCTIONS:
+1. Open https://x.com/roostrcapital/status/2022053449681314006
+2. Click Reply
+3. Paste tweet content above
+4. Post
+5. Capture tweet URL
+6. Run: cd /Users/agentjoselo/.openclaw/workspace/marketing && ./update_after_manual.sh <TWEET_URL> w2-8
+
+TECHNICAL NOTES:
+- OpenClaw browser tool: service timeout
+- Selenium: ChromeDriver session creation failed
+- No Twitter API credentials found in workspace
+- Need to fix automation before next cron run (7 PM evening slot)
+
+CRON JOB: roostr Afternoon Post (4 PM EST)
+CRON ID: fcf7001e-3e62-4870-831e-a2b35e2bae16

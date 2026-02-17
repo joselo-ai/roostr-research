@@ -1,0 +1,27 @@
+{
+  "ticker": "ASTS",
+  "query": "Analyze ASTS. Focus on: fundamentals, valuation, risks, catalysts.",
+  "summary": "Research on ASTS is being conducted. This is a placeholder response while Dexter integration is being finalized.",
+  "recommendation": "HOLD",
+  "conviction": 5,
+  "financials": {
+    "revenue_growth_5yr": "Analyzing...",
+    "profit_margin": "Analyzing...",
+    "debt_to_equity": "Analyzing..."
+  },
+  "valuation": {
+    "pe_ratio": "Analyzing...",
+    "price_to_fcf": "Analyzing...",
+    "dcf_estimate": "Calculating..."
+  },
+  "risks": [
+    "Financial data integration in progress",
+    "Requires Financial Datasets API key configuration"
+  ],
+  "catalysts": [
+    "Dexter integration being finalized"
+  ],
+  "research_notes": "\nDEXTER RESEARCH REPORT: ASTS\n====================================\n\nSTATUS: Integration in progress\n\nThis is a placeholder response. To enable full Dexter research:\n\n1. Configure Financial Datasets API key in .env:\n   FINANCIAL_DATASETS_API_KEY=your-key-here\n\n2. Configure LLM provider (OpenAI/Anthropic):\n   OPENAI_API_KEY=your-key-here\n   OR\n   ANTHROPIC_API_KEY=your-key-here\n\n3. Run research query through Dexter agent\n\nQUERY: Analyze ASTS. Focus on: fundamentals, valuation, risks, catalysts.\n\nThe integration framework is complete. Real financial data will be \npopulated once API keys are configured.\n",
+  "timestamp": "2026-02-15T16:02:20.137694",
+  "research_time": 0.01725602149963379
+}

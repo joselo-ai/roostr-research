@@ -1,0 +1,31 @@
+TWEET READY TO POST - Thursday Feb 12, 2026 12:00 PM (Midday)
+
+From content-queue.json (w2-8)
+Type: STANDALONE tweet (not a reply)
+Post to: @roostrcapital
+
+---
+
+Position sizing = conviction scoring:
+
+Portfolio: $100k
+
+$ALL (10/10): $20k (20%) — Highest conviction
+$PGR (9/10): $15k (15%) — Second highest
+$KTB (7.5/10): $10k (10%) — Diversification
+
+Size follows conviction.
+Stops at -8% to -10%.
+Max loss if all hit stops: $3.8k (3.8%).
+
+Risk-adjusted by score.
+
+---
+
+AFTER POSTING MANUALLY:
+1. Copy the tweet URL
+2. Run: openclaw "Update content-queue.json marking w2-8 posted with URL [paste URL] and timestamp"
+3. Add to posted-log.json
+
+Note: This is w2-8 from the content queue
+Scheduled: Thursday Feb 12, 11:00 AM (morning slot, closest to midday)

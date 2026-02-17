@@ -1,0 +1,22 @@
+{
+  "guild_id": "1469019919671885915",
+  "channels": {
+    "general": "1469019921592619154",
+    "trading-signals": "1472685997182685466",
+    "trading-updates": "1472686012286242952",
+    "research": "1472686030204178534",
+    "agent-chat": "1472686047187173628",
+    "logs": "1472686064299675750",
+    "morning-brief": "1472688401558933578",
+    "dexter-research": "1472697429852819489"
+  },
+  "routing": {
+    "signals": "trading-signals",
+    "updates": "trading-updates",
+    "research": "research",
+    "chat": "agent-chat",
+    "monitoring": "logs",
+    "morning": "morning-brief",
+    "dexter": "dexter-research"
+  }
+}
