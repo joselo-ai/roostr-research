@@ -2,58 +2,692 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=trading/">
-    <title>roostr Capital - Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roostr Capital - The First Multi-Agent AI Hedge Fund Built in Public</title>
+    <meta name="description" content="18 AI agents hunt information asymmetries before Wall Street wakes up. 100+ stocks scanned daily. Full transparency.">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
         }
-        .loader {
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        .header {
             text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #00ff00;
+            margin-bottom: 40px;
         }
-        .spinner {
-            border: 4px solid rgba(74, 222, 128, 0.1);
-            border-top: 4px solid #4ade80;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
+        
+        .logo {
+            font-size: 4em;
+            margin-bottom: 10px;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        
         h1 {
-            font-size: 2em;
-            margin: 0;
-            background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #00ff00;
         }
-        p {
-            color: rgba(255,255,255,0.6);
+        
+        .tagline {
+            font-size: 1.3em;
+            color: #808080;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
             margin-top: 10px;
+        }
+        
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #00ff00;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        /* Operation Timeline */
+        .timeline {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .timeline-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            border-left: 4px solid #00ff00;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .timeline-item.complete {
+            border-left-color: #00ff00;
+        }
+        
+        .timeline-item.pending {
+            border-left-color: #808080;
+            opacity: 0.6;
+        }
+        
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #00ff00;
+        }
+        
+        .status {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .status.complete {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+        }
+        
+        .status.pending {
+            background: rgba(128, 128, 128, 0.2);
+            color: #808080;
+        }
+        
+        .timeline-content {
+            color: #cccccc;
+            font-size: 0.95em;
+        }
+        
+        /* Top 5 Opportunities */
+        .opportunities {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .opportunity {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            border-left: 4px solid #00ff00;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .opportunity.high { border-left-color: #00ff00; }
+        .opportunity.medium { border-left-color: #fbbf24; }
+        .opportunity.low { border-left-color: #808080; }
+        
+        .opp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .ticker {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        
+        .conviction {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #00ff00;
+        }
+        
+        .opp-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .meta-item {
+            font-size: 0.85em;
+        }
+        
+        .meta-label {
+            color: #808080;
+            margin-bottom: 4px;
+        }
+        
+        .meta-value {
+            color: #ffffff;
+            font-weight: 600;
+        }
+        
+        .opp-agents {
+            font-size: 0.9em;
+            color: #cccccc;
+            line-height: 1.5;
+        }
+        
+        /* Portfolio */
+        .portfolio {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .position {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            border-left: 4px solid;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .position.profit { border-left-color: #00ff00; }
+        .position.loss { border-left-color: #f87171; }
+        .position.neutral { border-left-color: #808080; }
+        
+        .pos-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .pnl {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+        
+        .pnl.positive { color: #00ff00; }
+        .pnl.negative { color: #f87171; }
+        .pnl.neutral { color: #808080; }
+        
+        /* Agents Grid */
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .agent-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #333;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .agent-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        
+        .agent-role {
+            font-size: 0.85em;
+            color: #808080;
+            margin-bottom: 10px;
+        }
+        
+        .agent-status {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75em;
+            padding: 4px 8px;
+            border-radius: 4px;
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+            color: #808080;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .links a {
+            color: #00ff00;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        .links a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .tagline { font-size: 1.1em; }
+            .logo { font-size: 3em; }
+            .opp-meta { grid-template-columns: 1fr; }
+            .agents-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <div class="loader">
-        <div class="spinner"></div>
-        <h1>roostr Capital</h1>
-        <p>Loading dashboard...</p>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🐓</div>
+            <h1>roostr Capital</h1>
+            <p class="tagline">"We hunt information asymmetries before Wall Street wakes up"</p>
+            <div class="live-badge">
+                <span class="live-dot"></span>
+                18 AI AGENTS OPERATIONAL
+            </div>
+        </div>
+        
+        <!-- Daily Operation Status -->
+        <div class="section">
+            <h2>📊 Today's Hunt (Feb 17, 2026)</h2>
+            <div class="timeline">
+                <div class="timeline-item complete">
+                    <div class="timeline-header">
+                        <span class="time">9:00 AM EST - Agent Scanner</span>
+                        <span class="status complete">✓ COMPLETE</span>
+                    </div>
+                    <div class="timeline-content">
+                        → 100+ stocks scanned (S&P 500 + trending social)<br>
+                        → 18 agents voted (ensemble deliberation)<br>
+                        → Top 5 opportunities identified<br>
+                        → Conviction scores calculated
+                    </div>
+                </div>
+                
+                <div class="timeline-item complete">
+                    <div class="timeline-header">
+                        <span class="time">1:00 PM EST - Risk Check</span>
+                        <span class="status complete">✓ COMPLETE</span>
+                    </div>
+                    <div class="timeline-content">
+                        → Joselo reviewed top signals<br>
+                        → Position sizing validated (conviction-based)<br>
+                        → Stop-loss levels set (-8% to -10%)<br>
+                        → Max portfolio loss confirmed (&lt;3.8%)
+                    </div>
+                </div>
+                
+                <div class="timeline-item pending">
+                    <div class="timeline-header">
+                        <span class="time">3:00 PM EST - Execution</span>
+                        <span class="status pending">⏳ PENDING</span>
+                    </div>
+                    <div class="timeline-content">
+                        → G final approval<br>
+                        → Trades deployed (paper trading)<br>
+                        → Execution monitoring
+                    </div>
+                </div>
+                
+                <div class="timeline-item pending">
+                    <div class="timeline-header">
+                        <span class="time">4:00 PM EST - Publish</span>
+                        <span class="status pending">⏳ PENDING</span>
+                    </div>
+                    <div class="timeline-content">
+                        → GitHub updated (conviction docs)<br>
+                        → Dashboard refreshed<br>
+                        → Twitter announcement
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Top 5 Opportunities -->
+        <div class="section">
+            <h2>🎯 Top 5 Opportunities (In Review)</h2>
+            <div class="opportunities">
+                <div class="opportunity high">
+                    <div class="opp-header">
+                        <span class="ticker">$ACGL</span>
+                        <span class="conviction">8.5/10</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Price</div>
+                            <div class="meta-value">$117.43</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Votes</div>
+                            <div class="meta-value">14 BUY / 3 HOLD / 1 SELL</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Status</div>
+                            <div class="meta-value" style="color: #00ff00;">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Lead Agents:</strong> Buffett (9/10), Munger (9/10), Value Agent (9/10)<br>
+                        <strong>Thesis:</strong> Undervalued insurance (P/E 12 vs sector 18), strong FCF, quality business
+                    </div>
+                </div>
+                
+                <div class="opportunity medium">
+                    <div class="opp-header">
+                        <span class="ticker">$ASTS</span>
+                        <span class="conviction">7.0/10</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Price</div>
+                            <div class="meta-value">$83.03</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Votes</div>
+                            <div class="meta-value">11 BUY / 5 HOLD / 2 SELL</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Status</div>
+                            <div class="meta-value" style="color: #00ff00;">APPROVED</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Lead Agents:</strong> Catalyst (8/10), Burry (7/10), Druckenmiller (8/10)<br>
+                        <strong>Thesis:</strong> Binary catalyst (FCC approval Q1 2026), asymmetric risk/reward
+                    </div>
+                </div>
+                
+                <div class="opportunity low">
+                    <div class="opp-header">
+                        <span class="ticker">$PLTR</span>
+                        <span class="conviction">6.5/10</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Price</div>
+                            <div class="meta-value">$89.21</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Votes</div>
+                            <div class="meta-value">9 BUY / 6 HOLD / 3 SELL</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Status</div>
+                            <div class="meta-value" style="color: #808080;">REJECTED</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Lead Agents:</strong> Social Agent (8/10), Catalyst (7/10)<br>
+                        <strong>Reason:</strong> Below 7/10 threshold, no deployment (discipline &gt; hype)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Current Portfolio -->
+        <div class="section">
+            <h2>💼 Current Portfolio (Phase 1: $1M Paper Trading)</h2>
+            <div class="portfolio">
+                <div class="position profit">
+                    <div class="pos-header">
+                        <span class="ticker">TAO (Crypto)</span>
+                        <span class="pnl positive">+$836 (+8.35%)</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Entry</div>
+                            <div class="meta-value">$176.05</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Current</div>
+                            <div class="meta-value">$190.75</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Size</div>
+                            <div class="meta-value">$10,000</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Stop Loss</div>
+                            <div class="meta-value">$140.84</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Source:</strong> Yieldschool-Dan (9/10 conviction)<br>
+                        <strong>Thesis:</strong> AI blockchain + novel tech + supply dynamics
+                    </div>
+                </div>
+                
+                <div class="position loss">
+                    <div class="pos-header">
+                        <span class="ticker">SOL (Crypto)</span>
+                        <span class="pnl negative">-$131 (-1.73%)</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Entry</div>
+                            <div class="meta-value">$86.51</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Current</div>
+                            <div class="meta-value">$85.01</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Size</div>
+                            <div class="meta-value">$7,500</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Stop Loss</div>
+                            <div class="meta-value">$73.53</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Source:</strong> Yieldschool-YieldHub (8/10 conviction)<br>
+                        <strong>Thesis:</strong> Layer-1 with strong DeFi ecosystem
+                    </div>
+                </div>
+                
+                <div class="position neutral">
+                    <div class="pos-header">
+                        <span class="ticker">ASTS (Stock)</span>
+                        <span class="pnl neutral">$0 (0%)</span>
+                    </div>
+                    <div class="opp-meta">
+                        <div class="meta-item">
+                            <div class="meta-label">Entry</div>
+                            <div class="meta-value">$83.03</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Current</div>
+                            <div class="meta-value">$83.03</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Size</div>
+                            <div class="meta-value">$10,000</div>
+                        </div>
+                        <div class="meta-item">
+                            <div class="meta-label">Stop Loss</div>
+                            <div class="meta-value">$70.58</div>
+                        </div>
+                    </div>
+                    <div class="opp-agents">
+                        <strong>Source:</strong> Reddit-wallstreetbets (10/10 conviction)<br>
+                        <strong>Catalyst:</strong> FCC approval expected Q1 2026
+                    </div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 15px; background: rgba(0, 255, 0, 0.05); border: 1px solid #00ff00; border-radius: 8px;">
+                <div style="font-family: 'JetBrains Mono', monospace; color: #00ff00;">
+                    <strong>Portfolio Summary:</strong><br>
+                    Total Capital: $1,000,000 | Deployed: $27,500 (2.75%) | Total P&L: <span style="color: #00ff00;">+$705 (+2.56%)</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 18-Agent System -->
+        <div class="section">
+            <h2>🤖 18-Agent System (Ensemble Intelligence)</h2>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-name">Social Arbitrage Agent</div>
+                    <div class="agent-role">Reddit, Discord, Twitter signals</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Value Investing Agent</div>
+                    <div class="agent-role">Undervalued gems, margin of safety</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Catalyst Agent</div>
+                    <div class="agent-role">Events, earnings, FDA, M&A</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Warren Buffett</div>
+                    <div class="agent-role">Wonderful companies, fair prices</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Charlie Munger</div>
+                    <div class="agent-role">Quality businesses, high moat</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Michael Burry</div>
+                    <div class="agent-role">Deep value, contrarian bets</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Benjamin Graham</div>
+                    <div class="agent-role">Hidden gems, margin of safety</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mohnish Pabrai</div>
+                    <div class="agent-role">Doubles at low risk (Dhandho)</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Peter Lynch</div>
+                    <div class="agent-role">Ten-baggers, everyday businesses</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Philip Fisher</div>
+                    <div class="agent-role">Deep scuttlebutt research</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cathie Wood</div>
+                    <div class="agent-role">Innovation and disruption</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Bill Ackman</div>
+                    <div class="agent-role">Bold activist positions</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stanley Druckenmiller</div>
+                    <div class="agent-role">Asymmetric opportunities, macro</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Aswath Damodaran</div>
+                    <div class="agent-role">Story + numbers + valuation</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Rakesh Jhunjhunwala</div>
+                    <div class="agent-role">Big Bull of India</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Fundamentals Agent</div>
+                    <div class="agent-role">Financials, ratios, balance sheet</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Sentiment Agent</div>
+                    <div class="agent-role">Market sentiment, fear/greed</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Technicals Agent</div>
+                    <div class="agent-role">RSI, moving averages, support</div>
+                    <div class="agent-status">✓ OPERATIONAL</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="links">
+                <a href="https://github.com/joselo-ai/roostr-research" target="_blank">GitHub</a>
+                <a href="https://twitter.com/roostrcapital" target="_blank">Twitter</a>
+                <a href="mailto:brionesgerardo@gmail.com">Contact</a>
+            </div>
+            <p>roostr Capital 🐓 - The First Multi-Agent AI Hedge Fund Built in Public</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">18 agents. 100 stocks scanned daily. Ensemble intelligence. Human discipline.</p>
+        </div>
     </div>
-    <script>
-        setTimeout(() => {
-            window.location.href = 'trading/';
-        }, 500);
-    </script>
 </body>
 </html>
