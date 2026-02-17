@@ -1,4 +1,4 @@
 Ticker,Source,Date_Found,Price_Entry,Conviction_Score,Status,Deployed,Position_Size,Stop_Loss,Target_1,Target_2,Current_Price,PnL_Dollars,PnL_Percent,Notes,Date_Entry,Agent_Decision,Agent_Conviction,Agent_Evaluated,Asset_Class
-TAO,Yieldschool-Dan,2026-02-06,176.05,9.0,GREEN,YES,10000.0,140.84,211.26,264.08,198.12,1254,12.54,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.,2026-02-06,BUY,9.0,2026-02-06,crypto
-SOL,Yieldschool-YieldHub,2026-02-06,86.51,8.0,GREEN,YES,7500.0,73.53,103.81,121.11,85.22,-112,-1.49,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Layer-1 with strong DeFi ecosystem.,2026-02-06,BUY,8.0,2026-02-06,crypto
+TAO,Yieldschool-Dan,2026-02-06,176.05,9.0,GREEN,YES,10000.0,140.84,211.26,264.08,195.04,1079,10.79,Entry: $176.05 | Qty: 56.8 tokens | Stop: $140.84 (20% below) | Dan's 1000x methodology - AI narrative + novel tech + supply dynamics.,2026-02-06,BUY,9.0,2026-02-06,crypto
+SOL,Yieldschool-YieldHub,2026-02-06,86.51,8.0,GREEN,YES,7500.0,73.53,103.81,121.11,84.77,-151,-2.01,Entry: $86.51 | Qty: 86.7 tokens | Stop: $73.53 (15% below) | Layer-1 with strong DeFi ecosystem.,2026-02-06,BUY,8.0,2026-02-06,crypto
 ASTS,Reddit-wallstreetbets,2026-02-16,,10.0,Monitoring,,,,,,,,,FCC approval expected Q1 2026,,,,,

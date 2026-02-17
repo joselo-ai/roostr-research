@@ -71,6 +71,12 @@
     "correlation_modeling": "DCC-GARCH (dynamic conditional correlation) + crisis regime shifts",
     "greeks_aggregation": "Sum delta-adjusted notional across all options positions"
   },
+  "disqualifiers": [
+    "VaR exceeds 2% of portfolio without mitigation plan",
+    "Expected Shortfall shows >5% tail risk",
+    "Correlation matrix average >0.7 (hidden concentration)",
+    "Stress test shows unrecoverable drawdown in 2+ scenarios"
+  ],
   "falsification_hooks": [
     "If VaR model underestimates actual losses 3x in 30 days → recalibrate",
     "If correlation breaks down (crisis correlation >0.9) → reduce gross exposure 30%",
