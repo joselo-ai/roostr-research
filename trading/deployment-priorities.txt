@@ -1,15 +1,7 @@
-🎯 Daily Deployment Priorities - 2026-02-17 08:00 EST
+🎯 Daily Deployment Priorities - 2026-02-18 08:00 EST
 ============================================================
 
 1. ASTS (Score: 4.00)
-   Conviction: 10.0/10 | Catalyst: 8.0/10 | Entry: 5.0/10
-   FCC approval expected Q1 2026
-
-2. ASTS (Score: 4.00)
-   Conviction: 10.0/10 | Catalyst: 8.0/10 | Entry: 5.0/10
-   FCC approval expected Q1 2026
-
-3. ASTS (Score: 4.00)
    Conviction: 10.0/10 | Catalyst: 8.0/10 | Entry: 5.0/10
    FCC approval expected Q1 2026
 
