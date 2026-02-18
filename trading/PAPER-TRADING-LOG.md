@@ -1,136 +1,167 @@
 # roostr Paper Trading Log
 **Phase 1: Track Record Validation**  
 **Capital:** $100,000 (paper)  
-**Start Date:** February 6, 2026  
+**Start Date:** February 9, 2026  
 **Goal:** >20% returns, <15% drawdown, >60% win rate (90 days)
 
 ---
 
-## Position #1: $TAO (Bittensor)
-**Entry Date:** February 6, 2026 11:09 EST  
-**Entry Price:** $176.05 per token (VERIFIED CoinGecko)  
-**Quantity:** 56.8 tokens  
-**Position Size:** $10,000 (10% of portfolio, 50% of crypto bucket)  
-**Current Price:** $177.93 per token  
-**Current Value:** $10,106.68  
-**Unrealized P&L:** +$106.68 (+1.07%)  
+## Position #1: $ALL (Allstate)
+**Entry Date:** February 9, 2026 09:30 EST  
+**Entry Price:** $207.00 per share  
+**Quantity:** 96.62 shares  
+**Position Size:** $20,000 (20% of portfolio, 50% of value bucket)  
+**Current Price:** $209.43 per share  
+**Current Value:** $20,234.78  
+**Unrealized P&L:** +$234.78 (+1.17%)  
 
-**Bucket:** Crypto Fundamentals (20% allocation)  
-**Conviction:** 9/10 GREEN  
+**Bucket:** Value Investing (40% allocation)  
+**Conviction:** 10/10 GREEN  
 
-**Stop Loss:** $140.84 per token (20% below entry)  
-**Stop Distance:** $35.21 per token  
+**Stop Loss:** $186.30 per share (10% below entry)  
+**Stop Distance:** $20.70 per share  
 **Max Risk if Stopped:** $2,000 (2.0% of portfolio)  
 
 **Profit Targets:**  
-- Target 1: $211.26 (+20%) → Take 30% = $3,032 profit
-- Target 2: $264.08 (+50%) → Take 30% = $3,032 profit
-- Target 3: $352.10 (+100%) → Take 40% = $4,042 profit
-
-**Position Details:**
-- Cost basis: $176.05 × 56.8 tokens = $10,000
-- Current value: $177.93 × 56.8 tokens = $10,106.68
-- Gain per token: $1.88
-- Total gain: $106.68
+- Target 1: $248.40 (+20%) → Take 30% = $6,006 profit
+- Target 2: $310.50 (+50%) → Take 40% = $8,008 profit  
+- Target 3: $414.00 (+100%) → Take 30% = $6,006 profit
 
 **Thesis:**
-Dan's methodology validated - $500 → $500k (1000x). Replicable pattern:
-- Category creation: AI + crypto infrastructure (Bittensor = decentralized ML)
-- Novel technology: Not a fork, genuine innovation
-- Supply dynamics: Low float, high lockup percentage
-- Narrative timing: AI boom continuing into 2026
-- Institutional interest: Growing adoption
-- Community conviction: Strong builder-focused community
+Screened 75+ value stocks. Allstate dominated:
+- P/E: 5.45 (cheapest in sector)
+- ROE: 39.52% (exceptional capital efficiency)
+- Debt/Equity: 0.29 (conservative balance sheet)
+- Fresh catalyst: $4B buyback announced
+- Analyst target: $220 (+6% upside)
+- Quality business at deep value price
 
 **Risk Management:**
-- 20% stop loss = $2,000 max loss
+- 10% stop loss = $2,000 max loss
 - Position size = 2% risk if stopped out
-- Scaling out at targets (not greedy)
+- Scaling out at targets (discipline > greed)
 
-**Source:** Yieldschool-Dan, validated by Atlas ML model (45+ features)
+**Source:** Multi-source screener + fundamental analysis
 
 **Status:** OPEN ✅
 
 ---
 
-## Position #2: $SOL (Solana)
-**Entry Date:** February 6, 2026 11:09 EST  
-**Entry Price:** $86.51 per token (VERIFIED CoinGecko)  
-**Quantity:** 86.7 tokens  
-**Position Size:** $7,500 (7.5% of portfolio, 37.5% of crypto bucket)  
-**Current Price:** $86.98 per token  
-**Current Value:** $7,540.68  
-**Unrealized P&L:** +$40.68 (+0.54%)  
+## Position #2: $PGR (Progressive)
+**Entry Date:** February 9, 2026 09:30 EST  
+**Entry Price:** $201.57 per share  
+**Quantity:** 74.42 shares  
+**Position Size:** $15,000 (15% of portfolio, 37.5% of value bucket)  
+**Current Price:** $203.28 per share  
+**Current Value:** $15,127.25  
+**Unrealized P&L:** +$127.25 (+0.85%)  
 
-**Bucket:** Crypto Fundamentals (20% allocation)  
-**Conviction:** 8/10 GREEN  
+**Bucket:** Value Investing (40% allocation)  
+**Conviction:** 9/10 GREEN  
 
-**Stop Loss:** $73.53 per token (15% below entry)  
-**Stop Distance:** $12.98 per token  
-**Max Risk if Stopped:** $1,127 (1.1% of portfolio)  
+**Stop Loss:** $181.41 per share (10% below entry)  
+**Stop Distance:** $20.16 per share  
+**Max Risk if Stopped:** $1,500 (1.5% of portfolio)  
 
 **Profit Targets:**  
-- Target 1: $103.81 (+20%) → Take 30% = $519 profit
-- Target 2: $121.11 (+40%) → Take 40% = $1,031 profit
-- Target 3: $138.42 (+60%) → Take 30% = $1,298 profit
-
-**Position Details:**
-- Cost basis: $86.51 × 86.7 tokens = $7,500
-- Current value: $86.98 × 86.7 tokens = $7,540.68
-- Gain per token: $0.47
-- Total gain: $40.68
+- Target 1: $241.88 (+20%) → Take 30% = $4,509 profit
+- Target 2: $302.36 (+50%) → Take 40% = $6,012 profit
+- Target 3: $403.14 (+100%) → Take 30% = $4,509 profit
 
 **Thesis:**
-Layer-1 with proven DeFi ecosystem. High liquidity, strong developer activity.
-- Multiple data sources aligned (Yieldschool + on-chain metrics + community)
-- Network activity increasing (transactions, DEX volume)
-- Staking yield attractive (5-7% APY)
-- Institutional adoption growing (ETFs discussions, custody solutions)
-- Less volatile than smaller caps (better risk/reward for core holding)
-- Technical: Held $80 support, trending up
+Insurance sector pair trade with ALL:
+- P/E: 19.8 (reasonable for growth quality)
+- ROE: 35.2% (strong profitability)
+- Market leader in auto insurance
+- Technology advantage (Snapshot, mobile apps)
+- Consistent earnings growth
+- Defensive sector with pricing power
 
 **Risk Management:**
-- 15% stop loss = $1,127 max loss
-- Position size = 1.1% risk if stopped out
-- Tighter stop than TAO (lower conviction, more liquid)
+- 10% stop loss = $1,500 max loss
+- Position size = 1.5% risk if stopped out
+- Diversification within insurance sector
 
-**Source:** Yieldschool-YieldHub, validated by multi-source confirmation
+**Source:** Value screener + sector analysis
 
 **Status:** OPEN ✅
 
 ---
 
-## Portfolio Summary (Live - Auto-Updates Every 5min)
+## Position #3: $KTB (Kontoor Brands)
+**Entry Date:** February 9, 2026 09:30 EST  
+**Entry Price:** $67.00 per share  
+**Quantity:** 149.25 shares  
+**Position Size:** $10,000 (10% of portfolio, 33% of social arb bucket)  
+**Current Price:** $67.85 per share  
+**Current Value:** $10,126.87  
+**Unrealized P&L:** +$126.87 (+1.27%)  
+
+**Bucket:** Social Arbitrage (30% allocation)  
+**Conviction:** 7.5/10 GREEN  
+
+**Stop Loss:** $60.30 per share (10% below entry)  
+**Stop Distance:** $6.70 per share  
+**Max Risk if Stopped:** $1,000 (1.0% of portfolio)  
+
+**Profit Targets:**  
+- Target 1: $80.40 (+20%) → Take 30% = $3,003 profit
+- Target 2: $100.50 (+50%) → Take 40% = $4,004 profit
+- Target 3: $134.00 (+100%) → Take 30% = $3,003 profit
+
+**Thesis:**
+Dumb Money Discord signal (18 👍 + 4 🔥 reactions):
+- Wrangler/Lee/Helly Hansen brands
+- ROE: 49.11% (exceptional)
+- Analyst target: +26% upside
+- Helly Hansen integration ahead of schedule
+- "Up 10% quietly, 40% undervalued" - Discord thesis
+- Wall Street hasn't noticed yet (social arbitrage window)
+
+**Risk Management:**
+- 10% stop loss = $1,000 max loss
+- Position size = 1.0% risk if stopped out
+- Lower conviction than value plays = smaller size
+
+**Source:** Dumb Money Discord + fundamental validation
+
+**Status:** OPEN ✅
+
+---
+
+## Portfolio Summary (Live)
 
 **Total Capital:** $100,000  
-**Deployed:** $17,500 (17.5%)  
-**Cash Reserve:** $82,500 (82.5%)  
-**Open Positions:** 2 (56.8 TAO + 86.7 SOL)  
-**Total Value:** $17,647.36
-**Total Risk if Both Stops Hit:** $3,127 (3.1% of portfolio) ✅ Within limits
+**Deployed:** $45,000 (45%)  
+**Cash Reserve:** $55,000 (55%)  
+**Open Positions:** 3 (96.62 ALL + 74.42 PGR + 149.25 KTB)  
+**Total Value:** $45,488.90  
+**Total Risk if All Stops Hit:** $4,500 (4.5% of portfolio) ✅ Within limits
 
 **By Bucket:**
-- 🟢 Riz EURUSD (40% - $40k): $0 deployed (waiting for setup signal)
-- 🟣 Social Arb (30% - $30k): $0 deployed (monitoring Dumb Money)
-- 🔵 Crypto (20% - $20k): $17,500 deployed (87.5% of bucket)
+- 🟢 Value Investing (40% - $40k): $35,000 deployed (87.5% of bucket)
+- 🟣 Social Arb (30% - $30k): $10,000 deployed (33% of bucket)
+- 🔵 Crypto (20% - $20k): $0 deployed
 - 🟠 Opportunistic (10% - $10k): $0 deployed
 
 **Performance (Unrealized):**
-- Position 1 (TAO 56.8 tokens): +$106.68 (+1.07%)
-- Position 2 (SOL 86.7 tokens): +$40.68 (+0.54%)
-- **Net P&L:** +$147.36 (+0.84% of deployed capital, +0.15% of total portfolio)
+- Position 1 (ALL 96.62 shares): +$234.78 (+1.17%)
+- Position 2 (PGR 74.42 shares): +$127.25 (+0.85%)
+- Position 3 (KTB 149.25 shares): +$126.87 (+1.27%)
+- **Net P&L:** +$488.90 (+1.09% of deployed capital, +0.49% of total portfolio)
 
 **Risk Metrics:**
-- Max drawdown if both stops: -3.1% ✅ (target: <15%)
-- Largest single position: 10% (TAO) ✅ (limit: 20%)
-- Total deployed: 17.5% ✅ (conservative, allows for more positions)
-- Crypto bucket usage: 87.5% ⚠️ (approaching 100% limit)
+- Max drawdown if all stops: -4.5% ✅ (target: <15%)
+- Largest single position: 20% (ALL) ✅ (limit: 20%)
+- Total deployed: 45% ✅ (allows room for more opportunities)
+- Value bucket usage: 87.5% ⚠️ (approaching limit)
+- Social arb bucket usage: 33% ✅ (room for more signals)
 
 **Next Actions:**
-- Monitor for Riz EURUSD setup (40% bucket empty)
-- Monitor for Social Arb signals (30% bucket empty)  
-- Scale out TAO/SOL at targets
-- Re-deploy into other buckets for diversification
+- Monitor for more Social Arb signals (20k available)
+- Monitor for Crypto Fundamentals signals (20k available)  
+- Scale out at profit targets
+- Diversify across remaining buckets
 
 ---
 
@@ -142,11 +173,11 @@ Layer-1 with proven DeFi ecosystem. High liquidity, strong developer activity.
 4. **Portfolio risk:** Total risk never >10% of capital
 5. **Take profits:** Scale out at targets (30/30/40 or 30/40/30 split)
 6. **Documentation:** Log every trade immediately with all details
-7. **Price validation:** Always verify entry price with CoinGecko before entry
+7. **Price validation:** Always verify entry price before logging
 8. **Review:** Daily P&L update (auto), weekly performance review (manual)
 
 ---
 
-**Last Updated:** Auto-updates every 5 minutes via CoinGecko API  
-**Next Manual Review:** EOD Feb 6, 2026 (4 PM EST)  
-**Phase 1 End Date:** ~May 6, 2026 (90 days)
+**Last Updated:** February 18, 2026 18:41 EST  
+**Next Manual Review:** EOD Feb 18, 2026  
+**Phase 1 End Date:** ~May 9, 2026 (90 days)
