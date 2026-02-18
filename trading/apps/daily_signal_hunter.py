@@ -98,37 +98,45 @@ def scan_reddit():
     signals = []
     
     try:
-        # Run existing Reddit scraper
-        result = subprocess.run(
-            ['python3', str(BASE_DIR / 'agents' / 'reddit_scraper.py')],
-            capture_output=True,
-            text=True,
-            timeout=30
-        )
+        # Import and run Reddit scraper
+        reddit_scraper_path = BASE_DIR / 'scrapers' / 'reddit_scraper.py'
         
-        # Parse output for signals
-        # Format: ticker, upvotes, title
-        lines = result.stdout.strip().split('\n')
-        for line in lines:
-            if line.startswith('$'):
-                parts = line.split(',')
-                if len(parts) >= 2:
-                    ticker = parts[0].strip('$ ')
-                    upvotes = int(parts[1]) if parts[1].isdigit() else 0
-                    
-                    if upvotes >= 500:  # Minimum threshold
-                        signals.append({
-                            'symbol': ticker,
-                            'source': 'reddit',
-                            'reason': f'{upvotes} upvotes on r/wallstreetbets',
-                            'score_components': {
-                                'source_quality': 0.5,  # Reddit = lower quality
-                                'catalyst_strength': 0.5,
-                                'fundamentals': 0.0,  # Need to validate
-                                'technicals': 0.0,
-                                'social_validation': min(2.0, upvotes / 1000)  # Scale by upvotes
-                            }
-                        })
+        if reddit_scraper_path.exists():
+            result = subprocess.run(
+                ['python3', str(reddit_scraper_path), '--json'],
+                capture_output=True,
+                text=True,
+                timeout=60,
+                cwd=str(BASE_DIR / 'scrapers')
+            )
+            
+            # Try to parse JSON output
+            if result.returncode == 0 and result.stdout:
+                try:
+                    data = json.loads(result.stdout)
+                    if isinstance(data, list):
+                        for item in data[:10]:  # Top 10 signals
+                            ticker = item.get('ticker', '').strip('$')
+                            upvotes = item.get('upvotes', 0)
+                            
+                            if upvotes >= 100 and ticker:  # Minimum threshold
+                                signals.append({
+                                    'symbol': ticker,
+                                    'source': 'reddit',
+                                    'reason': f'{upvotes} upvotes: {item.get("title", "")[:50]}',
+                                    'score_components': {
+                                        'source_quality': 0.5,  # Reddit = lower quality
+                                        'catalyst_strength': 0.5,
+                                        'fundamentals': 0.0,  # Need to validate
+                                        'technicals': 0.0,
+                                        'social_validation': min(2.0, upvotes / 500)  # Scale by upvotes
+                                    }
+                                })
+                except json.JSONDecodeError:
+                    log_to_file(f"   ⚠️  Could not parse Reddit JSON output")
+        else:
+            log_to_file(f"   ⚠️  Reddit scraper not found at {reddit_scraper_path}")
+            
     except Exception as e:
         log_to_file(f"   ⚠️  Reddit scan error: {e}")
     
@@ -171,13 +179,69 @@ def scan_dexter():
     log_to_file(f"   Found {len(signals)} Dexter signals")
     return signals
 
+def add_manual_test_signals():
+    """
+    Add manual test signals to demonstrate pipeline
+    Remove this function once real data sources are connected
+    """
+    log_to_file("🧪 Adding manual test signals...")
+    
+    signals = []
+    
+    # Example GREEN signal (high conviction)
+    signals.append({
+        'symbol': 'TEST-GREEN',
+        'source': 'manual-test',
+        'reason': 'Test signal: Multiple catalysts, strong fundamentals',
+        'score_components': {
+            'source_quality': 2.0,  # Max quality (simulating Yieldschool Dan)
+            'catalyst_strength': 1.8,  # Strong catalyst
+            'fundamentals': 1.9,  # Excellent fundamentals
+            'technicals': 1.5,  # Good technical setup
+            'social_validation': 1.5  # Strong social validation
+        }
+    })
+    
+    # Example YELLOW signal (watch)
+    signals.append({
+        'symbol': 'TEST-YELLOW',
+        'source': 'manual-test',
+        'reason': 'Test signal: Emerging opportunity, needs validation',
+        'score_components': {
+            'source_quality': 1.0,  # Medium quality
+            'catalyst_strength': 1.2,  # Moderate catalyst
+            'fundamentals': 1.0,  # Decent fundamentals
+            'technicals': 0.8,  # Neutral technicals
+            'social_validation': 0.8  # Some social validation
+        }
+    })
+    
+    # Example RED signal (avoid)
+    signals.append({
+        'symbol': 'TEST-RED',
+        'source': 'manual-test',
+        'reason': 'Test signal: Weak setup, insufficient conviction',
+        'score_components': {
+            'source_quality': 0.5,  # Low quality
+            'catalyst_strength': 0.3,  # Weak catalyst
+            'fundamentals': 0.2,  # Poor fundamentals
+            'technicals': 0.5,  # Weak technicals
+            'social_validation': 0.4  # Minimal validation
+        }
+    })
+    
+    log_to_file(f"   Added {len(signals)} test signals")
+    return signals
+
 def calculate_conviction_score(components):
     """
     Calculate 0-10 conviction score from components
     Formula from MARKET-ANALYSIS-FRAMEWORK.md
+    
+    Each component is 0-2.0, so total is 0-10.0
     """
     total = sum(components.values())
-    return round(total / 10.0, 1)
+    return round(total, 1)
 
 def classify_signal(score):
     """Classify signal by conviction score"""
@@ -250,12 +314,16 @@ def add_to_signals_database(signal, conviction_score, classification):
     if classification != "GREEN":
         return
     
+    fieldnames = ['ticker', 'source', 'conviction', 'date_found', 'catalyst', 'status', 'entry_clarity']
+    
     # Check if already in database
     existing = []
     if SIGNALS_DB.exists():
         with open(SIGNALS_DB, 'r') as f:
             reader = csv.DictReader(f)
-            existing = list(reader)
+            for row in reader:
+                # Only keep fields that match our schema
+                existing.append({k: row.get(k, '') for k in fieldnames})
     
     # Check for duplicates
     for item in existing:
@@ -264,7 +332,7 @@ def add_to_signals_database(signal, conviction_score, classification):
             return
     
     # Add new signal
-    existing.append({
+    new_entry = {
         'ticker': signal['symbol'],
         'source': signal['source'],
         'conviction': conviction_score,
@@ -272,11 +340,11 @@ def add_to_signals_database(signal, conviction_score, classification):
         'catalyst': signal['reason'][:100],  # Truncate
         'status': 'new',
         'entry_clarity': 5.0  # Default, will be refined
-    })
+    }
+    existing.append(new_entry)
     
     # Write updated database
     with open(SIGNALS_DB, 'w', newline='') as f:
-        fieldnames = ['ticker', 'source', 'conviction', 'date_found', 'catalyst', 'status', 'entry_clarity']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(existing)
@@ -354,6 +422,9 @@ def main():
     all_signals.extend(scan_dexscreener())
     all_signals.extend(scan_google_trends())
     all_signals.extend(scan_dexter())
+    
+    # Add test signals to demonstrate pipeline (remove once real sources are connected)
+    all_signals.extend(add_manual_test_signals())
     
     # Score and classify each signal
     processed_signals = []
