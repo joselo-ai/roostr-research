@@ -17,7 +17,7 @@ sys.path.append('/Users/agentjoselo/.openclaw/workspace/command-center')
 from activity_logger import log_trading, log_automation
 
 
-DASHBOARD_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/index.html"
+DASHBOARD_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/dashboard.html"
 POSITIONS_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/PAPER-TRADING-LOG.md"
 CACHE_PATH = "/Users/agentjoselo/.openclaw/workspace/trading/.price_cache.json"
 
