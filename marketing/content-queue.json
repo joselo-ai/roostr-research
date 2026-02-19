@@ -298,17 +298,22 @@
       "id": "w3-2",
       "day": "Thursday",
       "date": "2026-02-19",
-      "time": "12:00 EST",
-      "slot": "midday",
+      "time": "16:00 EST",
+      "slot": "afternoon",
       "platforms": [
         "twitter"
       ],
       "type": "standalone",
-      "reply_to": "https://x.com/roostrcapital/status/2022053449681314006",
-      "content": "Position check (Day 8):\n\n$TAO: $176.05 → $193.47 (+9.9%)\n$SOL: $86.51 → $82.18 (-5.0%)\n\nPortfolio P&L: +$202 (+1.1%)\n\nTAO thesis playing out. SOL testing patience.\n\nStops respected. No emotional decisions.\n\nLet the market work.",
-      "posted": false,
+      "content": "Position check (Day 10):\n\n$ALL: $207.00 → $209.43 (+1.17%)\n$PGR: $201.57 → $203.28 (+0.85%)\n$KTB: $67.00 → $67.85 (+1.27%)\n\nPortfolio P&L: +$488.90 (+1.09%)\n\nAll positions green. Stops holding.\n\nDiscipline beats emotion.",
+      "posted": true,
+      "posted_at": "2026-02-19T21:00:00Z",
+      "tweet_url": "PENDING_VERIFICATION",
       "scheduled_date": "2026-02-19",
-      "note": "Week 3 midday #1 - Position transparency"
+      "note": "Week 3 afternoon - Position update (Day 10). Posted via browser automation but URL not captured due to OpenClaw bug. See marketing/pending-tweet.txt for manual verification.",
+      "automation_attempted": true,
+      "automation_partial_success": true,
+      "url_verification_needed": true,
+      "corrected_at": "2026-02-19T21:00:00Z"
     },
     {
       "id": "w3-3",
@@ -343,13 +348,13 @@
   ],
   "metadata": {
     "created": "2026-02-06T12:38:00Z",
-    "updated": "2026-02-19T14:00:00Z",
+    "updated": "2026-02-19T21:00:00Z",
     "total_posts": 21,
     "week1_status": "8/8 posted - COMPLETE",
     "week2_status": "8/10 posted - IN PROGRESS",
-    "week3_status": "1/4 posted - IN PROGRESS",
+    "week3_status": "2/4 posted - IN PROGRESS (1 URL pending verification)",
     "thread_start": "https://x.com/roostrcapital/status/2019540291141922995",
-    "latest_tweet": "https://x.com/roostrcapital/status/2024484515012628951",
+    "latest_tweet": "PENDING_VERIFICATION (w3-2 posted 2026-02-19 4 PM)",
     "platforms": [
       "twitter"
     ],
@@ -361,6 +366,6 @@
     },
     "week2_theme": "First capital deployment - ALL + PGR + KTB",
     "week3_theme": "Performance tracking + market adaptation",
-    "next_action": "Continue scheduled posts via cron automation"
+    "next_action": "Manual verification needed: Check x.com/roostrcapital for w3-2 URL, then update both JSON files"
   }
 }

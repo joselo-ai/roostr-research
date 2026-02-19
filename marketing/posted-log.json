@@ -153,6 +153,17 @@
       "reply_to": "https://x.com/roostrcapital/status/2024227738949685528",
       "posted_at": "2026-02-19T14:00:00Z",
       "note": "Week 2 risk management - Position sizing by conviction (automated morning cron post)"
+    },
+    {
+      "id": "w3-2",
+      "content": "Position check (Day 10):\n\n$ALL: $207.00 → $209.43 (+1.17%)\n$PGR: $201.57 → $203.28 (+0.85%)\n$KTB: $67.00 → $67.85 (+1.27%)\n\nPortfolio P&L: +$488.90 (+1.09%)\n\nAll positions green. Stops holding.\n\nDiscipline beats emotion.",
+      "platforms": [
+        "twitter"
+      ],
+      "tweet_url": "PENDING_VERIFICATION",
+      "reply_to": null,
+      "posted_at": "2026-02-19T21:00:00Z",
+      "note": "Week 3 afternoon - Position update (Day 10). Posted successfully but URL not captured due to OpenClaw browser control bug. Manual verification needed at https://x.com/roostrcapital"
     }
   ]
 }
