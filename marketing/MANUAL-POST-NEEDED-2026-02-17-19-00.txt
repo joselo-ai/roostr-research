@@ -1,0 +1,53 @@
+MANUAL POST REQUIRED - Evening Tweet (w2-9)
+===========================================
+
+**Date:** Feb 17, 2026 @ 7:00 PM EST
+**Automation blocked:** Browser control service unreachable (HTTP 404)
+
+CONTENT TO POST:
+---
+Why social arbitrage works:
+
+Chris Camillo's Dorel Industries play (2020):
+
+• March: COVID lockdowns begin
+• Social media: Parents panic-buying bikes for kids
+• Dorel: Major bike manufacturer
+• Entry: $3.50
+• Exit: $22
+• Return: 629%
+
+Wall Street saw it 3 months later.
+
+Edge = speed of information.
+---
+
+REPLY TO: https://x.com/roostrcapital/status/2022053449681314006
+
+AFTER POSTING:
+1. Copy tweet URL
+2. Update marketing/content-queue.json:
+   - Find id "w2-9"
+   - Set "posted": true
+   - Add "posted_at": "<timestamp>"
+   - Add "tweet_url": "<your-tweet-url>"
+
+3. Update marketing/posted-log.json:
+   - Add new entry to "posted" array:
+   {
+     "id": "w2-9",
+     "content": "<same as above>",
+     "platforms": ["twitter"],
+     "tweet_url": "<your-tweet-url>",
+     "reply_to": "https://x.com/roostrcapital/status/2022053449681314006",
+     "posted_at": "<timestamp>",
+     "note": "Week 2 Thursday evening - Social arb case study (manual post)"
+   }
+
+FIX AUTOMATION:
+- Check: openclaw gateway status
+- Restart gateway if needed
+- Test browser control service: browser action=status
+
+Next scheduled:
+- w3-1 (Afternoon, Feb 17 @ 4 PM) - Also pending manual post

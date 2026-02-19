@@ -1,0 +1,83 @@
+[
+  {
+    "ticker": "AI",
+    "source": "dumbmoney-browser",
+    "total_reactions": 52,
+    "total_conviction": 10.0,
+    "mention_count": 1,
+    "messages": [
+      {
+        "author": "avg8888 + hitsy",
+        "content": "TransAlta AI/HPC data centre pivot. Least riskiest and most undervalued. Deep dive completed.",
+        "timestamp": ""
+      }
+    ],
+    "top_emojis": {
+      "\ud83d\udd25": 32,
+      "\ud83d\udc4d": 11,
+      "\ud83d\ude4f": 6,
+      "\u26a1": 3
+    },
+    "avg_conviction": 10.0
+  },
+  {
+    "ticker": "HPC",
+    "source": "dumbmoney-browser",
+    "total_reactions": 52,
+    "total_conviction": 10.0,
+    "mention_count": 1,
+    "messages": [
+      {
+        "author": "avg8888 + hitsy",
+        "content": "TransAlta AI/HPC data centre pivot. Least riskiest and most undervalued. Deep dive completed.",
+        "timestamp": ""
+      }
+    ],
+    "top_emojis": {
+      "\ud83d\udd25": 32,
+      "\ud83d\udc4d": 11,
+      "\ud83d\ude4f": 6,
+      "\u26a1": 3
+    },
+    "avg_conviction": 10.0
+  },
+  {
+    "ticker": "MOAT",
+    "source": "dumbmoney-browser",
+    "total_reactions": 17,
+    "total_conviction": 0.9,
+    "mention_count": 1,
+    "messages": [
+      {
+        "author": "Rehman Dakait Baloch",
+        "content": "Intel Foundry MOAT - America's most important asset. Asymmetrical long opportunity.",
+        "timestamp": ""
+      }
+    ],
+    "top_emojis": {
+      "\ud83d\udc4d": 11,
+      "chris": 5,
+      "\ud83c\uddfa\ud83c\uddf8": 1
+    },
+    "avg_conviction": 0.9
+  },
+  {
+    "ticker": "BNPL",
+    "source": "dumbmoney-browser",
+    "total_reactions": 6,
+    "total_conviction": 0.3,
+    "mention_count": 1,
+    "messages": [
+      {
+        "author": "MrLck",
+        "content": "Affirm - positioned to dominate U.S. BNPL landscape",
+        "timestamp": ""
+      }
+    ],
+    "top_emojis": {
+      "\ud83d\udc4d": 5,
+      "\ud83e\udd14": 1
+    },
+    "avg_conviction": 0.3
+  }
+]

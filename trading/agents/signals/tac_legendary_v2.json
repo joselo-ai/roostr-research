@@ -1,0 +1,257 @@
+{
+  "ticker": "TAC",
+  "timestamp": "2026-02-18T17:18:49.937864",
+  "agents": {
+    "damodaran": {
+      "agent_name": "Aswath Damodaran",
+      "ticker": "TAC",
+      "conviction": 3.0,
+      "action": "SELL",
+      "rationale": "My DCF model values TAC at $13.17 per share based on 5.0% growth and 10% WACC. Comparable P/E analysis suggests $3.49 using 20.0x industry multiple. This gives a margin of safety of -37.8% at current price $13.39. The market is pricing in a story that the numbers don't support. Overvalued.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "dcf_intrinsic_value": 13.1734977105237,
+        "pe_intrinsic_value": 3.4895560766058416,
+        "margin_of_safety_pct": -37.77799183297408,
+        "fcf": 244000000,
+        "revenue_growth": -0.036,
+        "pe_ratio": 76.743286,
+        "ev_ebitda": 12.101,
+        "sector": "Utilities"
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.380668"
+    },
+    "graham": {
+      "agent_name": "Benjamin Graham",
+      "ticker": "TAC",
+      "conviction": 0.0,
+      "action": "SELL",
+      "rationale": "Analyzing TAC through my classic value lens: Fails 4 criteria: P/B 9.16 > 1.5; Current ratio 0.8 < 2; Debt/Equity 273.9% > 100%; Negative earnings. This fails my value screens. No margin of safety. Pass.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "pe_ratio": null,
+        "pb_ratio": 9.155339,
+        "book_value": 1.4625345,
+        "net_net_per_share": null,
+        "current_ratio": 0.788,
+        "debt_to_equity": 273.883,
+        "criteria_met": 0,
+        "criteria_failed": 4
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.633725"
+    },
+    "lynch": {
+      "agent_name": "Peter Lynch",
+      "ticker": "TAC",
+      "conviction": 5.0,
+      "action": "ABSTAIN",
+      "rationale": "I can't evaluate TAC without growth data. I need to see revenue and earnings growth to determine if this could be a 10-bagger.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "pe_ratio": 76.743286,
+        "peg_ratio": null,
+        "revenue_growth_pct": -3.5999999999999996,
+        "earnings_growth_pct": 0,
+        "sector": "Utilities",
+        "industry": "Utilities - Independent Power Producers",
+        "is_consumer_facing": false
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.674615"
+    },
+    "wood": {
+      "agent_name": "Cathie Wood",
+      "ticker": "TAC",
+      "conviction": 3.5999999999999996,
+      "action": "SELL",
+      "rationale": "Evaluating TAC for disruptive innovation potential: I see exposure to gene, ev - these are the transformative themes of the next decade. Growth is too slow for my 5-year compounding thesis. This isn't disruptive enough for my portfolio.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "sector": "Utilities",
+        "industry": "Utilities - Independent Power Producers",
+        "revenue_growth_pct": -3.5999999999999996,
+        "market_cap": 3972813056,
+        "innovation_themes": [
+          "gene",
+          "ev"
+        ],
+        "innovation_score": 3
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.713135"
+    },
+    "fisher": {
+      "agent_name": "Phil Fisher",
+      "ticker": "TAC",
+      "conviction": 0.0,
+      "action": "SELL",
+      "rationale": "Conducting scuttlebutt research on TAC: However, concerns about ROE -9.1% below 10%; Slow revenue growth -3.6%. Quality isn't high enough for my hold-forever portfolio.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "gross_margin_pct": 30.192999999999998,
+        "operating_margin_pct": 5.5280000000000005,
+        "profit_margin_pct": -5.6760002,
+        "roe_pct": -9.114,
+        "roa_pct": 1.126,
+        "revenue_growth_pct": -3.5999999999999996,
+        "debt_to_equity": 273.883,
+        "current_ratio": 0.788,
+        "quality_score": 0
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.754261"
+    },
+    "jhunjhunwala": {
+      "agent_name": "Rakesh Jhunjhunwala",
+      "ticker": "TAC",
+      "conviction": 1,
+      "action": "SELL",
+      "rationale": "Analyzing TAC for long-term wealth creation: Growth and quality aren't strong enough for my patient capital approach.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "revenue_growth_pct": -3.5999999999999996,
+        "earnings_growth_pct": 0,
+        "roe_pct": -9.114,
+        "profit_margin_pct": -5.6760002,
+        "country": "Canada",
+        "sector": "Utilities",
+        "is_emerging_market": false,
+        "market_cap": 3972813056
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.793823"
+    },
+    "ackman": {
+      "agent_name": "Bill Ackman",
+      "ticker": "TAC",
+      "conviction": 5.0,
+      "action": "HOLD",
+      "rationale": "Evaluating TAC for activist opportunity: Some potential: ROE -9.1% - room for improvement; Margins 5.5% - operational efficiency opportunity. Worth a SMALL (5%) position but not my highest conviction.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "pe_ratio": 76.743286,
+        "pb_ratio": 9.155339,
+        "roe_pct": -9.114,
+        "operating_margin_pct": 5.5280000000000005,
+        "debt_to_equity": 273.883,
+        "market_cap": 3972813056,
+        "catalyst_score": 5.0,
+        "position_size": "SMALL (5%)"
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:50.833444"
+    },
+    "druckenmiller": {
+      "agent_name": "Stanley Druckenmiller",
+      "ticker": "TAC",
+      "conviction": 1,
+      "action": "SELL",
+      "rationale": "Macro analysis on TAC: Price momentum +8.7% confirms the trend. No clear macro edge or asymmetry. I only bet big when the macro and risk/reward align.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "sector": "Utilities",
+        "momentum_6m_pct": 8.650721916898691,
+        "volatility_pct": 42.25449357649859,
+        "upside_to_target_pct": 0.9694473487677359,
+        "revenue_growth_pct": -3.5999999999999996,
+        "pe_ratio": 76.743286,
+        "macro_score": 1,
+        "position_size": "NONE"
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:51.087310"
+    },
+    "pabrai": {
+      "agent_name": "Mohnish Pabrai",
+      "ticker": "TAC",
+      "conviction": 0,
+      "action": "SELL",
+      "rationale": "Dhandho analysis on TAC: Risk/reward isn't asymmetric enough. P/B 9.16 - high downside risk; High debt 273.9% - bankruptcy risk; Limited upside 1%. I need clearer downside protection.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "book_value": 1.4625345,
+        "pb_ratio": 9.155339,
+        "target_price": 13.519809,
+        "upside_pct": 0.9694473487677359,
+        "downside_to_book_pct": -89.07741224794623,
+        "risk_reward_ratio": 0.010883200626319131,
+        "debt_to_equity": 273.883,
+        "current_ratio": 0.788,
+        "asymmetry_score": 0
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:51.129552"
+    },
+    "buffett": {
+      "agent_name": "Warren Buffett",
+      "ticker": "TAC",
+      "conviction": 2.5,
+      "action": "SELL",
+      "rationale": "Looking at TAC through my quality lens: I don't see a durable competitive advantage here.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "roe_pct": -9.114,
+        "roic_pct": 1.126,
+        "gross_margin_pct": 30.192999999999998,
+        "operating_margin_pct": 5.5280000000000005,
+        "fcf_per_share": 0.8223795079204583,
+        "debt_to_equity": 273.883,
+        "pe_ratio": 76.743286,
+        "sector": "Utilities",
+        "moat_score": 2.5
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:51.168982"
+    },
+    "munger": {
+      "agent_name": "Charlie Munger",
+      "ticker": "TAC",
+      "conviction": 0,
+      "action": "SELL",
+      "rationale": "Applying mental models to TAC: Inverting: What could go wrong? High debt 273.9% - bankruptcy risk; Low margins -5.7% - no pricing power. My inversion analysis shows too many ways this could go wrong. Avoid stupidity.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "roe_pct": -9.114,
+        "profit_margin_pct": -5.6760002,
+        "debt_to_equity": 273.883,
+        "pe_ratio": 76.743286,
+        "red_flags_count": 4,
+        "green_flags_count": 0
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:51.209493"
+    },
+    "burry": {
+      "agent_name": "Michael Burry",
+      "ticker": "TAC",
+      "conviction": 1.5,
+      "action": "SELL",
+      "rationale": "Contrarian analysis on TAC: But the fundamentals show positive cash flow. Not contrarian enough or fundamentals don't support going against the crowd.",
+      "key_metrics": {
+        "current_price": 13.39,
+        "pe_ratio": 76.743286,
+        "pb_ratio": 9.155339,
+        "book_value": 1.4625345,
+        "momentum_3m_pct": -7.52761901500193,
+        "fcf": 244000000,
+        "debt_to_equity": 273.883,
+        "contrarian_score": 1.5
+      },
+      "data_quality": "HIGH",
+      "timestamp": "2026-02-18T17:18:51.341082"
+    }
+  },
+  "summary": {
+    "consensus": "SELL",
+    "avg_conviction": 1.88,
+    "vote_distribution": {
+      "BUY": 0,
+      "SELL": 10,
+      "HOLD": 1,
+      "ABSTAIN": 1
+    },
+    "data_quality": "HIGH"
+  }
+}

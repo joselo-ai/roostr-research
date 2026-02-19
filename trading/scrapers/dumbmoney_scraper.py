@@ -1,315 +1,386 @@
 #!/usr/bin/env python3
 """
-Dumb Money Discord Scraper - Extract social arbitrage signals
-Focuses on high-conviction tickers (20+ reactions) posted recently (<48h)
+Dumb Money Discord Scraper - Social Arbitrage Signal Hunter
+Scans Discord for high-engagement stock picks before Wall Street notices
+
+Usage:
+    python3 dumbmoney_scraper.py --hours 24 --min-reactions 20
 """
 
+import asyncio
 import json
-import csv
+import re
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import List, Dict, Any
+import os
 
-class DumbMoneyScraper:
-    """Scrape Dumb Money Discord for social arbitrage signals"""
+try:
+    import discord
+except ImportError:
+    print("❌ discord.py not installed. Run: pip install discord.py")
+    exit(1)
+
+BASE_DIR = Path(__file__).parent.parent
+TOKEN_FILE = Path.home() / ".openclaw" / "workspace" / ".discord-bot-token"
+
+# Social arbitrage emoji indicators (high conviction)
+CONVICTION_EMOJIS = {
+    '🚀': 3.0,  # Rocket = strong buy signal
+    '🔥': 2.5,  # Fire = trending/hot
+    '💎': 2.0,  # Diamond hands = hold conviction
+    '💯': 1.5,  # 100 = strong agreement
+    '👀': 1.0,  # Eyes = watching/interested
+    '📈': 1.5,  # Chart up = bullish
+    '🤑': 1.0,  # Money face = profit potential
+    '⚡': 1.0,  # Lightning = quick move expected
+}
+
+class DumbMoneyScanner:
+    """Scan Dumb Money Discord for social arbitrage signals"""
     
-    def __init__(self):
-        self.output_file = '../signals-database.csv'
-        self.reaction_threshold = 20  # Min reactions for GREEN
-        self.hours_fresh = 48  # Only fresh theses (<48h)
+    def __init__(self, token: str = None):
+        """Initialize scanner with Discord bot token"""
+        self.token = token or self._load_token()
         
-    def scrape_channel(self, messages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        intents = discord.Intents.default()
+        intents.message_content = True
+        intents.reactions = True
+        intents.guilds = True
+        
+        self.client = discord.Client(intents=intents)
+        self.signals = []
+    
+    def _load_token(self) -> str:
+        """Load Discord bot token from file"""
+        if TOKEN_FILE.exists():
+            with open(TOKEN_FILE, 'r') as f:
+                return f.read().strip()
+        
+        token = os.getenv('DISCORD_BOT_TOKEN')
+        if not token:
+            raise ValueError(
+                "Discord token not found. Set DISCORD_BOT_TOKEN env var or "
+                f"create {TOKEN_FILE}"
+            )
+        return token
+    
+    def extract_tickers(self, text: str) -> List[str]:
         """
-        Extract high-conviction stock signals
+        Extract stock tickers from message text
+        Matches: $TICKER, TICKER (all caps), or common formats
+        """
+        if not text:
+            return []
+        
+        tickers = []
+        
+        # Match $TICKER format (most common in trading Discord)
+        dollar_tickers = re.findall(r'\$([A-Z]{1,5})\b', text)
+        tickers.extend(dollar_tickers)
+        
+        # Match standalone ALL CAPS tickers (2-5 chars, common stock symbols)
+        # But exclude common words like "THIS", "MAKE", "JUST", etc.
+        excluded_words = {'THIS', 'THAT', 'MAKE', 'JUST', 'OVER', 'MORE', 'SOME', 'VERY', 'ONLY', 'LIKE', 'BEEN', 'WHEN', 'WILL', 'CALL', 'PUTS', 'SAME'}
+        standalone = re.findall(r'\b([A-Z]{2,5})\b', text)
+        tickers.extend([t for t in standalone if t not in excluded_words])
+        
+        # Remove duplicates, preserve order
+        seen = set()
+        unique_tickers = []
+        for ticker in tickers:
+            if ticker not in seen:
+                seen.add(ticker)
+                unique_tickers.append(ticker)
+        
+        return unique_tickers
+    
+    def calculate_conviction_score(self, reactions: Dict[str, int]) -> float:
+        """
+        Calculate conviction score from emoji reactions
+        
+        Formula: Σ(emoji_weight × count) 
+        Returns: 0-10 scale
+        """
+        total_score = 0.0
+        
+        for emoji, count in reactions.items():
+            weight = CONVICTION_EMOJIS.get(emoji, 0.1)  # Default 0.1 for other emojis
+            total_score += weight * count
+        
+        # Scale to 0-10 (20+ weighted reactions = 10/10)
+        normalized = min(10.0, (total_score / 20.0) * 10.0)
+        return round(normalized, 1)
+    
+    async def scan_channel(
+        self, 
+        channel_id: int, 
+        hours_back: int = 24,
+        min_reactions: int = 5
+    ) -> List[Dict[str, Any]]:
+        """
+        Scan a Discord channel for social arbitrage signals
         
         Args:
-            messages: List of message dicts with content, reactions, timestamp
-            
+            channel_id: Discord channel ID
+            hours_back: Hours of history to scan
+            min_reactions: Minimum total reactions to qualify
+        
         Returns:
             List of signal dictionaries
         """
         signals = []
-        cutoff_time = datetime.now() - timedelta(hours=self.hours_fresh)
+        cutoff_time = datetime.utcnow() - timedelta(hours=hours_back)
         
-        for msg in messages:
-            # Check if fresh
-            msg_time = datetime.fromisoformat(msg.get('timestamp', datetime.now().isoformat()))
-            if msg_time < cutoff_time:
-                continue  # Skip stale messages
+        try:
+            channel = await self.client.fetch_channel(channel_id)
+            print(f"📊 Scanning #{channel.name} (last {hours_back}h)...")
             
-            # Extract tickers
-            tickers = self._extract_tickers(msg['content'])
-            
-            # Count reactions
-            reactions = msg.get('reactions', {})
-            total_reactions = self._count_conviction_reactions(reactions)
-            
-            # Skip if low conviction
-            if total_reactions < 15:  # Pre-filter (below threshold)
-                continue
-            
-            # Extract thesis
-            thesis = self._extract_thesis(msg['content'])
-            
-            for ticker in tickers:
-                signal = {
-                    'ticker': ticker,
-                    'source': 'DumbMoney',
-                    'date_found': datetime.now().strftime('%Y-%m-%d'),
-                    'message_timestamp': msg_time.strftime('%Y-%m-%d %H:%M'),
-                    'total_reactions': total_reactions,
-                    'fire_reactions': reactions.get('🔥', 0),
-                    'rocket_reactions': reactions.get('🚀', 0),
-                    'thumbsup_reactions': reactions.get('👍', 0),
-                    'muscle_reactions': reactions.get('💪', 0),
-                    'thesis_snippet': thesis[:200],
-                    'conviction_score': self._calculate_conviction(total_reactions, msg['content']),
-                    'status': 'YELLOW'
-                }
+            message_count = 0
+            async for message in channel.history(limit=1000):
+                message_count += 1
                 
-                # Mark as GREEN if meets threshold
-                if total_reactions >= self.reaction_threshold:
-                    signal['status'] = 'GREEN'
+                # Stop if past cutoff
+                if message.created_at.replace(tzinfo=None) < cutoff_time:
+                    break
                 
-                signals.append(signal)
+                # Extract tickers from message
+                tickers = self.extract_tickers(message.content)
+                if not tickers:
+                    continue
+                
+                # Count reactions
+                reactions = {}
+                total_reaction_count = 0
+                
+                for reaction in message.reactions:
+                    emoji = str(reaction.emoji)
+                    count = reaction.count
+                    reactions[emoji] = count
+                    total_reaction_count += count
+                
+                # Filter: minimum reactions required
+                if total_reaction_count < min_reactions:
+                    continue
+                
+                # Calculate conviction score
+                conviction = self.calculate_conviction_score(reactions)
+                
+                # Build signal for each ticker mentioned
+                for ticker in tickers:
+                    signal = {
+                        'ticker': ticker,
+                        'source': 'dumbmoney-discord',
+                        'channel': channel.name,
+                        'message_id': str(message.id),
+                        'author': message.author.name,
+                        'content': message.content[:200],  # Truncate
+                        'timestamp': message.created_at.isoformat(),
+                        'reactions': reactions,
+                        'total_reactions': total_reaction_count,
+                        'conviction_score': conviction,
+                        'url': message.jump_url
+                    }
+                    
+                    signals.append(signal)
+            
+            print(f"   Scanned {message_count} messages, found {len(signals)} signals")
+            
+        except discord.errors.Forbidden:
+            print(f"❌ No access to channel {channel_id}")
+        except discord.errors.NotFound:
+            print(f"❌ Channel {channel_id} not found")
+        except Exception as e:
+            print(f"❌ Error: {e}")
         
         return signals
     
-    def _extract_tickers(self, content: str) -> List[str]:
+    async def scan_server(
+        self,
+        guild_id: int,
+        channel_ids: List[int],
+        hours_back: int = 24,
+        min_reactions: int = 5
+    ) -> List[Dict[str, Any]]:
         """
-        Extract stock tickers from message
-        
-        Returns:
-            List of ticker symbols (e.g., ['ASTS', 'TAC'])
-        """
-        import re
-        
-        # Pattern 1: $TICKER format (most common)
-        dollar_tickers = re.findall(r'\$([A-Z]{1,5})', content)
-        
-        # Pattern 2: Standalone uppercase 1-5 letters near financial keywords
-        # (More conservative than crypto - stocks often use longer names)
-        financial_keywords = ['stock', 'shares', 'price', 'earnings', 'revenue', 'market cap']
-        
-        tickers = []
-        
-        # Add dollar tickers
-        tickers.extend(dollar_tickers)
-        
-        # Filter common words
-        blacklist = ['I', 'A', 'THE', 'AND', 'FOR', 'ARE', 'CAN', 'CEO', 'CFO', 'USA', 'NYSE', 'IMO']
-        tickers = [t for t in tickers if t not in blacklist]
-        
-        # Dedupe
-        return list(set(tickers))
-    
-    def _count_conviction_reactions(self, reactions: Dict[str, int]) -> int:
-        """
-        Count conviction reactions (🔥🚀👍💪)
-        
-        Returns:
-            Total conviction reaction count
-        """
-        conviction_emojis = ['🔥', '🚀', '👍', '💪', '💎', '🙌']
-        total = sum(reactions.get(emoji, 0) for emoji in conviction_emojis)
-        return total
-    
-    def _extract_thesis(self, content: str) -> str:
-        """
-        Extract investment thesis from message
-        
-        Returns:
-            Cleaned thesis string
-        """
-        # Remove links
-        import re
-        content = re.sub(r'http\S+', '', content)
-        
-        # Remove excessive whitespace
-        content = ' '.join(content.split())
-        
-        return content
-    
-    def _calculate_conviction(self, total_reactions: int, content: str) -> int:
-        """
-        Calculate conviction score 1-10
+        Scan multiple channels in a Discord server
         
         Args:
-            total_reactions: Total conviction emoji reactions
-            content: Message content
+            guild_id: Discord server (guild) ID
+            channel_ids: List of channel IDs to scan
+            hours_back: Hours of history
+            min_reactions: Minimum reaction threshold
+        
+        Returns:
+            Combined list of all signals found
+        """
+        all_signals = []
+        
+        for channel_id in channel_ids:
+            channel_signals = await self.scan_channel(
+                channel_id, 
+                hours_back=hours_back,
+                min_reactions=min_reactions
+            )
+            all_signals.extend(channel_signals)
             
-        Returns:
-            Score 1-10
-        """
-        # Base score from reactions
-        if total_reactions >= 30:
-            score = 9
-        elif total_reactions >= 25:
-            score = 8
-        elif total_reactions >= 20:
-            score = 7
-        elif total_reactions >= 15:
-            score = 6
-        else:
-            score = 5
+            # Rate limit protection
+            await asyncio.sleep(0.5)
         
-        # Bonus for quality thesis indicators
-        quality_indicators = [
-            'revenue growth',
-            'earnings',
-            'market share',
-            'competitive advantage',
-            'addressable market',
-            'moat'
-        ]
-        
-        if any(indicator in content.lower() for indicator in quality_indicators):
-            score += 1
-        
-        # Penalty for hype language
-        hype_words = ['moon', 'lambo', 'to the moon', '🚀🚀🚀']
-        if any(word in content.lower() for word in hype_words):
-            score -= 1
-        
-        # Cap at 10
-        return min(max(score, 1), 10)
+        return all_signals
     
-    def validate_freshness(self, signals: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def aggregate_signals(self, signals: List[Dict]) -> List[Dict]:
         """
-        Filter to only fresh signals (<48h old)
-        
-        Returns:
-            Filtered list of fresh signals
+        Aggregate multiple mentions of same ticker
+        Combines reactions across messages
         """
-        fresh = []
-        cutoff = datetime.now() - timedelta(hours=self.hours_fresh)
-        
-        for signal in signals:
-            msg_time = datetime.strptime(signal['message_timestamp'], '%Y-%m-%d %H:%M')
-            if msg_time >= cutoff:
-                fresh.append(signal)
-        
-        return fresh
-    
-    def consolidate_signals(self, signals: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """
-        Consolidate duplicate tickers, sum reactions
-        
-        Returns:
-            Consolidated list with max conviction per ticker
-        """
-        ticker_map = {}
+        ticker_data = {}
         
         for signal in signals:
             ticker = signal['ticker']
             
-            if ticker not in ticker_map:
-                ticker_map[ticker] = signal
-            else:
-                # Keep the one with more reactions
-                if signal['total_reactions'] > ticker_map[ticker]['total_reactions']:
-                    ticker_map[ticker] = signal
-        
-        # Convert to list and sort by reactions
-        consolidated = list(ticker_map.values())
-        consolidated.sort(key=lambda x: x['total_reactions'], reverse=True)
-        
-        return consolidated
-    
-    def save_to_csv(self, signals: List[Dict[str, Any]]):
-        """Save signals to CSV database"""
-        with open(self.output_file, 'a', newline='') as f:
-            writer = csv.writer(f)
+            if ticker not in ticker_data:
+                ticker_data[ticker] = {
+                    'ticker': ticker,
+                    'source': 'dumbmoney-discord',
+                    'total_reactions': 0,
+                    'total_conviction': 0.0,
+                    'mention_count': 0,
+                    'messages': [],
+                    'top_emojis': {}
+                }
             
-            for signal in signals:
-                writer.writerow([
-                    signal['ticker'],
-                    signal['source'],
-                    signal['date_found'],
-                    '',  # price_entry (filled when deployed)
-                    signal['conviction_score'],
-                    signal['status'],
-                    'NO',  # deployed
-                    '',  # position_size
-                    '',  # stop_loss
-                    '',  # target_1
-                    '',  # target_2
-                    '',  # current_price
-                    '',  # pnl_dollars
-                    '',  # pnl_percent
-                    f"Reactions: {signal['total_reactions']} (🔥{signal['fire_reactions']} 🚀{signal['rocket_reactions']}), Fresh: {signal['message_timestamp']}"
-                ])
+            # Aggregate
+            ticker_data[ticker]['total_reactions'] += signal['total_reactions']
+            ticker_data[ticker]['total_conviction'] += signal['conviction_score']
+            ticker_data[ticker]['mention_count'] += 1
+            ticker_data[ticker]['messages'].append({
+                'author': signal['author'],
+                'content': signal['content'],
+                'url': signal['url'],
+                'timestamp': signal['timestamp']
+            })
+            
+            # Aggregate emoji counts
+            for emoji, count in signal['reactions'].items():
+                if emoji not in ticker_data[ticker]['top_emojis']:
+                    ticker_data[ticker]['top_emojis'][emoji] = 0
+                ticker_data[ticker]['top_emojis'][emoji] += count
         
-        print(f"Saved {len(signals)} signals to {self.output_file}")
+        # Calculate average conviction
+        aggregated = []
+        for ticker, data in ticker_data.items():
+            data['avg_conviction'] = round(
+                data['total_conviction'] / data['mention_count'], 
+                1
+            )
+            aggregated.append(data)
+        
+        # Sort by average conviction (descending)
+        aggregated.sort(key=lambda x: x['avg_conviction'], reverse=True)
+        
+        return aggregated
     
-    def run(self, messages: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    async def run_scan(
+        self,
+        channel_ids: List[int],
+        hours_back: int = 24,
+        min_reactions: int = 5,
+        output_file: str = None
+    ) -> List[Dict]:
         """
-        Main execution: scrape Dumb Money and return GREEN signals
+        Main scan execution
         
         Args:
-            messages: List of Discord message dicts
-            
+            channel_ids: List of Discord channel IDs to scan
+            hours_back: Hours of history
+            min_reactions: Minimum reaction count
+            output_file: Optional JSON output file
+        
         Returns:
-            List of GREEN signals ready to deploy
+            List of aggregated signals
         """
-        print("Scraping Dumb Money Discord...")
+        @self.client.event
+        async def on_ready():
+            print(f"✅ Connected as {self.client.user}")
+            print(f"🔍 Scanning {len(channel_ids)} channel(s)...")
+            
+            # Scan all channels
+            raw_signals = []
+            for channel_id in channel_ids:
+                signals = await self.scan_channel(
+                    channel_id,
+                    hours_back=hours_back,
+                    min_reactions=min_reactions
+                )
+                raw_signals.extend(signals)
+            
+            # Aggregate by ticker
+            aggregated = self.aggregate_signals(raw_signals)
+            
+            self.signals = aggregated
+            
+            # Save to file
+            if output_file:
+                with open(output_file, 'w') as f:
+                    json.dump(aggregated, f, indent=2)
+                print(f"💾 Saved {len(aggregated)} signals to {output_file}")
+            
+            # Print summary
+            print(f"\n📊 FOUND {len(aggregated)} UNIQUE TICKERS\n")
+            for sig in aggregated[:10]:  # Top 10
+                print(f"  {sig['ticker']:6} | Conviction: {sig['avg_conviction']}/10 | "
+                      f"Reactions: {sig['total_reactions']} | "
+                      f"Mentions: {sig['mention_count']}")
+            
+            await self.client.close()
         
-        # Extract all signals
-        all_signals = self.scrape_channel(messages)
+        # Run
+        try:
+            await self.client.start(self.token)
+        except Exception as e:
+            print(f"❌ Error: {e}")
         
-        # Filter to fresh only
-        fresh_signals = self.validate_freshness(all_signals)
-        
-        # Consolidate duplicates
-        consolidated = self.consolidate_signals(fresh_signals)
-        
-        # Filter to GREEN only (20+ reactions)
-        green_signals = [s for s in consolidated if s['status'] == 'GREEN']
-        
-        print(f"\nTotal signals extracted: {len(all_signals)}")
-        print(f"Fresh signals (<48h): {len(fresh_signals)}")
-        print(f"After consolidation: {len(consolidated)}")
-        print(f"GREEN signals (20+ reactions): {len(green_signals)}")
-        
-        # Display top signals
-        print("\nTop 10 signals:")
-        for i, signal in enumerate(consolidated[:10], 1):
-            status_emoji = '🟢' if signal['status'] == 'GREEN' else '🟡'
-            print(f"{status_emoji} {i}. {signal['ticker']} - "
-                  f"{signal['total_reactions']} reactions (🔥{signal['fire_reactions']} 🚀{signal['rocket_reactions']}), "
-                  f"Conviction: {signal['conviction_score']}/10")
-            print(f"   Thesis: {signal['thesis_snippet'][:100]}...")
-            print()
-        
-        # Save to database
-        self.save_to_csv(consolidated)
-        
-        return green_signals
+        return self.signals
 
 
-# Example usage
+async def main():
+    """CLI entry point"""
+    import argparse
+    
+    parser = argparse.ArgumentParser(description="Dumb Money Discord social arbitrage scanner")
+    parser.add_argument('--channels', type=str, help='Comma-separated channel IDs')
+    parser.add_argument('--hours', type=int, default=24, help='Hours of history')
+    parser.add_argument('--min-reactions', type=int, default=5, help='Minimum reactions')
+    parser.add_argument('--output', type=str, default='dumbmoney-signals.json', help='Output file')
+    
+    args = parser.parse_args()
+    
+    print("🐓 Dumb Money Social Arbitrage Scanner")
+    print("="*60)
+    
+    # Parse channel IDs
+    if args.channels:
+        channel_ids = [int(c.strip()) for c in args.channels.split(',')]
+    else:
+        print("❌ No channels specified. Use --channels CHANNEL_ID1,CHANNEL_ID2")
+        print("\nTo find channel IDs:")
+        print("  1. Enable Discord Developer Mode (Settings > Advanced)")
+        print("  2. Right-click channel → Copy ID")
+        return
+    
+    # Run scanner
+    scanner = DumbMoneyScanner()
+    signals = await scanner.run_scan(
+        channel_ids=channel_ids,
+        hours_back=args.hours,
+        min_reactions=args.min_reactions,
+        output_file=args.output
+    )
+    
+    print(f"\n✅ Scan complete: {len(signals)} signals found")
+    print(f"   Output: {args.output}")
+
+
 if __name__ == "__main__":
-    # Sample messages (replace with actual Discord scraping)
-    sample_messages = [
-        {
-            'content': "$ASTS SpaceMobile is the first-mover in satellite-to-cell. Partnerships with AT&T, Verizon. Waiting on FCC approval but when it hits, this could 3x. Market cap $38B but TAM is massive.",
-            'reactions': {'🔥': 34, '🚀': 16, '👍': 8},
-            'timestamp': datetime.now().isoformat()
-        },
-        {
-            'content': "$TAC TransAlta Energy - undervalued renewable play. Revenue growing 15% YoY. Trading at 0.8x book value. Dividend yield 4.5%. Institutional accumulation visible.",
-            'reactions': {'👍': 32, '🔥': 11},
-            'timestamp': (datetime.now() - timedelta(hours=12)).isoformat()
-        },
-        {
-            'content': "$AS to the moon! 🚀🚀🚀 This will 10x easy!",
-            'reactions': {'🔥': 25, '💪': 10},
-            'timestamp': (datetime.now() - timedelta(hours=6)).isoformat()
-        }
-    ]
-    
-    scraper = DumbMoneyScraper()
-    green_signals = scraper.run(sample_messages)
-    
-    print(f"\n🟢 Deploy these {len(green_signals)} social arb signals:")
-    for signal in green_signals:
-        print(f"- {signal['ticker']} ({signal['total_reactions']} reactions, Conviction: {signal['conviction_score']}/10)")
+    asyncio.run(main())

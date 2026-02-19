@@ -69,8 +69,64 @@ def scan_dumb_money():
     """
     log_to_file("👍 Scanning Dumb Money...")
     
-    # TODO: Discord scraping for emoji reactions
     signals = []
+    
+    try:
+        # Run Dumb Money Discord scraper
+        scraper_path = BASE_DIR / 'scrapers' / 'dumbmoney_scraper.py'
+        
+        if scraper_path.exists():
+            # For now, use demo mode (will implement real Discord channels later)
+            # Real usage: --channels CHANNEL_ID1,CHANNEL_ID2
+            result = subprocess.run(
+                [
+                    'python3', str(scraper_path),
+                    '--hours', '24',
+                    '--min-reactions', '10',
+                    '--output', str(BASE_DIR / 'dumbmoney-signals.json')
+                ],
+                capture_output=True,
+                text=True,
+                timeout=60,
+                cwd=str(BASE_DIR / 'scrapers')
+            )
+            
+            # Load results from JSON output
+            output_file = BASE_DIR / 'dumbmoney-signals.json'
+            if output_file.exists():
+                try:
+                    with open(output_file, 'r') as f:
+                        data = json.load(f)
+                    
+                    # Convert to signal format
+                    for item in data:
+                        ticker = item.get('ticker', '')
+                        conviction = item.get('avg_conviction', 0)
+                        reactions = item.get('total_reactions', 0)
+                        
+                        if reactions >= 10 and ticker:  # Minimum threshold
+                            # Score based on social validation strength
+                            signals.append({
+                                'symbol': ticker,
+                                'source': 'dumbmoney-discord',
+                                'reason': f'{reactions} reactions across {item.get("mention_count", 1)} messages',
+                                'score_components': {
+                                    'source_quality': 1.5,  # Dumb Money = proven edge
+                                    'catalyst_strength': 0.5,  # Social catalyst
+                                    'fundamentals': 0.0,  # Need to validate
+                                    'technicals': 0.0,  # Need chart analysis
+                                    'social_validation': min(2.0, conviction / 5.0)  # Scale conviction
+                                }
+                            })
+                except json.JSONDecodeError:
+                    log_to_file(f"   ⚠️  Could not parse Dumb Money JSON")
+        else:
+            log_to_file(f"   ⚠️  Dumb Money scraper not found at {scraper_path}")
+            
+    except subprocess.TimeoutExpired:
+        log_to_file(f"   ⚠️  Dumb Money scan timed out")
+    except Exception as e:
+        log_to_file(f"   ⚠️  Dumb Money scan error: {e}")
     
     log_to_file(f"   Found {len(signals)} Dumb Money signals")
     return signals

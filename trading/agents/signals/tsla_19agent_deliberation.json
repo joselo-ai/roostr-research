@@ -1,0 +1,401 @@
+{
+  "ticker": "TSLA",
+  "timestamp": "2026-02-17T18:04:45.178394",
+  "agents": {
+    "quant": {
+      "valuation": {
+        "agent_name": "Quant Valuation",
+        "ticker": "TSLA",
+        "conviction": 1.5,
+        "action": "SELL",
+        "rationale": "I assess TSLA as extremely overvalued based on quantitative analysis. P/E ratio of 376.72 suggests premium pricing. P/B of 18.75 indicates market expects growth. EV/EBITDA of 146.42 reflects market premium.",
+        "key_metrics": {
+          "pe_ratio": 376.72,
+          "pe_score": 1.5,
+          "pb_ratio": 18.75,
+          "pb_score": 1.5,
+          "ev_ebitda": 146.42,
+          "ebitda_score": 1.5,
+          "current_price": 410.63,
+          "market_cap": 1540861067264,
+          "conviction": 1.5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:45.598064"
+      },
+      "technicals": {
+        "agent_name": "Quant Technicals",
+        "ticker": "TSLA",
+        "conviction": 5.12,
+        "action": "HOLD",
+        "rationale": "I see TSLA as neutral from a technical perspective. RSI at 40.97 is neutral, MACD shows bullish crossover, and price is below 50 DMA (bearish). Volume trends are normal volume.",
+        "key_metrics": {
+          "rsi": 40.97,
+          "rsi_signal": "neutral",
+          "macd": -7.2255,
+          "macd_signal": "bullish crossover",
+          "ma_50": 443.23,
+          "ma_200": null,
+          "current_price": 410.63,
+          "ma_signal": "below 50 DMA (bearish)",
+          "volume_signal": "normal volume",
+          "conviction": 5.12
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:45.677656"
+      },
+      "fundamentals": {
+        "agent_name": "Quant Fundamentals",
+        "ticker": "TSLA",
+        "conviction": 4.0,
+        "action": "HOLD",
+        "rationale": "I assess TSLA fundamentals as average. ROE of 4.93% shows moderate returns. Debt/Equity at 17.76 indicates conservative leverage. Revenue growing at -3.1%. Profit margins at 4.0%.",
+        "key_metrics": {
+          "roe": 4.93,
+          "roe_score": 2.0,
+          "debt_to_equity": 17.76,
+          "debt_score": 9.0,
+          "fcf_yield": 0.24,
+          "fcf_score": 4.0,
+          "revenue_growth": -3.1,
+          "growth_score": 2.0,
+          "profit_margin": 4.0,
+          "margin_score": 3.0,
+          "conviction": 4.0
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:45.692403"
+      },
+      "sentiment": {
+        "agent_name": "Quant Sentiment",
+        "ticker": "TSLA",
+        "conviction": 5.0,
+        "action": "HOLD",
+        "rationale": "I see neutral sentiment for TSLA. News sentiment shows 10 recent articles with mixed tone. Overall crowd sentiment is neutral.",
+        "key_metrics": {
+          "news_score": 5.0,
+          "news_count": 10,
+          "momentum_score": 5.0,
+          "conviction": 5.0
+        },
+        "data_quality": "MEDIUM",
+        "timestamp": "2026-02-17T18:04:45.919118"
+      }
+    },
+    "legendary": {
+      "damodaran": {
+        "agent_name": "Aswath Damodaran",
+        "ticker": "TSLA",
+        "conviction": 1.5,
+        "action": "SELL",
+        "rationale": "My DCF model values TSLA at $15.93 per share based on 5.0% growth and 10% WACC. Comparable P/E analysis suggests $21.80 using 20.0x industry multiple. This gives a margin of safety of -95.4% at current price $410.63. The market is pricing in a story that the numbers don't support. Overvalued.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "dcf_intrinsic_value": 15.934202777151768,
+          "pe_intrinsic_value": 21.80000061583422,
+          "margin_of_safety_pct": -95.40532798468378,
+          "fcf": 3732624896,
+          "revenue_growth": -0.031,
+          "pe_ratio": 376.72476,
+          "ev_ebitda": 146.416,
+          "sector": "Consumer Cyclical"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:45.936695"
+      },
+      "graham": {
+        "agent_name": "Benjamin Graham",
+        "ticker": "TSLA",
+        "conviction": 6.0,
+        "action": "HOLD",
+        "rationale": "Analyzing TSLA through my classic value lens: Passes 3 criteria: Current ratio 2.2 > 2; Debt/Equity 17.8% < 100%; Positive earnings. Fails 2 criteria: P/E 376.7 too high (>15); P/B 18.75 > 1.5. Some value here, but not a screaming bargain. I prefer clearer safety margins.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "pe_ratio": 376.72476,
+          "pb_ratio": 18.752798,
+          "book_value": 21.897,
+          "net_net_per_share": null,
+          "current_ratio": 2.164,
+          "debt_to_equity": 17.763,
+          "criteria_met": 3,
+          "criteria_failed": 2
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.279386"
+      },
+      "lynch": {
+        "agent_name": "Peter Lynch",
+        "ticker": "TSLA",
+        "conviction": 4.4,
+        "action": "HOLD",
+        "rationale": "Looking at TSLA as a potential growth play: It's a Auto Manufacturers business I can understand. Growth doesn't justify the price. Pass.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "pe_ratio": 376.72476,
+          "peg_ratio": null,
+          "revenue_growth_pct": -3.1,
+          "earnings_growth_pct": -60.6,
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Manufacturers",
+          "is_consumer_facing": true
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.320124"
+      },
+      "wood": {
+        "agent_name": "Cathie Wood",
+        "ticker": "TSLA",
+        "conviction": 4.8,
+        "action": "HOLD",
+        "rationale": "Evaluating TSLA for disruptive innovation potential: I see exposure to artificial intelligence, ai - these are the transformative themes of the next decade. Growth is too slow for my 5-year compounding thesis. This isn't disruptive enough for my portfolio.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "sector": "Consumer Cyclical",
+          "industry": "Auto Manufacturers",
+          "revenue_growth_pct": -3.1,
+          "market_cap": 1540861067264,
+          "innovation_themes": [
+            "artificial intelligence",
+            "ai",
+            "gene",
+            "electric vehicle",
+            "ev"
+          ],
+          "innovation_score": 4
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.336024"
+      },
+      "fisher": {
+        "agent_name": "Phil Fisher",
+        "ticker": "TSLA",
+        "conviction": 2.8571428571428568,
+        "action": "SELL",
+        "rationale": "Conducting scuttlebutt research on TSLA: Some quality characteristics: Low debt 17.8%; Strong liquidity 2.2x. However, concerns about Low operating margin 4.7%; ROE 4.9% below 10%. Quality isn't high enough for my hold-forever portfolio.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "gross_margin_pct": 18.027,
+          "operating_margin_pct": 4.7030002,
+          "profit_margin_pct": 4.0009998,
+          "roe_pct": 4.9250003,
+          "roa_pct": 2.095,
+          "revenue_growth_pct": -3.1,
+          "debt_to_equity": 17.763,
+          "current_ratio": 2.164,
+          "quality_score": 2
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.351958"
+      },
+      "jhunjhunwala": {
+        "agent_name": "Rakesh Jhunjhunwala",
+        "ticker": "TSLA",
+        "conviction": 1,
+        "action": "SELL",
+        "rationale": "Analyzing TSLA for long-term wealth creation: Growth and quality aren't strong enough for my patient capital approach.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "revenue_growth_pct": -3.1,
+          "earnings_growth_pct": -60.6,
+          "roe_pct": 4.9250003,
+          "profit_margin_pct": 4.0009998,
+          "country": "United States",
+          "sector": "Consumer Cyclical",
+          "is_emerging_market": false,
+          "market_cap": 1540861067264
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.368131"
+      },
+      "ackman": {
+        "agent_name": "Bill Ackman",
+        "ticker": "TSLA",
+        "conviction": 2.5,
+        "action": "SELL",
+        "rationale": "Evaluating TSLA for activist opportunity: I don't see enough catalyst potential or value unlock opportunity here. Too large for activist influence. I only make bold bets when I have high conviction.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "pe_ratio": 376.72476,
+          "pb_ratio": 18.752798,
+          "roe_pct": 4.9250003,
+          "operating_margin_pct": 4.7030002,
+          "debt_to_equity": 17.763,
+          "market_cap": 1540861067264,
+          "catalyst_score": 2.5,
+          "position_size": "NONE"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.388621"
+      },
+      "druckenmiller": {
+        "agent_name": "Stanley Druckenmiller",
+        "ticker": "TSLA",
+        "conviction": 2,
+        "action": "SELL",
+        "rationale": "Macro analysis on TSLA: Price momentum +22.5% confirms the trend. No clear macro edge or asymmetry. I only bet big when the macro and risk/reward align.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "sector": "Consumer Cyclical",
+          "momentum_6m_pct": 22.517603650818668,
+          "volatility_pct": 44.83687192421563,
+          "upside_to_target_pct": 2.7029199035628158,
+          "revenue_growth_pct": -3.1,
+          "pe_ratio": 376.72476,
+          "macro_score": 2,
+          "position_size": "NONE"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.476164"
+      },
+      "pabrai": {
+        "agent_name": "Mohnish Pabrai",
+        "ticker": "TSLA",
+        "conviction": 3,
+        "action": "SELL",
+        "rationale": "Dhandho analysis on TSLA: Low debt 17.8% means limited bankruptcy risk. Risk/reward isn't asymmetric enough. P/B 18.75 - high downside risk; Limited upside 3%. I need clearer downside protection.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "book_value": 21.897,
+          "pb_ratio": 18.752798,
+          "target_price": 421.729,
+          "upside_pct": 2.7029199035628158,
+          "downside_to_book_pct": -94.66746219224119,
+          "risk_reward_ratio": 0.02855173087954969,
+          "debt_to_equity": 17.763,
+          "current_ratio": 2.164,
+          "asymmetry_score": 3
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.496946"
+      },
+      "buffett": {
+        "agent_name": "Warren Buffett",
+        "ticker": "TSLA",
+        "conviction": 1.5,
+        "action": "SELL",
+        "rationale": "Looking at TSLA through my quality lens: Conservative balance sheet. I don't see a durable competitive advantage here.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "roe_pct": 4.9250003,
+          "roic_pct": 2.095,
+          "gross_margin_pct": 18.027,
+          "operating_margin_pct": 4.7030002,
+          "fcf_per_share": 0.994721533105875,
+          "debt_to_equity": 17.763,
+          "pe_ratio": 376.72476,
+          "sector": "Consumer Cyclical",
+          "moat_score": 1.5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.532099"
+      },
+      "munger": {
+        "agent_name": "Charlie Munger",
+        "ticker": "TSLA",
+        "conviction": 1.7000000000000002,
+        "action": "SELL",
+        "rationale": "Applying mental models to TSLA: Inverting: What could go wrong? Low margins 4.0% - no pricing power; Weak ROE 4.9% - poor capital deployment. Quality indicators: Conservative debt 17.8%. My inversion analysis shows too many ways this could go wrong. Avoid stupidity.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "roe_pct": 4.9250003,
+          "profit_margin_pct": 4.0009998,
+          "debt_to_equity": 17.763,
+          "pe_ratio": 376.72476,
+          "red_flags_count": 3,
+          "green_flags_count": 1
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.640762"
+      },
+      "burry": {
+        "agent_name": "Michael Burry",
+        "ticker": "TSLA",
+        "conviction": 2.5,
+        "action": "SELL",
+        "rationale": "Contrarian analysis on TSLA: But the fundamentals show positive cash flow. Not contrarian enough or fundamentals don't support going against the crowd.",
+        "key_metrics": {
+          "current_price": 410.63,
+          "pe_ratio": 376.72476,
+          "pb_ratio": 18.752798,
+          "book_value": 21.897,
+          "momentum_3m_pct": 2.3376959209501558,
+          "fcf": 3732624896,
+          "debt_to_equity": 17.763,
+          "contrarian_score": 2.5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:46.724587"
+      }
+    }
+  },
+  "synthesis": {
+    "consensus": "SELL",
+    "consensus_strength": "STRONG",
+    "avg_conviction": 3.09,
+    "vote_distribution": {
+      "BUY": 0,
+      "SELL": 10,
+      "HOLD": 6,
+      "ABSTAIN": 0
+    },
+    "data_quality": "HIGH",
+    "total_agents": 16,
+    "buy_percentage": 0.0,
+    "sell_percentage": 62.5
+  },
+  "risk": {
+    "risk_manager": {
+      "position_size_pct": 0,
+      "stop_loss_pct": 0,
+      "risk_level": "HIGH",
+      "max_portfolio_exposure": 0
+    },
+    "john_hull": {
+      "conviction_variance": 2.35,
+      "agent_disagreement": 0.62,
+      "data_reliability": "HIGH",
+      "recommendation": "CAUTION"
+    }
+  },
+  "recommendation": {
+    "action": "SELL",
+    "conviction": 3.0860714285714286,
+    "position_size_pct": 0,
+    "stop_loss_pct": 0,
+    "reasoning": "After deliberation among 16 specialized agents, 62% recommend SELL with average conviction 3.1/10. Majority sees limited upside or significant risks. Data quality is HIGH.",
+    "key_supporters": [
+      {
+        "name": "Mohnish Pabrai",
+        "conviction": 3,
+        "rationale": "Dhandho analysis on TSLA: Low debt 17.8% means limited bankruptcy risk. Risk/reward isn't asymmetric enough. P/B 18.75 - high downside risk; Limited upside 3%. I need clearer downside protection."
+      },
+      {
+        "name": "Phil Fisher",
+        "conviction": 2.8571428571428568,
+        "rationale": "Conducting scuttlebutt research on TSLA: Some quality characteristics: Low debt 17.8%; Strong liquidity 2.2x. However, concerns about Low operating margin 4.7%; ROE 4.9% below 10%. Quality isn't high enough for my hold-forever portfolio."
+      },
+      {
+        "name": "Bill Ackman",
+        "conviction": 2.5,
+        "rationale": "Evaluating TSLA for activist opportunity: I don't see enough catalyst potential or value unlock opportunity here. Too large for activist influence. I only make bold bets when I have high conviction."
+      }
+    ],
+    "key_critics": [
+      {
+        "name": "Benjamin Graham",
+        "conviction": 6.0,
+        "rationale": "Analyzing TSLA through my classic value lens: Passes 3 criteria: Current ratio 2.2 > 2; Debt/Equity 17.8% < 100%; Positive earnings. Fails 2 criteria: P/E 376.7 too high (>15); P/B 18.75 > 1.5. Some value here, but not a screaming bargain. I prefer clearer safety margins."
+      },
+      {
+        "name": "Quant Technicals",
+        "conviction": 5.12,
+        "rationale": "I see TSLA as neutral from a technical perspective. RSI at 40.97 is neutral, MACD shows bullish crossover, and price is below 50 DMA (bearish). Volume trends are normal volume."
+      },
+      {
+        "name": "Quant Sentiment",
+        "conviction": 5.0,
+        "rationale": "I see neutral sentiment for TSLA. News sentiment shows 10 recent articles with mixed tone. Overall crowd sentiment is neutral."
+      }
+    ]
+  }
+}

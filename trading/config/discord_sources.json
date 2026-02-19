@@ -1,0 +1,52 @@
+{
+  "dumbmoney": {
+    "name": "Dumb Money",
+    "description": "Social arbitrage signals - stocks with high engagement before Wall Street notices",
+    "guild_id": "YOUR_GUILD_ID_HERE",
+    "channels": {
+      "main": "CHANNEL_ID_HERE",
+      "alerts": "CHANNEL_ID_HERE"
+    },
+    "enabled": false,
+    "min_reactions": 10,
+    "conviction_threshold": 7.0
+  },
+  "yieldschool": {
+    "name": "Yieldschool",
+    "description": "Dan's crypto fundamental analysis",
+    "guild_id": "YOUR_GUILD_ID_HERE",
+    "channels": {
+      "yield_hub": "CHANNEL_ID_HERE",
+      "blue_chips": "CHANNEL_ID_HERE",
+      "mid_caps": "CHANNEL_ID_HERE",
+      "live_sessions": "CHANNEL_ID_HERE"
+    },
+    "enabled": false,
+    "conviction_threshold": 8.0
+  },
+  "chart_fanatics": {
+    "name": "Chart Fanatics",
+    "description": "Riz's EURUSD setups + other pro traders",
+    "guild_id": "YOUR_GUILD_ID_HERE",
+    "channels": {
+      "trade_ideas": "CHANNEL_ID_HERE",
+      "riz": "CHANNEL_ID_HERE",
+      "trade_recaps": "CHANNEL_ID_HERE"
+    },
+    "enabled": false,
+    "conviction_threshold": 8.5
+  },
+  "_instructions": {
+    "how_to_get_channel_ids": [
+      "1. Open Discord Desktop/Web (mobile doesn't work)",
+      "2. Settings > Advanced > Enable Developer Mode",
+      "3. Right-click any channel → Copy ID",
+      "4. Paste ID as string (keep quotes)",
+      "5. Set 'enabled': true when ready"
+    ],
+    "how_to_get_guild_id": [
+      "Right-click server icon (left sidebar) → Copy ID"
+    ],
+    "bot_token_location": "~/.openclaw/workspace/.discord-bot-token"
+  }
+}

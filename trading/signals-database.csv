@@ -1,2 +1,4 @@
 ticker,source,conviction,date_found,catalyst,status,entry_clarity
 TEST-GREEN,manual-test,8.7,2026-02-18,"Test signal: Multiple catalysts, strong fundamentals",new,5.0
+NVDA,manual-test,9.2,2026-02-18,AI chip leader - massive data center demand,new,5.0
+TAC,dumbmoney-discord,9.5,2026-02-18,TransAlta AI/HPC data centres - 52 reactions (32🔥+11👍+6🙏),new,5.0

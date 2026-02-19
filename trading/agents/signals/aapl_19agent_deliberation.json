@@ -1,0 +1,398 @@
+{
+  "ticker": "AAPL",
+  "timestamp": "2026-02-17T18:04:37.051548",
+  "agents": {
+    "quant": {
+      "valuation": {
+        "agent_name": "Quant Valuation",
+        "ticker": "AAPL",
+        "conviction": 2.0,
+        "action": "SELL",
+        "rationale": "I assess AAPL as extremely overvalued based on quantitative analysis. P/E ratio of 33.4 suggests premium pricing. P/B of 43.99 indicates market expects growth. EV/EBITDA of 24.71 reflects market premium.",
+        "key_metrics": {
+          "pe_ratio": 33.4,
+          "pe_score": 3.0,
+          "pb_ratio": 43.99,
+          "pb_score": 1.5,
+          "ev_ebitda": 24.71,
+          "ebitda_score": 1.5,
+          "current_price": 263.88,
+          "market_cap": 3878488637440,
+          "conviction": 2.0
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:37.437595"
+      },
+      "technicals": {
+        "agent_name": "Quant Technicals",
+        "ticker": "AAPL",
+        "conviction": 4.25,
+        "action": "HOLD",
+        "rationale": "I see AAPL as neutral from a technical perspective. RSI at 54.92 is neutral, MACD shows approaching bearish, and price is below 50 DMA (bearish). Volume trends are normal volume.",
+        "key_metrics": {
+          "rsi": 54.92,
+          "rsi_signal": "neutral",
+          "macd": 0.8798,
+          "macd_signal": "approaching bearish",
+          "ma_50": 266.85,
+          "ma_200": null,
+          "current_price": 263.88,
+          "ma_signal": "below 50 DMA (bearish)",
+          "volume_signal": "normal volume",
+          "conviction": 4.25
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:37.568886"
+      },
+      "fundamentals": {
+        "agent_name": "Quant Fundamentals",
+        "ticker": "AAPL",
+        "conviction": 6.5,
+        "action": "BUY",
+        "rationale": "I assess AAPL fundamentals as strong. ROE of 152.02% shows strong returns. Debt/Equity at 102.63 indicates elevated leverage. Revenue growing at 15.7%. Profit margins at 27.04%.",
+        "key_metrics": {
+          "roe": 152.02,
+          "roe_score": 9.0,
+          "debt_to_equity": 102.63,
+          "debt_score": 3.0,
+          "fcf_yield": 2.74,
+          "fcf_score": 4.0,
+          "revenue_growth": 15.7,
+          "growth_score": 7.5,
+          "profit_margin": 27.04,
+          "margin_score": 9.0,
+          "conviction": 6.5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:37.608619"
+      },
+      "sentiment": {
+        "agent_name": "Quant Sentiment",
+        "ticker": "AAPL",
+        "conviction": 5.0,
+        "action": "HOLD",
+        "rationale": "I see neutral sentiment for AAPL. News sentiment shows 10 recent articles with mixed tone. Overall crowd sentiment is neutral.",
+        "key_metrics": {
+          "news_score": 5.0,
+          "news_count": 10,
+          "momentum_score": 5.0,
+          "conviction": 5.0
+        },
+        "data_quality": "MEDIUM",
+        "timestamp": "2026-02-17T18:04:38.084762"
+      }
+    },
+    "legendary": {
+      "damodaran": {
+        "agent_name": "Aswath Damodaran",
+        "ticker": "AAPL",
+        "conviction": 3.0,
+        "action": "SELL",
+        "rationale": "My DCF model values AAPL at $179.41 per share based on 15.7% growth and 10% WACC. Comparable P/E analysis suggests $158.00 using 20.0x industry multiple. This gives a margin of safety of -36.1% at current price $263.88. The market is pricing in a story that the numbers don't support. Overvalued.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "dcf_intrinsic_value": 179.4129921780441,
+          "pe_intrinsic_value": 158.0000077838415,
+          "margin_of_safety_pct": -36.066962262792636,
+          "fcf": 106312753152,
+          "revenue_growth": 0.157,
+          "pe_ratio": 33.40253,
+          "ev_ebitda": 24.714,
+          "sector": "Technology"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.184863"
+      },
+      "graham": {
+        "agent_name": "Benjamin Graham",
+        "ticker": "AAPL",
+        "conviction": 2.0,
+        "action": "SELL",
+        "rationale": "Analyzing AAPL through my classic value lens: Passes 1 criteria: Positive earnings. Fails 4 criteria: P/E 33.4 too high (>15); P/B 43.99 > 1.5; Current ratio 1.0 < 2; Debt/Equity 102.6% > 100%. This fails my value screens. No margin of safety. Pass.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "pe_ratio": 33.40253,
+          "pb_ratio": 43.994663,
+          "book_value": 5.998,
+          "net_net_per_share": null,
+          "current_ratio": 0.974,
+          "debt_to_equity": 102.63,
+          "criteria_met": 1,
+          "criteria_failed": 4
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.457448"
+      },
+      "lynch": {
+        "agent_name": "Peter Lynch",
+        "ticker": "AAPL",
+        "conviction": 4.4,
+        "action": "HOLD",
+        "rationale": "Looking at AAPL as a potential growth play: PEG of 1.83 suggests the market is pricing in the growth. Growing at 18.3% but I've seen faster. Growth doesn't justify the price. Pass.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "pe_ratio": 33.40253,
+          "peg_ratio": 1.825274863387978,
+          "revenue_growth_pct": 15.7,
+          "earnings_growth_pct": 18.3,
+          "sector": "Technology",
+          "industry": "Consumer Electronics",
+          "is_consumer_facing": false
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.496877"
+      },
+      "wood": {
+        "agent_name": "Cathie Wood",
+        "ticker": "AAPL",
+        "conviction": 3.5999999999999996,
+        "action": "SELL",
+        "rationale": "Evaluating AAPL for disruptive innovation potential: I see exposure to ai, cloud - these are the transformative themes of the next decade. Revenue growth of 16% is solid but not exponential. This isn't disruptive enough for my portfolio.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "sector": "Technology",
+          "industry": "Consumer Electronics",
+          "revenue_growth_pct": 15.7,
+          "market_cap": 3878488637440,
+          "innovation_themes": [
+            "ai",
+            "cloud"
+          ],
+          "innovation_score": 3
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.536679"
+      },
+      "fisher": {
+        "agent_name": "Phil Fisher",
+        "ticker": "AAPL",
+        "conviction": 7.142857142857143,
+        "action": "BUY",
+        "rationale": "Conducting scuttlebutt research on AAPL: This is a quality growth business. Gross margin 47.3%; Operating margin 35.4%; Net margin 27.0%. These are the characteristics of a company I could hold forever.Superior margins and returns indicate a wonderful business worth holding long-term.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "gross_margin_pct": 47.325,
+          "operating_margin_pct": 35.374,
+          "profit_margin_pct": 27.037,
+          "roe_pct": 152.02099,
+          "roa_pct": 24.377,
+          "revenue_growth_pct": 15.7,
+          "debt_to_equity": 102.63,
+          "current_ratio": 0.974,
+          "quality_score": 5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.576549"
+      },
+      "jhunjhunwala": {
+        "agent_name": "Rakesh Jhunjhunwala",
+        "ticker": "AAPL",
+        "conviction": 6.0,
+        "action": "HOLD",
+        "rationale": "Analyzing AAPL for long-term wealth creation: Growing 15.7% annually with 152.0% ROE shows this is a quality business that can compound. Decent long-term potential but I've seen better opportunities.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "revenue_growth_pct": 15.7,
+          "earnings_growth_pct": 18.3,
+          "roe_pct": 152.02099,
+          "profit_margin_pct": 27.037,
+          "country": "United States",
+          "sector": "Technology",
+          "is_emerging_market": false,
+          "market_cap": 3878488637440
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.620235"
+      },
+      "ackman": {
+        "agent_name": "Bill Ackman",
+        "ticker": "AAPL",
+        "conviction": 1,
+        "action": "SELL",
+        "rationale": "Evaluating AAPL for activist opportunity: I don't see enough catalyst potential or value unlock opportunity here. Too large for activist influence. I only make bold bets when I have high conviction.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "pe_ratio": 33.40253,
+          "pb_ratio": 43.994663,
+          "roe_pct": 152.02099,
+          "operating_margin_pct": 35.374,
+          "debt_to_equity": 102.63,
+          "market_cap": 3878488637440,
+          "catalyst_score": 1,
+          "position_size": "NONE"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.660376"
+      },
+      "druckenmiller": {
+        "agent_name": "Stanley Druckenmiller",
+        "ticker": "AAPL",
+        "conviction": 3.5,
+        "action": "SELL",
+        "rationale": "Macro analysis on AAPL: Technology has macro tailwinds. Price momentum +14.5% confirms the trend. No clear macro edge or asymmetry. I only bet big when the macro and risk/reward align.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "sector": "Technology",
+          "momentum_6m_pct": 14.506025066442884,
+          "volatility_pct": 22.542305898674915,
+          "upside_to_target_pct": 10.92302182810368,
+          "revenue_growth_pct": 15.7,
+          "pe_ratio": 33.40253,
+          "macro_score": 3.5,
+          "position_size": "NONE"
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.724746"
+      },
+      "pabrai": {
+        "agent_name": "Mohnish Pabrai",
+        "ticker": "AAPL",
+        "conviction": 0,
+        "action": "SELL",
+        "rationale": "Dhandho analysis on AAPL: Risk/reward isn't asymmetric enough. P/B 43.99 - high downside risk. I need clearer downside protection.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "book_value": 5.998,
+          "pb_ratio": 43.994663,
+          "target_price": 292.70367,
+          "upside_pct": 10.92302182810368,
+          "downside_to_book_pct": -97.72699711990299,
+          "risk_reward_ratio": 0.11177077112788016,
+          "debt_to_equity": 102.63,
+          "current_ratio": 0.974,
+          "asymmetry_score": 0
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.764366"
+      },
+      "buffett": {
+        "agent_name": "Warren Buffett",
+        "ticker": "AAPL",
+        "conviction": 5.0,
+        "action": "HOLD",
+        "rationale": "Looking at AAPL through my quality lens: ROE of 152.0% shows this business earns good returns on capital. Gross margins of 47.3% suggest pricing power. Decent business but not the exceptional quality I seek.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "roe_pct": 152.02099,
+          "roic_pct": 24.377,
+          "gross_margin_pct": 47.325,
+          "operating_margin_pct": 35.374,
+          "fcf_per_share": 7.2414508104956425,
+          "debt_to_equity": 102.63,
+          "pe_ratio": 33.40253,
+          "sector": "Technology",
+          "moat_score": 5.0
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.804418"
+      },
+      "munger": {
+        "agent_name": "Charlie Munger",
+        "ticker": "AAPL",
+        "conviction": 5.9,
+        "action": "HOLD",
+        "rationale": "Applying mental models to AAPL: Inverting: What could go wrong? Complex sector: Technology. Quality indicators: High margins 27.0% - pricing power; Strong ROE 152.0%. Mixed signals. Not obviously stupid, but not obviously wonderful either.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "roe_pct": 152.02099,
+          "profit_margin_pct": 27.037,
+          "debt_to_equity": 102.63,
+          "pe_ratio": 33.40253,
+          "red_flags_count": 1,
+          "green_flags_count": 2
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.844914"
+      },
+      "burry": {
+        "agent_name": "Michael Burry",
+        "ticker": "AAPL",
+        "conviction": 1.5,
+        "action": "SELL",
+        "rationale": "Contrarian analysis on AAPL: But the fundamentals show positive cash flow. Not contrarian enough or fundamentals don't support going against the crowd.",
+        "key_metrics": {
+          "current_price": 263.88,
+          "pe_ratio": 33.40253,
+          "pb_ratio": 43.994663,
+          "book_value": 5.998,
+          "momentum_3m_pct": -1.238817893015896,
+          "fcf": 106312753152,
+          "debt_to_equity": 102.63,
+          "contrarian_score": 1.5
+        },
+        "data_quality": "HIGH",
+        "timestamp": "2026-02-17T18:04:38.997552"
+      }
+    }
+  },
+  "synthesis": {
+    "consensus": "SELL",
+    "consensus_strength": "MODERATE",
+    "avg_conviction": 3.8,
+    "vote_distribution": {
+      "BUY": 2,
+      "SELL": 8,
+      "HOLD": 6,
+      "ABSTAIN": 0
+    },
+    "data_quality": "HIGH",
+    "total_agents": 16,
+    "buy_percentage": 12.5,
+    "sell_percentage": 50.0
+  },
+  "risk": {
+    "risk_manager": {
+      "position_size_pct": 0,
+      "stop_loss_pct": 0,
+      "risk_level": "HIGH",
+      "max_portfolio_exposure": 0
+    },
+    "john_hull": {
+      "conviction_variance": 4.12,
+      "agent_disagreement": 0.38,
+      "data_reliability": "HIGH",
+      "recommendation": "CAUTION"
+    }
+  },
+  "recommendation": {
+    "action": "SELL",
+    "conviction": 3.799553571428571,
+    "position_size_pct": 0,
+    "stop_loss_pct": 0,
+    "reasoning": "After deliberation among 16 specialized agents, 50% recommend SELL with average conviction 3.8/10. Majority sees limited upside or significant risks. Data quality is HIGH.",
+    "key_supporters": [
+      {
+        "name": "Cathie Wood",
+        "conviction": 3.5999999999999996,
+        "rationale": "Evaluating AAPL for disruptive innovation potential: I see exposure to ai, cloud - these are the transformative themes of the next decade. Revenue growth of 16% is solid but not exponential. This isn't disruptive enough for my portfolio."
+      },
+      {
+        "name": "Stanley Druckenmiller",
+        "conviction": 3.5,
+        "rationale": "Macro analysis on AAPL: Technology has macro tailwinds. Price momentum +14.5% confirms the trend. No clear macro edge or asymmetry. I only bet big when the macro and risk/reward align."
+      },
+      {
+        "name": "Aswath Damodaran",
+        "conviction": 3.0,
+        "rationale": "My DCF model values AAPL at $179.41 per share based on 15.7% growth and 10% WACC. Comparable P/E analysis suggests $158.00 using 20.0x industry multiple. This gives a margin of safety of -36.1% at current price $263.88. The market is pricing in a story that the numbers don't support. Overvalued."
+      }
+    ],
+    "key_critics": [
+      {
+        "name": "Phil Fisher",
+        "conviction": 7.142857142857143,
+        "rationale": "Conducting scuttlebutt research on AAPL: This is a quality growth business. Gross margin 47.3%; Operating margin 35.4%; Net margin 27.0%. These are the characteristics of a company I could hold forever.Superior margins and returns indicate a wonderful business worth holding long-term."
+      },
+      {
+        "name": "Quant Fundamentals",
+        "conviction": 6.5,
+        "rationale": "I assess AAPL fundamentals as strong. ROE of 152.02% shows strong returns. Debt/Equity at 102.63 indicates elevated leverage. Revenue growing at 15.7%. Profit margins at 27.04%."
+      },
+      {
+        "name": "Rakesh Jhunjhunwala",
+        "conviction": 6.0,
+        "rationale": "Analyzing AAPL for long-term wealth creation: Growing 15.7% annually with 152.0% ROE shows this is a quality business that can compound. Decent long-term potential but I've seen better opportunities."
+      }
+    ]
+  }
+}
