@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐓 roostr Trading - Live Positions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            padding: 20px;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        h1 { 
+            font-size: 2em; 
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .timestamp { 
+            color: #666; 
+            font-size: 0.9em; 
+            margin-bottom: 30px;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .stat {
+            background: #111;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #222;
+        }
+        .stat-label {
+            color: #888;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            background: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #222;
+        }
+        th {
+            background: #0a0a0a;
+            padding: 15px 10px;
+            text-align: left;
+            color: #888;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        td {
+            padding: 15px 10px;
+            border-top: 1px solid #222;
+        }
+        .ticker {
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+        .positive { color: #0f0; }
+        .negative { color: #f00; }
+        .loading { color: #666; }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #444;
+            font-size: 0.85em;
+        }
+        .error {
+            background: #300;
+            border: 1px solid #f00;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            color: #f88;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐓 roostr Capital</h1>
+        <div class="timestamp" id="timestamp">Loading...</div>
+        
+        <div class="summary">
+            <div class="stat">
+                <div class="stat-label">Portfolio</div>
+                <div class="stat-value" id="total-value">--</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Net P&L</div>
+                <div class="stat-value" id="total-pnl">--</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Deployed</div>
+                <div class="stat-value">$45,000</div>
+            </div>
+        </div>
+        
+        <div id="error-message"></div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Ticker</th>
+                    <th>Entry</th>
+                    <th>Current</th>
+                    <th>Value</th>
+                    <th>P&L</th>
+                    <th>%</th>
+                </tr>
+            </thead>
+            <tbody id="positions">
+                <tr>
+                    <td class="ticker">ALL</td>
+                    <td>$207.00</td>
+                    <td class="loading">Loading...</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                </tr>
+                <tr>
+                    <td class="ticker">PGR</td>
+                    <td>$201.57</td>
+                    <td class="loading">Loading...</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                </tr>
+                <tr>
+                    <td class="ticker">KTB</td>
+                    <td>$67.00</td>
+                    <td class="loading">Loading...</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                    <td class="loading">--</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="footer">
+            Phase 1 Paper Trading · Auto-refresh every 60s<br>
+            Entry: Feb 9, 2026 · <a href="https://github.com/joselo-ai/roostr-research" style="color: #0f0;">GitHub</a>
+        </div>
+    </div>
+    
+    <script>
+        const positions = {
+            ALL: { shares: 96.62, entry: 207.00, cost: 20000 },
+            PGR: { shares: 74.42, entry: 201.57, cost: 15000 },
+            KTB: { shares: 149.25, entry: 67.00, cost: 10000 }
+        };
+        
+        async function getPrice(ticker) {
+            try {
+                const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?interval=1d&range=1d`;
+                const response = await fetch(url);
+                const data = await response.json();
+                return data.chart.result[0].meta.regularMarketPrice;
+            } catch (error) {
+                console.error(`Error fetching ${ticker}:`, error);
+                return null;
+            }
+        }
+        
+        async function updateDashboard() {
+            const tbody = document.getElementById('positions');
+            const errorDiv = document.getElementById('error-message');
+            errorDiv.innerHTML = '';
+            
+            let totalValue = 0;
+            let totalPnL = 0;
+            let errors = [];
+            
+            for (const [ticker, pos] of Object.entries(positions)) {
+                const price = await getPrice(ticker);
+                
+                const row = tbody.querySelector(`tr:has(.ticker:contains("${ticker}"))`);
+                if (!row) continue;
+                
+                const cells = row.querySelectorAll('td');
+                
+                if (price) {
+                    const value = price * pos.shares;
+                    const pnl = value - pos.cost;
+                    const pnlPct = (pnl / pos.cost) * 100;
+                    
+                    totalValue += value;
+                    totalPnL += pnl;
+                    
+                    const pnlClass = pnl >= 0 ? 'positive' : 'negative';
+                    
+                    cells[2].textContent = `$${price.toFixed(2)}`;
+                    cells[2].className = '';
+                    cells[3].textContent = `$${value.toLocaleString('en-US', {maximumFractionDigits: 0})}`;
+                    cells[3].className = '';
+                    cells[4].textContent = `$${pnl.toFixed(0)}`;
+                    cells[4].className = pnlClass;
+                    cells[5].textContent = `${pnlPct.toFixed(2)}%`;
+                    cells[5].className = pnlClass;
+                } else {
+                    errors.push(ticker);
+                    cells[2].textContent = 'Error';
+                    cells[2].className = 'negative';
+                }
+            }
+            
+            // Update summary
+            const totalPnLPct = (totalPnL / 45000) * 100;
+            const totalPnLClass = totalPnL >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('total-value').textContent = `$${totalValue.toLocaleString('en-US', {maximumFractionDigits: 0})}`;
+            document.getElementById('total-pnl').textContent = `$${totalPnL.toFixed(0)} (${totalPnLPct.toFixed(2)}%)`;
+            document.getElementById('total-pnl').className = `stat-value ${totalPnLClass}`;
+            
+            // Update timestamp
+            const now = new Date();
+            document.getElementById('timestamp').textContent = 
+                `Updated: ${now.toLocaleString('en-US', { 
+                    month: 'short', 
+                    day: 'numeric', 
+                    hour: 'numeric', 
+                    minute: '2-digit',
+                    second: '2-digit'
+                })} EST`;
+            
+            // Show errors if any
+            if (errors.length > 0) {
+                errorDiv.innerHTML = `<div class="error">⚠️ Failed to load: ${errors.join(', ')}. Retrying in 60s...</div>`;
+            }
+        }
+        
+        // Helper to find row by ticker text
+        document.querySelectorAll('.ticker').forEach(el => {
+            if (el.textContent === 'ALL' || el.textContent === 'PGR' || el.textContent === 'KTB') {
+                el.closest('tr').setAttribute('data-ticker', el.textContent);
+            }
+        });
+        
+        // Initial load
+        updateDashboard();
+        
+        // Auto-refresh every 60 seconds
+        setInterval(updateDashboard, 60000);
+    </script>
+</body>
+</html>
