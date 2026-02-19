@@ -142,6 +142,17 @@
       "reply_to": "https://x.com/roostrcapital/status/2022053449681314006",
       "posted_at": "2026-02-18T21:00:00Z",
       "note": "Week 3 start - Performance update (automated cron post)"
+    },
+    {
+      "id": "w2-8",
+      "content": "Position sizing = conviction scoring:\n\n$ALL (10/10): $20k (20%)\n$PGR (9/10): $15k (15%)\n$KTB (7.5/10): $10k (10%)\n\nPortfolio: $100k\nStops: -8% to -10%\nMax loss if all hit: $3.8k\n\nRisk-adjusted by score.",
+      "platforms": [
+        "twitter"
+      ],
+      "tweet_url": "https://x.com/roostrcapital/status/2024484515012628951",
+      "reply_to": "https://x.com/roostrcapital/status/2024227738949685528",
+      "posted_at": "2026-02-19T14:00:00Z",
+      "note": "Week 2 risk management - Position sizing by conviction (automated morning cron post)"
     }
   ]
 }

@@ -237,11 +237,14 @@
       "platforms": [
         "twitter"
       ],
-      "type": "standalone",
-      "content": "Position sizing = conviction scoring:\n\nPortfolio: $100k\n\n$ALL (10/10): $20k (20%) — Highest conviction\n$PGR (9/10): $15k (15%) — Second highest\n$KTB (7.5/10): $10k (10%) — Diversification\n\nSize follows conviction.\nStops at -8% to -10%.\nMax loss if all hit stops: $3.8k (3.8%).\n\nRisk-adjusted by score.",
-      "posted": false,
+      "type": "reply",
+      "reply_to": "https://x.com/roostrcapital/status/2024227738949685528",
+      "content": "Position sizing = conviction scoring:\n\n$ALL (10/10): $20k (20%)\n$PGR (9/10): $15k (15%)\n$KTB (7.5/10): $10k (10%)\n\nPortfolio: $100k\nStops: -8% to -10%\nMax loss if all hit: $3.8k\n\nRisk-adjusted by score.",
+      "posted": true,
+      "posted_at": "2026-02-19T14:00:00Z",
+      "tweet_url": "https://x.com/roostrcapital/status/2024484515012628951",
       "scheduled_date": "2026-02-12",
-      "note": "Risk management transparency - conviction-weighted allocation (UPDATED)"
+      "note": "Risk management transparency - conviction-weighted allocation ✅ POSTED (auto-posted via cron)"
     },
     {
       "id": "w2-9",
@@ -340,13 +343,13 @@
   ],
   "metadata": {
     "created": "2026-02-06T12:38:00Z",
-    "updated": "2026-02-18T21:00:00Z",
+    "updated": "2026-02-19T14:00:00Z",
     "total_posts": 21,
     "week1_status": "8/8 posted - COMPLETE",
-    "week2_status": "7/10 posted - NEEDS COMPLETION",
-    "week3_status": "3/4 midday tweets added - READY FOR AUTO-POST",
+    "week2_status": "8/10 posted - IN PROGRESS",
+    "week3_status": "1/4 posted - IN PROGRESS",
     "thread_start": "https://x.com/roostrcapital/status/2019540291141922995",
-    "latest_tweet": "https://x.com/roostrcapital/status/2024227738949685528",
+    "latest_tweet": "https://x.com/roostrcapital/status/2024484515012628951",
     "platforms": [
       "twitter"
     ],
@@ -358,6 +361,6 @@
     },
     "week2_theme": "First capital deployment - ALL + PGR + KTB",
     "week3_theme": "Performance tracking + market adaptation",
-    "next_action": "MANUAL POST NEEDED: See MANUAL-POST-NEEDED-2026-02-17-16-00.txt"
+    "next_action": "Continue scheduled posts via cron automation"
   }
 }
