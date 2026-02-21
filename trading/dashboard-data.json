@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-02-20T13:18:47.898350",
+  "positions": [
+    {
+      "ticker": "PG",
+      "entry": 160.15,
+      "current": 160.4199981689453,
+      "shares": 31,
+      "positionSize": 5000,
+      "currentValue": 4973.019943237305,
+      "pnl": -26.980056762695312,
+      "pnlPct": -0.5396011352539062,
+      "stopLoss": 147.34,
+      "conviction": 5.2,
+      "date": "2026-02-20",
+      "tier": "LOW-MEDIUM"
+    }
+  ],
+  "totalPnL": -26.98,
+  "totalValue": 5000,
+  "totalPnLPct": -0.54,
+  "performance": {
+    "winRate": 0.0,
+    "avgConviction": 5.2,
+    "maxDrawdown": -0.54,
+    "positionsGreen": 0,
+    "positionsTotal": 1
+  }
+}

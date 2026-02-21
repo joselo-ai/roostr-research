@@ -256,10 +256,12 @@
         "twitter"
       ],
       "type": "standalone",
-      "content": "Why social arbitrage works:\n\nChris Camillo's Dorel Industries play (2020):\n\n• March: COVID lockdowns begin\n• Social media: Parents panic-buying bikes for kids\n• Dorel: Major bike manufacturer\n• Entry: $3.50\n• Exit: $22\n• Return: 629%\n\nWall Street saw it 3 months later.\n\nEdge = speed of information.",
-      "posted": false,
+      "content": "Chris Camillo's Dorel Industries play (2020):\n\n• COVID lockdowns → parents panic-buying bikes\n• Dorel: Major bike maker\n• Entry: $3.50 | Exit: $22\n• Return: 629%\n\nWall Street saw it 3 months later.\n\nSocial arbitrage = speed of information.",
+      "posted": true,
+      "posted_at": "2026-02-20T19:00:00Z",
+      "tweet_url": "https://x.com/roostrcapital/status/2024998079817027937",
       "scheduled_date": "2026-02-12",
-      "note": "Social arb education - real case study"
+      "note": "Social arb education - real case study ✅ POSTED (trimmed for char limit)"
     },
     {
       "id": "w2-10",
@@ -307,13 +309,9 @@
       "content": "Position check (Day 10):\n\n$ALL: $207.00 → $209.43 (+1.17%)\n$PGR: $201.57 → $203.28 (+0.85%)\n$KTB: $67.00 → $67.85 (+1.27%)\n\nPortfolio P&L: +$488.90 (+1.09%)\n\nAll positions green. Stops holding.\n\nDiscipline beats emotion.",
       "posted": true,
       "posted_at": "2026-02-19T21:00:00Z",
-      "tweet_url": "PENDING_VERIFICATION",
+      "tweet_url": "https://x.com/roostrcapital/status/2024590066941669521",
       "scheduled_date": "2026-02-19",
-      "note": "Week 3 afternoon - Position update (Day 10). Posted via browser automation but URL not captured due to OpenClaw bug. See marketing/pending-tweet.txt for manual verification.",
-      "automation_attempted": true,
-      "automation_partial_success": true,
-      "url_verification_needed": true,
-      "corrected_at": "2026-02-19T21:00:00Z"
+      "note": "Week 3 afternoon - Position update (Day 10) ✅ POSTED (URL verified Feb 20)"
     },
     {
       "id": "w3-3",
@@ -348,13 +346,13 @@
   ],
   "metadata": {
     "created": "2026-02-06T12:38:00Z",
-    "updated": "2026-02-19T21:00:00Z",
+    "updated": "2026-02-20T19:00:00Z",
     "total_posts": 21,
     "week1_status": "8/8 posted - COMPLETE",
-    "week2_status": "8/10 posted - IN PROGRESS",
-    "week3_status": "2/4 posted - IN PROGRESS (1 URL pending verification)",
+    "week2_status": "9/10 posted - IN PROGRESS",
+    "week3_status": "2/4 posted - IN PROGRESS",
     "thread_start": "https://x.com/roostrcapital/status/2019540291141922995",
-    "latest_tweet": "PENDING_VERIFICATION (w3-2 posted 2026-02-19 4 PM)",
+    "latest_tweet": "https://x.com/roostrcapital/status/2024998079817027937 (w2-9 posted 2026-02-20 7 PM)",
     "platforms": [
       "twitter"
     ],
@@ -366,6 +364,6 @@
     },
     "week2_theme": "First capital deployment - ALL + PGR + KTB",
     "week3_theme": "Performance tracking + market adaptation",
-    "next_action": "Manual verification needed: Check x.com/roostrcapital for w3-2 URL, then update both JSON files"
+    "next_action": "Continue scheduled posts. Next: w3-3 (midday Friday)"
   }
 }

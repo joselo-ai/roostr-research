@@ -51,11 +51,11 @@ class ValuationAgent:
             recommendation = "SELL"
             reasoning = f"{ticker} appears overvalued"
         elif fair_value:
-            score = 5.5
+            score = 4.5
             recommendation = "HOLD"
             reasoning = f"{ticker} trading near fair value"
         else:
-            score = 5.0
+            score = 4.0
             recommendation = "HOLD"
             reasoning = f"{ticker} no clear valuation signal"
         
@@ -85,13 +85,13 @@ class SentimentAgent:
         source = signal.get('source', '')
         catalyst = signal.get('catalyst', '')
         
-        # Social sentiment indicators
+        # Social sentiment indicators (recalibrated 2026-02-20)
         reddit_score = 0
         if 'reddit' in source.lower():
             if any(word in catalyst.lower() for word in ['🚀', 'moon', 'apes', 'yolo']):
                 reddit_score = 7  # High engagement
             else:
-                reddit_score = 5
+                reddit_score = 4  # Neutral mention
         
         # Discord/Community sentiment
         discord_score = 0
@@ -99,10 +99,10 @@ class SentimentAgent:
             if 'conviction' in catalyst.lower():
                 discord_score = 7
             else:
-                discord_score = 5
+                discord_score = 4  # Neutral mention
         
         # Aggregate sentiment
-        sentiment_score = max(reddit_score, discord_score, 5)
+        sentiment_score = max(reddit_score, discord_score, 4)
         
         if sentiment_score >= 7:
             recommendation = "BUY"
@@ -152,14 +152,14 @@ class FundamentalsAgent:
             'product launch', 'partnership', 'contract', 'approval', 'expansion'
         ])
         
-        # Scoring
-        score = 5.0
+        # Scoring (recalibrated 2026-02-20)
+        score = 3.5
         if strong_fundamentals:
-            score += 2
+            score += 3
         if weak_fundamentals:
             score -= 2
         if catalyst_present:
-            score += 1
+            score += 1.5
         
         score = max(0, min(10, score))
         
@@ -210,14 +210,14 @@ class TechnicalsAgent:
         # Momentum
         momentum = 'momentum' in catalyst.lower() or 'trending' in catalyst.lower()
         
-        # Scoring
-        score = 5.0
+        # Scoring (recalibrated 2026-02-20)
+        score = 3.5
         if bullish_technicals:
-            score += 2
+            score += 3
         if bearish_technicals:
             score -= 2
         if momentum:
-            score += 1
+            score += 1.5
         
         score = max(0, min(10, score))
         

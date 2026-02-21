@@ -1,13 +1,11 @@
--- AppleScript to post tweet reply
-delay 2
-
-tell application "System Events"
-	-- Click reply button (using keyboard shortcut if available)
-	keystroke "r" -- X shortcut for reply
-	delay 2
+tell application "Google Chrome"
+	activate
+	set tweetURL to "https://x.com/roostrcapital/status/2024484515012628951"
+	open location tweetURL
+	delay 3
 	
-	-- Paste the tweet content
-	set the clipboard to "Why social arbitrage works:
+	-- Tweet content
+	set tweetContent to "Why social arbitrage works:
 
 Chris Camillo's Dorel Industries play (2020):
 
@@ -22,10 +20,21 @@ Wall Street saw it 3 months later.
 
 Edge = speed of information."
 	
-	keystroke "v" using command down
-	delay 2
+	-- Instructions for manual posting
+	display dialog "Ready to post tweet. 
+
+Content:
+" & tweetContent & "
+
+Steps:
+1. Click Reply button on the tweet
+2. Paste the content (Cmd+V)
+3. Click Post
+4. Copy the new tweet URL
+
+Press OK when ready." buttons {"OK"} default button "OK"
 	
-	-- Post tweet (Cmd+Return on X)
-	keystroke return using command down
-	delay 3
+	-- Copy tweet content to clipboard
+	set the clipboard to tweetContent
+	
 end tell

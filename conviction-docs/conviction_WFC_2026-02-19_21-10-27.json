@@ -1,0 +1,197 @@
+{
+  "ticker": "WFC",
+  "timestamp": "2026-02-19T21:10:27.293416",
+  "signal_source": "Manual",
+  "catalyst": "Banking recovery play post-scandal cleanup: ROE 11.7%, profit margin 26.7%, revenue growth 5.0%. P/E 14.1 attractive for quality bank. Asset cap lifted, efficiency improvements ongoing. Trading at discount to JPM/BAC despite similar fundamentals.",
+  "entry_price": 87.57,
+  "legendary_investors": {
+    "consensus": "HOLD",
+    "avg_conviction": 5.67,
+    "votes": {
+      "BUY": 1,
+      "SELL": 0,
+      "HOLD": 11
+    },
+    "individual_opinions": [
+      {
+        "investor": "Warren Buffett",
+        "conviction": 5.5,
+        "vote": "BUY",
+        "reasoning": "Warren Buffett evaluates WFC: Overall conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Charlie Munger",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Charlie Munger on WFC: Mental models suggest red flags. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Michael Burry",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Michael Burry on WFC: Contrarian setup with value. Conviction: 6.5/10.",
+        "strengths": [
+          "Backed by deep research"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Ben Graham",
+        "conviction": 5.75,
+        "vote": "HOLD",
+        "reasoning": "Ben Graham on WFC: No safety margin. Conviction: 5.75/10.",
+        "strengths": [
+          "Margin of safety present"
+        ],
+        "concerns": [
+          "Growth story, not value play"
+        ]
+      },
+      {
+        "investor": "Mohnish Pabrai",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Mohnish Pabrai on WFC: Risk/reward not asymmetric. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Cathie Wood",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Cathie Wood on WFC: Not innovative enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Phil Fisher",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Phil Fisher on WFC: Need deeper research. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Peter Lynch",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Peter Lynch on WFC: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth story"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Bill Ackman",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Bill Ackman on WFC: Not bold enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Not high enough conviction for concentrated bet"
+        ]
+      },
+      {
+        "investor": "Stanley Druckenmiller",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Stanley Druckenmiller on WFC: No clear macro edge. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No exit strategy if wrong"
+        ]
+      },
+      {
+        "investor": "Aswath Damodaran",
+        "conviction": 5.75,
+        "vote": "HOLD",
+        "reasoning": "Aswath Damodaran on WFC: Narrative without valuation. Conviction: 5.75/10.",
+        "strengths": [
+          "Numbers back the story"
+        ],
+        "concerns": [
+          "No valuation framework"
+        ]
+      },
+      {
+        "investor": "Rakesh Jhunjhunwala",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Rakesh Jhunjhunwala on WFC: Long-term growth story. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth market opportunity"
+        ],
+        "concerns": []
+      }
+    ]
+  },
+  "quant_agents": {
+    "consensus": "HOLD",
+    "avg_score": 6.25,
+    "votes": {
+      "BUY": 2,
+      "SELL": 0,
+      "HOLD": 2
+    },
+    "individual_opinions": [
+      {
+        "agent": "Valuation Agent",
+        "score": 8.0,
+        "recommendation": "BUY",
+        "reasoning": "WFC appears undervalued relative to intrinsic value",
+        "metrics": {
+          "undervalued_signal": true,
+          "overvalued_signal": false,
+          "fair_value_signal": false
+        }
+      },
+      {
+        "agent": "Sentiment Agent",
+        "score": 5,
+        "recommendation": "HOLD",
+        "reasoning": "WFC neutral sentiment",
+        "metrics": {
+          "reddit_score": 0,
+          "discord_score": 0,
+          "overall_sentiment": 5
+        }
+      },
+      {
+        "agent": "Fundamentals Agent",
+        "score": 7.0,
+        "recommendation": "BUY",
+        "reasoning": "WFC strong fundamentals with catalyst",
+        "metrics": {
+          "strong_fundamentals": true,
+          "weak_fundamentals": false,
+          "catalyst_present": false
+        }
+      },
+      {
+        "agent": "Technicals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "WFC neutral technical picture",
+        "metrics": {
+          "bullish_technicals": false,
+          "bearish_technicals": false,
+          "momentum": false
+        }
+      }
+    ]
+  },
+  "combined_conviction": 5.9,
+  "risk_validated_conviction": 5.9,
+  "risk_concerns": [
+    "Conviction <6.0, below deployment threshold",
+    "No stop loss mentioned"
+  ],
+  "final_decision": "HOLD",
+  "conviction_rating": "\ud83d\udfe1 MEDIUM",
+  "reasoning": "**Decision: HOLD** (Conviction: 5.9/10)\n\n**Legendary Investors:** 0/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 2/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Mixed signals. Waiting for clearer setup. Will reassess when conviction improves.\n",
+  "position_sizing": null
+}

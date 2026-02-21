@@ -1,0 +1,50 @@
+[
+  {
+    "ticker": "ASTS",
+    "conviction": 5,
+    "recommendation": "HOLD",
+    "summary": "Research on ASTS is being conducted. This is a placeholder response while Dexter integration is being finalized.",
+    "catalysts": [
+      "Dexter integration being finalized"
+    ],
+    "risks": [
+      "Financial data integration in progress",
+      "Requires Financial Datasets API key configuration"
+    ],
+    "date_found": "2026-02-19",
+    "source": "Dexter",
+    "research_time": 0.395082950592041
+  },
+  {
+    "ticker": "NVDA",
+    "conviction": 5,
+    "recommendation": "HOLD",
+    "summary": "Research on NVDA is being conducted. This is a placeholder response while Dexter integration is being finalized.",
+    "catalysts": [
+      "Dexter integration being finalized"
+    ],
+    "risks": [
+      "Financial data integration in progress",
+      "Requires Financial Datasets API key configuration"
+    ],
+    "date_found": "2026-02-19",
+    "source": "Dexter",
+    "research_time": 0.014358997344970703
+  },
+  {
+    "ticker": "PLTR",
+    "conviction": 5,
+    "recommendation": "HOLD",
+    "summary": "Research on PLTR is being conducted. This is a placeholder response while Dexter integration is being finalized.",
+    "catalysts": [
+      "Dexter integration being finalized"
+    ],
+    "risks": [
+      "Financial data integration in progress",
+      "Requires Financial Datasets API key configuration"
+    ],
+    "date_found": "2026-02-19",
+    "source": "Dexter",
+    "research_time": 0.014003992080688477
+  }
+]

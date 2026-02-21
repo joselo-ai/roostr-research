@@ -1,0 +1,195 @@
+{
+  "ticker": "PYPL",
+  "timestamp": "2026-02-20T12:20:22.207169",
+  "signal_source": "Manual",
+  "catalyst": "Fintech leader, digital payments, Venmo growth",
+  "entry_price": 82.5,
+  "legendary_investors": {
+    "consensus": "HOLD",
+    "avg_conviction": 5.44,
+    "votes": {
+      "BUY": 1,
+      "SELL": 0,
+      "HOLD": 11
+    },
+    "individual_opinions": [
+      {
+        "investor": "Warren Buffett",
+        "conviction": 5.5,
+        "vote": "BUY",
+        "reasoning": "Warren Buffett evaluates PYPL: Overall conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Charlie Munger",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Charlie Munger on PYPL: Mental models suggest red flags. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Michael Burry",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Michael Burry on PYPL: Not contrarian enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Ben Graham",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Ben Graham on PYPL: No safety margin. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Growth story, not value play"
+        ]
+      },
+      {
+        "investor": "Mohnish Pabrai",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Mohnish Pabrai on PYPL: Risk/reward not asymmetric. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Cathie Wood",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Cathie Wood on PYPL: Disruptive innovation at scale. Conviction: 6.5/10.",
+        "strengths": [
+          "Disruptive innovation play"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Phil Fisher",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Phil Fisher on PYPL: Need deeper research. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Insufficient research depth"
+        ]
+      },
+      {
+        "investor": "Peter Lynch",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Peter Lynch on PYPL: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth story"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Bill Ackman",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Bill Ackman on PYPL: Not bold enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Not high enough conviction for concentrated bet"
+        ]
+      },
+      {
+        "investor": "Stanley Druckenmiller",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Stanley Druckenmiller on PYPL: No clear macro edge. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No exit strategy if wrong"
+        ]
+      },
+      {
+        "investor": "Aswath Damodaran",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Aswath Damodaran on PYPL: Narrative without valuation. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No valuation framework"
+        ]
+      },
+      {
+        "investor": "Rakesh Jhunjhunwala",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Rakesh Jhunjhunwala on PYPL: Long-term growth story. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth market opportunity"
+        ],
+        "concerns": []
+      }
+    ]
+  },
+  "quant_agents": {
+    "consensus": "HOLD",
+    "avg_score": 5.0,
+    "votes": {
+      "BUY": 0,
+      "SELL": 0,
+      "HOLD": 4
+    },
+    "individual_opinions": [
+      {
+        "agent": "Valuation Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "PYPL no clear valuation signal",
+        "metrics": {
+          "undervalued_signal": false,
+          "overvalued_signal": false,
+          "fair_value_signal": false
+        }
+      },
+      {
+        "agent": "Sentiment Agent",
+        "score": 5,
+        "recommendation": "HOLD",
+        "reasoning": "PYPL neutral sentiment",
+        "metrics": {
+          "reddit_score": 0,
+          "discord_score": 0,
+          "overall_sentiment": 5
+        }
+      },
+      {
+        "agent": "Fundamentals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "PYPL mixed fundamental signals",
+        "metrics": {
+          "strong_fundamentals": false,
+          "weak_fundamentals": false,
+          "catalyst_present": false
+        }
+      },
+      {
+        "agent": "Technicals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "PYPL neutral technical picture",
+        "metrics": {
+          "bullish_technicals": false,
+          "bearish_technicals": false,
+          "momentum": false
+        }
+      }
+    ]
+  },
+  "combined_conviction": 5.26,
+  "risk_validated_conviction": 5.26,
+  "risk_concerns": [
+    "Conviction <6.0, below deployment threshold",
+    "No stop loss mentioned"
+  ],
+  "final_decision": "HOLD",
+  "conviction_rating": "\ud83d\udfe1 MEDIUM",
+  "reasoning": "**Decision: HOLD** (Conviction: 5.26/10)\n\n**Legendary Investors:** 0/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 0/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Mixed signals. Waiting for clearer setup. Will reassess when conviction improves.\n",
+  "position_sizing": null
+}

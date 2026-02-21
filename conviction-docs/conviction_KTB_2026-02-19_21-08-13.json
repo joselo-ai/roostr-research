@@ -1,0 +1,197 @@
+{
+  "ticker": "KTB",
+  "timestamp": "2026-02-19T21:08:13.566331",
+  "signal_source": "Manual",
+  "catalyst": "Social arbitrage play from Dumb Money Discord (18+ reactions). Kontoor Brands (Wrangler/Lee/Helly Hansen): ROE 49.1% (exceptional), undervalued vs peers. Helly Hansen integration ahead of schedule. Analyst upside +26%. Dumb Money conviction: 'Up 10% quietly, 40% undervalued'.",
+  "entry_price": 67.0,
+  "legendary_investors": {
+    "consensus": "HOLD",
+    "avg_conviction": 5.81,
+    "votes": {
+      "BUY": 1,
+      "SELL": 0,
+      "HOLD": 11
+    },
+    "individual_opinions": [
+      {
+        "investor": "Warren Buffett",
+        "conviction": 6.5,
+        "vote": "BUY",
+        "reasoning": "Warren Buffett evaluates KTB: Strengths include Strong competitive moat. Overall conviction: 6.5/10.",
+        "strengths": [
+          "Strong competitive moat"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Charlie Munger",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Charlie Munger on KTB: Mental models suggest red flags. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Michael Burry",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Michael Burry on KTB: Contrarian setup with value. Conviction: 6.5/10.",
+        "strengths": [
+          "Contrarian opportunity"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Ben Graham",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Ben Graham on KTB: Margin of safety exists. Conviction: 6.5/10.",
+        "strengths": [
+          "Margin of safety present"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Mohnish Pabrai",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Mohnish Pabrai on KTB: Heads I win, tails limited loss. Conviction: 6.5/10.",
+        "strengths": [
+          "Asymmetric risk/reward setup"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Cathie Wood",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Cathie Wood on KTB: Not innovative enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Value play, not growth/innovation"
+        ]
+      },
+      {
+        "investor": "Phil Fisher",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Phil Fisher on KTB: Need deeper research. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Peter Lynch",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Peter Lynch on KTB: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+        "strengths": [
+          "Consumer-facing business"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Bill Ackman",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Bill Ackman on KTB: Not bold enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Not high enough conviction for concentrated bet"
+        ]
+      },
+      {
+        "investor": "Stanley Druckenmiller",
+        "conviction": 5.75,
+        "vote": "HOLD",
+        "reasoning": "Stanley Druckenmiller on KTB: No clear macro edge. Conviction: 5.75/10.",
+        "strengths": [
+          "Asymmetric risk/reward"
+        ],
+        "concerns": [
+          "No exit strategy if wrong"
+        ]
+      },
+      {
+        "investor": "Aswath Damodaran",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Aswath Damodaran on KTB: Narrative without valuation. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Rakesh Jhunjhunwala",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Rakesh Jhunjhunwala on KTB: Not long-term enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      }
+    ]
+  },
+  "quant_agents": {
+    "consensus": "HOLD",
+    "avg_score": 5.75,
+    "votes": {
+      "BUY": 1,
+      "SELL": 0,
+      "HOLD": 3
+    },
+    "individual_opinions": [
+      {
+        "agent": "Valuation Agent",
+        "score": 8.0,
+        "recommendation": "BUY",
+        "reasoning": "KTB appears undervalued relative to intrinsic value",
+        "metrics": {
+          "undervalued_signal": true,
+          "overvalued_signal": false,
+          "fair_value_signal": false
+        }
+      },
+      {
+        "agent": "Sentiment Agent",
+        "score": 5,
+        "recommendation": "HOLD",
+        "reasoning": "KTB neutral sentiment",
+        "metrics": {
+          "reddit_score": 0,
+          "discord_score": 0,
+          "overall_sentiment": 5
+        }
+      },
+      {
+        "agent": "Fundamentals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "KTB mixed fundamental signals",
+        "metrics": {
+          "strong_fundamentals": false,
+          "weak_fundamentals": false,
+          "catalyst_present": false
+        }
+      },
+      {
+        "agent": "Technicals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "KTB neutral technical picture",
+        "metrics": {
+          "bullish_technicals": false,
+          "bearish_technicals": false,
+          "momentum": false
+        }
+      }
+    ]
+  },
+  "combined_conviction": 5.79,
+  "risk_validated_conviction": 5.79,
+  "risk_concerns": [
+    "Conviction <6.0, below deployment threshold",
+    "No stop loss mentioned"
+  ],
+  "final_decision": "HOLD",
+  "conviction_rating": "\ud83d\udfe1 MEDIUM",
+  "reasoning": "**Decision: HOLD** (Conviction: 5.79/10)\n\n**Legendary Investors:** 0/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 1/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Mixed signals. Waiting for clearer setup. Will reassess when conviction improves.\n",
+  "position_sizing": null
+}

@@ -47,10 +47,10 @@ class LegendaryInvestor:
     
     def _calculate_conviction(self, strengths: List[str], concerns: List[str]) -> float:
         """Calculate conviction score based on strengths vs concerns"""
-        # Start at 5.5, +1.0 per strength, -0.75 per concern (more generous)
-        conviction = 5.5
-        conviction += len(strengths) * 1.0
-        conviction -= len(concerns) * 0.75
+        # Recalibrated 2026-02-20: Start lower, wider range
+        conviction = 3.0
+        conviction += len(strengths) * 1.5  # More weight to strengths
+        conviction -= len(concerns) * 1.2   # More penalty for concerns
         return max(0.0, min(10.0, conviction))
 
 

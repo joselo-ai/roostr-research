@@ -1,0 +1,392 @@
+[
+  {
+    "ticker": "ALL",
+    "score": 8.0,
+    "price": 203.22,
+    "pe": 5.5028434,
+    "roe": 39.518002,
+    "margin": 15.190999999999999,
+    "growth": 5.1,
+    "reasons": "P/E 5.5 (cheap), ROE 40% (exceptional), Debt/Eq 24.5 (high)"
+  },
+  {
+    "ticker": "HOOD",
+    "score": 8.0,
+    "price": 75.65,
+    "pe": 36.545895,
+    "roe": 21.993999,
+    "margin": 42.097,
+    "growth": 26.5,
+    "reasons": "ROE 22% (strong), Margin 42% (high), Growth +26% (strong), Debt/Eq 129.4 (high)"
+  },
+  {
+    "ticker": "NEM",
+    "score": 8.0,
+    "price": 125.4,
+    "pe": 19.381763,
+    "roe": 22.875999,
+    "margin": 33.423,
+    "growth": 20.0,
+    "reasons": "ROE 23% (strong), Margin 33% (high), Growth +20% (strong), Debt/Eq 16.9 (high)"
+  },
+  {
+    "ticker": "PGR",
+    "score": 7.5,
+    "price": 201.77,
+    "pe": 10.569408,
+    "roe": 40.448,
+    "margin": 12.903,
+    "growth": 12.2,
+    "reasons": "P/E 10.6 (reasonable), ROE 40% (exceptional), Growth +12% (decent), Debt/Eq 22.7 (high)"
+  },
+  {
+    "ticker": "BAC",
+    "score": 7.5,
+    "price": 52.77,
+    "pe": 13.997348,
+    "roe": 10.190000000000001,
+    "margin": 28.401,
+    "growth": 13.200000000000001,
+    "reasons": "P/E 14.0 (reasonable), Margin 28% (high), Growth +13% (decent)"
+  },
+  {
+    "ticker": "ORCL",
+    "score": 7.5,
+    "price": 156.54,
+    "pe": 29.314604,
+    "roe": 69.026,
+    "margin": 25.280002000000003,
+    "growth": 14.2,
+    "reasons": "ROE 69% (exceptional), Margin 25% (high), Growth +14% (decent), Debt/Eq 432.5 (high)"
+  },
+  {
+    "ticker": "NVDA",
+    "score": 7.5,
+    "price": 187.9,
+    "pe": 46.5099,
+    "roe": 107.35900000000001,
+    "margin": 53.007000000000005,
+    "growth": 62.5,
+    "reasons": "P/E 46.5 (expensive), ROE 107% (exceptional), Margin 53% (high), Growth +62% (strong), Debt/Eq 9.1 (high)"
+  },
+  {
+    "ticker": "AVGO",
+    "score": 7.5,
+    "price": 333.99,
+    "pe": 69.87238,
+    "roe": 31.048,
+    "margin": 36.198002,
+    "growth": 16.400000000000002,
+    "reasons": "P/E 69.9 (expensive), ROE 31% (exceptional), Margin 36% (high), Growth +16% (strong), Debt/Eq 166.0 (high)"
+  },
+  {
+    "ticker": "LRCX",
+    "score": 7.5,
+    "price": 237.39,
+    "pe": 49.251034,
+    "roe": 65.565,
+    "margin": 30.220000000000002,
+    "growth": 22.1,
+    "reasons": "P/E 49.3 (expensive), ROE 66% (exceptional), Margin 30% (high), Growth +22% (strong), Debt/Eq 44.2 (high)"
+  },
+  {
+    "ticker": "PYPL",
+    "score": 7.5,
+    "price": 41.73,
+    "pe": 7.656881,
+    "roe": 25.732001999999998,
+    "margin": 15.775,
+    "growth": 3.6999999999999997,
+    "reasons": "P/E 7.7 (cheap), ROE 26% (strong), Debt/Eq 60.7 (high)"
+  },
+  {
+    "ticker": "WFC",
+    "score": 7.0,
+    "price": 87.57,
+    "pe": 14.147011,
+    "roe": 11.732,
+    "margin": 26.659,
+    "growth": 5.0,
+    "reasons": "P/E 14.1 (reasonable), Margin 27% (high)"
+  },
+  {
+    "ticker": "STT",
+    "score": 7.0,
+    "price": 127.87,
+    "pe": 13.793959,
+    "roe": 11.078000000000001,
+    "margin": 21.209998,
+    "growth": 7.6,
+    "reasons": "P/E 13.8 (reasonable), Margin 21% (high)"
+  },
+  {
+    "ticker": "HPQ",
+    "score": 7.0,
+    "price": 18.34,
+    "pe": 6.9207544,
+    "roe": null,
+    "margin": 4.5739997,
+    "growth": 4.2,
+    "reasons": "P/E 6.9 (cheap)"
+  },
+  {
+    "ticker": "AMAT",
+    "score": 7.0,
+    "price": 369.83,
+    "pe": 37.892414,
+    "roe": 38.863,
+    "margin": 27.784002,
+    "growth": -2.1,
+    "reasons": "ROE 39% (exceptional), Margin 28% (high), Debt/Eq 30.2 (high)"
+  },
+  {
+    "ticker": "PLTR",
+    "score": 7.0,
+    "price": 134.89,
+    "pe": 214.11111,
+    "roe": 25.983,
+    "margin": 36.310002000000004,
+    "growth": 70.0,
+    "reasons": "P/E 214.1 (expensive), ROE 26% (strong), Margin 36% (high), Growth +70% (strong), Debt/Eq 3.1 (high)"
+  },
+  {
+    "ticker": "LULU",
+    "score": 7.0,
+    "price": 182.88,
+    "pe": 12.656055,
+    "roe": 41.016999999999996,
+    "margin": 15.720001,
+    "growth": 7.1,
+    "reasons": "P/E 12.7 (reasonable), ROE 41% (exceptional), Debt/Eq 39.2 (high)"
+  },
+  {
+    "ticker": "DKS",
+    "score": 7.0,
+    "price": 202.74,
+    "pe": 16.523228,
+    "roe": 23.785999999999998,
+    "margin": 6.859,
+    "growth": 36.3,
+    "reasons": "ROE 24% (strong), Growth +36% (strong), Debt/Eq 139.5 (high)"
+  },
+  {
+    "ticker": "TRV",
+    "score": 6.5,
+    "price": 299.9,
+    "pe": 10.881713,
+    "roe": 20.698999,
+    "margin": 12.878,
+    "growth": 3.5000000000000004,
+    "reasons": "P/E 10.9 (reasonable), ROE 21% (strong), Debt/Eq 28.9 (high)"
+  },
+  {
+    "ticker": "PRU",
+    "score": 6.5,
+    "price": 102.71,
+    "pe": 10.438008,
+    "roe": 11.359999,
+    "margin": 5.84,
+    "growth": 31.2,
+    "reasons": "P/E 10.4 (reasonable), Growth +31% (strong), Debt/Eq 117.1 (high)"
+  },
+  {
+    "ticker": "JPM",
+    "score": 6.5,
+    "price": 308.05,
+    "pe": 15.433367,
+    "roe": 16.134001,
+    "margin": 33.910000000000004,
+    "growth": 2.5,
+    "reasons": "ROE 16% (good), Margin 34% (high)"
+  },
+  {
+    "ticker": "GS",
+    "score": 6.5,
+    "price": 916.65,
+    "pe": 18.180286,
+    "roe": 13.885,
+    "margin": 28.917998,
+    "growth": 15.2,
+    "reasons": "Margin 29% (high), Growth +15% (strong), Debt/Eq 528.8 (high)"
+  },
+  {
+    "ticker": "IBM",
+    "score": 6.5,
+    "price": 256.28,
+    "pe": 23.42596,
+    "roe": 35.158001999999996,
+    "margin": 15.685001000000002,
+    "growth": 12.2,
+    "reasons": "ROE 35% (exceptional), Growth +12% (decent), Debt/Eq 197.3 (high)"
+  },
+  {
+    "ticker": "S",
+    "score": 6.5,
+    "price": 13.56,
+    "pe": null,
+    "roe": -25.790999999999997,
+    "margin": -43.038,
+    "growth": 22.900000000000002,
+    "reasons": "Growth +23% (strong)"
+  },
+  {
+    "ticker": "BA",
+    "score": 6.5,
+    "price": 233.71,
+    "pe": 96.176956,
+    "roe": 290.084,
+    "margin": 2.4979999999999998,
+    "growth": 57.099999999999994,
+    "reasons": "P/E 96.2 (expensive), ROE 290% (exceptional), Growth +57% (strong), Debt/Eq 1032.9 (high)"
+  },
+  {
+    "ticker": "MS",
+    "score": 6.0,
+    "price": 174.37,
+    "pe": 17.29861,
+    "roe": 15.729000000000001,
+    "margin": 23.986,
+    "growth": 11.0,
+    "reasons": "ROE 16% (good), Margin 24% (high), Growth +11% (decent), Debt/Eq 420.6 (high)"
+  },
+  {
+    "ticker": "BK",
+    "score": 6.0,
+    "price": 118.16,
+    "pe": 16.16416,
+    "roe": 12.898000000000001,
+    "margin": 27.589999999999996,
+    "growth": 7.8,
+    "reasons": "Margin 28% (high)"
+  },
+  {
+    "ticker": "DECK",
+    "score": 6.0,
+    "price": 118.07,
+    "pe": 16.891273,
+    "roe": 39.688,
+    "margin": 19.348000000000003,
+    "growth": 7.1,
+    "reasons": "ROE 40% (exceptional), Debt/Eq 13.1 (high)"
+  },
+  {
+    "ticker": "LMT",
+    "score": 6.0,
+    "price": 666.51,
+    "pe": 30.21351,
+    "roe": 76.86500000000001,
+    "margin": 6.6850000000000005,
+    "growth": 9.1,
+    "reasons": "ROE 77% (exceptional), Debt/Eq 338.8 (high)"
+  },
+  {
+    "ticker": "MET",
+    "score": 5.5,
+    "price": 78.1,
+    "pe": 16.373165,
+    "roe": 11.963,
+    "margin": 4.3839999999999995,
+    "growth": 27.6,
+    "reasons": "Growth +28% (strong), Debt/Eq 130.2 (high)"
+  },
+  {
+    "ticker": "CSCO",
+    "score": 5.5,
+    "price": 78.56,
+    "pe": 28.057142,
+    "roe": 23.754998999999998,
+    "margin": 18.756,
+    "growth": 9.700000000000001,
+    "reasons": "ROE 24% (strong), Debt/Eq 66.5 (high)"
+  },
+  {
+    "ticker": "QCOM",
+    "score": 5.5,
+    "price": 141.27,
+    "pe": 28.889572,
+    "roe": 21.48,
+    "margin": 11.958,
+    "growth": 5.0,
+    "reasons": "ROE 21% (strong), Debt/Eq 64.2 (high)"
+  },
+  {
+    "ticker": "SNOW",
+    "score": 5.5,
+    "price": 179.2,
+    "pe": null,
+    "roe": -53.093,
+    "margin": -30.764000000000003,
+    "growth": 28.7,
+    "reasons": "Growth +29% (strong), Debt/Eq 125.9 (high)"
+  },
+  {
+    "ticker": "CRWD",
+    "score": 5.5,
+    "price": 422.14,
+    "pe": null,
+    "roe": -8.814999499999999,
+    "margin": -6.882000000000001,
+    "growth": 22.2,
+    "reasons": "Growth +22% (strong), Debt/Eq 20.2 (high)"
+  },
+  {
+    "ticker": "ZS",
+    "score": 5.5,
+    "price": 168.99,
+    "pe": null,
+    "roe": -2.407,
+    "margin": -1.4489999999999998,
+    "growth": 25.5,
+    "reasons": "Growth +26% (strong), Debt/Eq 92.7 (high)"
+  },
+  {
+    "ticker": "NET",
+    "score": 5.5,
+    "price": 192.64,
+    "pe": null,
+    "roe": -8.164,
+    "margin": -4.717,
+    "growth": 33.6,
+    "reasons": "Growth +34% (strong), Debt/Eq 241.1 (high)"
+  },
+  {
+    "ticker": "ASTS",
+    "score": 5.5,
+    "price": 86.4,
+    "pe": null,
+    "roe": -39.031,
+    "margin": null,
+    "growth": 1239.8999999999999,
+    "reasons": "Growth +1240% (strong), Debt/Eq 44.4 (high)"
+  },
+  {
+    "ticker": "RKLB",
+    "score": 5.5,
+    "price": 76.58,
+    "pe": null,
+    "roe": -23.24,
+    "margin": -35.638999999999996,
+    "growth": 48.0,
+    "reasons": "Growth +48% (strong), Debt/Eq 40.3 (high)"
+  },
+  {
+    "ticker": "NOC",
+    "score": 5.5,
+    "price": 736.87,
+    "pe": 24.93638,
+    "roe": 26.167,
+    "margin": 9.968001,
+    "growth": 9.6,
+    "reasons": "ROE 26% (strong), Debt/Eq 107.3 (high)"
+  },
+  {
+    "ticker": "LCID",
+    "score": 5.5,
+    "price": 9.75,
+    "pe": null,
+    "roe": -61.119,
+    "margin": -214.09500000000003,
+    "growth": 68.30000000000001,
+    "reasons": "Growth +68% (strong), Debt/Eq 75.6 (high)"
+  }
+]

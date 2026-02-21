@@ -160,10 +160,21 @@
       "platforms": [
         "twitter"
       ],
-      "tweet_url": "PENDING_VERIFICATION",
+      "tweet_url": "https://x.com/roostrcapital/status/2024590066941669521",
       "reply_to": null,
       "posted_at": "2026-02-19T21:00:00Z",
-      "note": "Week 3 afternoon - Position update (Day 10). Posted successfully but URL not captured due to OpenClaw browser control bug. Manual verification needed at https://x.com/roostrcapital"
+      "note": "Week 3 afternoon - Position update (Day 10) ✅ URL verified Feb 20"
+    },
+    {
+      "id": "w2-9",
+      "content": "Chris Camillo's Dorel Industries play (2020):\n\n• COVID lockdowns → parents panic-buying bikes\n• Dorel: Major bike maker\n• Entry: $3.50 | Exit: $22\n• Return: 629%\n\nWall Street saw it 3 months later.\n\nSocial arbitrage = speed of information.",
+      "platforms": [
+        "twitter"
+      ],
+      "tweet_url": "https://x.com/roostrcapital/status/2024998079817027937",
+      "reply_to": null,
+      "posted_at": "2026-02-20T19:00:00Z",
+      "note": "Week 2 evening - Social arbitrage education (Chris Camillo case study). Trimmed for char limit."
     }
   ]
 }

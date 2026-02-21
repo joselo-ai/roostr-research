@@ -1,0 +1,201 @@
+{
+  "ticker": "ALL",
+  "timestamp": "2026-02-19T21:07:54.425944",
+  "signal_source": "Manual",
+  "catalyst": "Insurance sector leader with exceptional fundamentals: P/E 5.5 (extremely undervalued), ROE 39.5% (top quartile), profit margin 15.2%. Strong pricing power in auto/home insurance. Revenue growth 5.1% with disciplined underwriting.",
+  "entry_price": 207.0,
+  "legendary_investors": {
+    "consensus": "HOLD",
+    "avg_conviction": 5.88,
+    "votes": {
+      "BUY": 2,
+      "SELL": 0,
+      "HOLD": 10
+    },
+    "individual_opinions": [
+      {
+        "investor": "Warren Buffett",
+        "conviction": 5.5,
+        "vote": "BUY",
+        "reasoning": "Warren Buffett evaluates ALL: Overall conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Charlie Munger",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Charlie Munger on ALL: Mental models suggest red flags. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Michael Burry",
+        "conviction": 7.5,
+        "vote": "BUY",
+        "reasoning": "Michael Burry on ALL: Contrarian setup with value. Conviction: 7.5/10.",
+        "strengths": [
+          "Contrarian opportunity",
+          "Backed by deep research"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Ben Graham",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Ben Graham on ALL: Margin of safety exists. Conviction: 6.5/10.",
+        "strengths": [
+          "Margin of safety present"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Mohnish Pabrai",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Mohnish Pabrai on ALL: Risk/reward not asymmetric. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Cathie Wood",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Cathie Wood on ALL: Not innovative enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Phil Fisher",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Phil Fisher on ALL: Need deeper research. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Peter Lynch",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Peter Lynch on ALL: Ten-bagger potential in understandable business. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth story"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Bill Ackman",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Bill Ackman on ALL: Not bold enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Not high enough conviction for concentrated bet"
+        ]
+      },
+      {
+        "investor": "Stanley Druckenmiller",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Stanley Druckenmiller on ALL: No clear macro edge. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No exit strategy if wrong"
+        ]
+      },
+      {
+        "investor": "Aswath Damodaran",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Aswath Damodaran on ALL: Story supported by numbers. Conviction: 6.5/10.",
+        "strengths": [
+          "Numbers back the story"
+        ],
+        "concerns": []
+      },
+      {
+        "investor": "Rakesh Jhunjhunwala",
+        "conviction": 6.5,
+        "vote": "HOLD",
+        "reasoning": "Rakesh Jhunjhunwala on ALL: Long-term growth story. Conviction: 6.5/10.",
+        "strengths": [
+          "Growth market opportunity"
+        ],
+        "concerns": []
+      }
+    ]
+  },
+  "quant_agents": {
+    "consensus": "HOLD",
+    "avg_score": 6.25,
+    "votes": {
+      "BUY": 2,
+      "SELL": 0,
+      "HOLD": 2
+    },
+    "individual_opinions": [
+      {
+        "agent": "Valuation Agent",
+        "score": 8.0,
+        "recommendation": "BUY",
+        "reasoning": "ALL appears undervalued relative to intrinsic value",
+        "metrics": {
+          "undervalued_signal": true,
+          "overvalued_signal": false,
+          "fair_value_signal": false
+        }
+      },
+      {
+        "agent": "Sentiment Agent",
+        "score": 5,
+        "recommendation": "HOLD",
+        "reasoning": "ALL neutral sentiment",
+        "metrics": {
+          "reddit_score": 0,
+          "discord_score": 0,
+          "overall_sentiment": 5
+        }
+      },
+      {
+        "agent": "Fundamentals Agent",
+        "score": 7.0,
+        "recommendation": "BUY",
+        "reasoning": "ALL strong fundamentals with catalyst",
+        "metrics": {
+          "strong_fundamentals": true,
+          "weak_fundamentals": false,
+          "catalyst_present": false
+        }
+      },
+      {
+        "agent": "Technicals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "ALL neutral technical picture",
+        "metrics": {
+          "bullish_technicals": false,
+          "bearish_technicals": false,
+          "momentum": false
+        }
+      }
+    ]
+  },
+  "combined_conviction": 6.03,
+  "risk_validated_conviction": 6.03,
+  "risk_concerns": [
+    "No stop loss mentioned"
+  ],
+  "final_decision": "BUY",
+  "conviction_rating": "\ud83d\udfe1 MEDIUM",
+  "reasoning": "**Decision: BUY** (Conviction: 6.03/10)\n\n**Legendary Investors:** 1/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 2/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Multi-agent consensus supports deployment. Risk/reward favorable. Position sizing follows conviction.\n",
+  "position_sizing": {
+    "conviction": 6.03,
+    "pct_allocation": "5.0%",
+    "position_size": "$50,000",
+    "stop_loss": "-10.0%",
+    "max_risk": "$5,000",
+    "entry_price": 207.0,
+    "stop_price": 186.3
+  }
+}

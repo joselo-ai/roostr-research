@@ -1,0 +1,43 @@
+🐓 MIDDAY TWEET READY - Feb 20, 2026 12:00 PM EST
+====================================================
+
+POST ID: w3-3
+SLOT: midday
+TYPE: standalone (no reply)
+
+TWEET TEXT (263 chars):
+--------------------
+Risk discipline in practice:
+
+Every position has:
+• Pre-defined stop loss (-15% to -20%)
+• Position size based on conviction (2%-10%)
+• Max portfolio risk: 10%
+
+No exceptions. No "let me see what happens."
+
+When stop hits → exit. No questions.
+
+Discipline > hope.
+--------------------
+
+MANUAL POSTING STEPS:
+1. Go to https://x.com/roostrcapital
+2. Click "Post" button
+3. Paste the tweet text above
+4. Click "Post"
+5. Copy the tweet URL from browser
+
+AFTER POSTING:
+Run this command with the actual tweet URL:
+python3 /Users/agentjoselo/.openclaw/workspace/marketing/mark_posted.py w3-3 <TWEET_URL>
+
+Example:
+python3 /Users/agentjoselo/.openclaw/workspace/marketing/mark_posted.py w3-3 https://x.com/roostrcapital/status/1234567890
+
+AUTOMATION NOTE:
+Browser automation failed due to OpenClaw browser control instability.
+Fallback: Manual posting required.
+Status: ⏳ PENDING MANUAL POST
+
+Generated: 2026-02-20 12:00:00 EST

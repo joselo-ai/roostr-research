@@ -1,0 +1,187 @@
+{
+  "ticker": "JNJ",
+  "timestamp": "2026-02-20T12:43:16.885606",
+  "signal_source": "Manual",
+  "catalyst": "Healthcare sector, 211.0% dividend",
+  "entry_price": 242.995,
+  "legendary_investors": {
+    "consensus": "HOLD",
+    "avg_conviction": 5.25,
+    "votes": {
+      "BUY": 1,
+      "SELL": 0,
+      "HOLD": 11
+    },
+    "individual_opinions": [
+      {
+        "investor": "Warren Buffett",
+        "conviction": 5.5,
+        "vote": "BUY",
+        "reasoning": "Warren Buffett evaluates JNJ: Overall conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Charlie Munger",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Charlie Munger on JNJ: Mental models suggest red flags. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Michael Burry",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Michael Burry on JNJ: Not contrarian enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Ben Graham",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Ben Graham on JNJ: No safety margin. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Mohnish Pabrai",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Mohnish Pabrai on JNJ: Risk/reward not asymmetric. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Cathie Wood",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Cathie Wood on JNJ: Not innovative enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Phil Fisher",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Phil Fisher on JNJ: Need deeper research. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Insufficient research depth"
+        ]
+      },
+      {
+        "investor": "Peter Lynch",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Peter Lynch on JNJ: Not everyday business. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      },
+      {
+        "investor": "Bill Ackman",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Bill Ackman on JNJ: Not bold enough. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "Not high enough conviction for concentrated bet"
+        ]
+      },
+      {
+        "investor": "Stanley Druckenmiller",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Stanley Druckenmiller on JNJ: No clear macro edge. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No exit strategy if wrong"
+        ]
+      },
+      {
+        "investor": "Aswath Damodaran",
+        "conviction": 4.75,
+        "vote": "HOLD",
+        "reasoning": "Aswath Damodaran on JNJ: Narrative without valuation. Conviction: 4.75/10.",
+        "strengths": [],
+        "concerns": [
+          "No valuation framework"
+        ]
+      },
+      {
+        "investor": "Rakesh Jhunjhunwala",
+        "conviction": 5.5,
+        "vote": "HOLD",
+        "reasoning": "Rakesh Jhunjhunwala on JNJ: Not long-term enough. Conviction: 5.5/10.",
+        "strengths": [],
+        "concerns": []
+      }
+    ]
+  },
+  "quant_agents": {
+    "consensus": "HOLD",
+    "avg_score": 5.0,
+    "votes": {
+      "BUY": 0,
+      "SELL": 0,
+      "HOLD": 4
+    },
+    "individual_opinions": [
+      {
+        "agent": "Valuation Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "JNJ no clear valuation signal",
+        "metrics": {
+          "undervalued_signal": false,
+          "overvalued_signal": false,
+          "fair_value_signal": false
+        }
+      },
+      {
+        "agent": "Sentiment Agent",
+        "score": 5,
+        "recommendation": "HOLD",
+        "reasoning": "JNJ neutral sentiment",
+        "metrics": {
+          "reddit_score": 0,
+          "discord_score": 0,
+          "overall_sentiment": 5
+        }
+      },
+      {
+        "agent": "Fundamentals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "JNJ mixed fundamental signals",
+        "metrics": {
+          "strong_fundamentals": false,
+          "weak_fundamentals": false,
+          "catalyst_present": false
+        }
+      },
+      {
+        "agent": "Technicals Agent",
+        "score": 5.0,
+        "recommendation": "HOLD",
+        "reasoning": "JNJ neutral technical picture",
+        "metrics": {
+          "bullish_technicals": false,
+          "bearish_technicals": false,
+          "momentum": false
+        }
+      }
+    ]
+  },
+  "combined_conviction": 5.15,
+  "risk_validated_conviction": 5.15,
+  "risk_concerns": [
+    "Conviction <6.0, below deployment threshold",
+    "No stop loss mentioned"
+  ],
+  "final_decision": "HOLD",
+  "conviction_rating": "\ud83d\udfe1 MEDIUM",
+  "reasoning": "**Decision: HOLD** (Conviction: 5.15/10)\n\n**Legendary Investors:** 0/12 bullish, 0/12 bearish. Consensus: HOLD.\n\n**Quant Agents:** 0/4 bullish, 0/4 bearish. Consensus: HOLD.\n\n**Rationale:** Mixed signals. Waiting for clearer setup. Will reassess when conviction improves.\n",
+  "position_sizing": null
+}

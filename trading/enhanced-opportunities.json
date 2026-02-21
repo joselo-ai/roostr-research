@@ -1,0 +1,145 @@
+{
+  "scan_date": "2026-02-20T13:00:41.305087",
+  "total_scanned": 30,
+  "top_15": [
+    {
+      "ticker": "ZS",
+      "price": 169.3350067138672,
+      "target_price": 302.29443,
+      "upside_pct": 78.51856852658953,
+      "catalyst": "Analyst target: $302.29 (78.5% upside)",
+      "score": 78.51856852658953,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "SNOW",
+      "price": 178.21499633789062,
+      "target_price": 271.71744,
+      "upside_pct": 52.46609184607078,
+      "catalyst": "Analyst target: $271.72 (52.5% upside)",
+      "score": 52.46609184607078,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "DDOG",
+      "price": 120.81999969482422,
+      "target_price": 182.4307,
+      "upside_pct": 50.993792799864664,
+      "catalyst": "Analyst target: $182.43 (51.0% upside)",
+      "score": 50.993792799864664,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "MSFT",
+      "price": 397.6000061035156,
+      "target_price": 595.99567,
+      "upside_pct": 49.89830504299133,
+      "catalyst": "Analyst target: $596.00 (49.9% upside)",
+      "score": 49.89830504299133,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "AMD",
+      "price": 199.6199951171875,
+      "target_price": 287.52173,
+      "upside_pct": 44.03453413131761,
+      "catalyst": "Analyst target: $287.52 (44.0% upside)",
+      "score": 44.03453413131761,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "PLTR",
+      "price": 134.28700256347656,
+      "target_price": 189.92043,
+      "upside_pct": 41.42875064191407,
+      "catalyst": "Analyst target: $189.92 (41.4% upside)",
+      "score": 41.42875064191407,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "AVGO",
+      "price": 334.9309997558594,
+      "target_price": 456.0997,
+      "upside_pct": 36.177212719176154,
+      "catalyst": "Analyst target: $456.10 (36.2% upside)",
+      "score": 36.177212719176154,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "NVDA",
+      "price": 188.83999633789062,
+      "target_price": 253.88464,
+      "upside_pct": 34.44431525285842,
+      "catalyst": "Analyst target: $253.88 (34.4% upside)",
+      "score": 34.44431525285842,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "AMZN",
+      "price": 209.67999267578125,
+      "target_price": 281.46033,
+      "upside_pct": 34.233279202374575,
+      "catalyst": "Analyst target: $281.46 (34.2% upside)",
+      "score": 34.233279202374575,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "JNJ",
+      "price": 242.80999755859375,
+      "institutional_pct": 75.663,
+      "pe_ratio": 21.99366,
+      "price_change_3m": 20.328776338278743,
+      "catalyst": "Insider confidence proxy: 76% institutional",
+      "score": 32.441841178691845,
+      "source": "insider_proxy"
+    },
+    {
+      "ticker": "META",
+      "price": 658.2750244140625,
+      "target_price": 861.301,
+      "upside_pct": 30.842120398940096,
+      "catalyst": "Analyst target: $861.30 (30.8% upside)",
+      "score": 30.842120398940096,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "CRWD",
+      "price": 423.9700012207031,
+      "target_price": 545.6153,
+      "upside_pct": 28.691958966213015,
+      "catalyst": "Analyst target: $545.62 (28.7% upside)",
+      "score": 28.691958966213015,
+      "source": "analyst_upgrade"
+    },
+    {
+      "ticker": "HD",
+      "price": 379.42999267578125,
+      "institutional_pct": 74.543,
+      "pe_ratio": 25.899658,
+      "price_change_3m": 14.893816782373737,
+      "catalyst": "Insider confidence proxy: 75% institutional",
+      "score": 26.209171627190607,
+      "source": "insider_proxy"
+    },
+    {
+      "ticker": "GOOGL",
+      "price": 315.42999267578125,
+      "institutional_pct": 80.793,
+      "pe_ratio": 29.180387,
+      "price_change_3m": 9.046918615164557,
+      "catalyst": "Insider confidence proxy: 81% institutional",
+      "score": 20.553177962893564,
+      "source": "insider_proxy"
+    },
+    {
+      "ticker": "PG",
+      "price": 160.14999389648438,
+      "institutional_pct": 70.419,
+      "pe_ratio": 23.725925,
+      "price_change_3m": 8.83802162576508,
+      "catalyst": "Insider confidence proxy: 70% institutional",
+      "score": 20.094720416539307,
+      "source": "insider_proxy"
+    }
+  ]
+}

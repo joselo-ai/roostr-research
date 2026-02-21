@@ -1,0 +1,24 @@
+EVENING TWEET - Feb 19, 2026 7:00 PM EST
+POST AS REPLY TO: https://x.com/roostrcapital/status/2024484515012628951
+
+CONTENT:
+Why social arbitrage works:
+
+Chris Camillo's Dorel Industries play (2020):
+
+• March: COVID lockdowns begin
+• Social media: Parents panic-buying bikes for kids
+• Dorel: Major bike manufacturer
+• Entry: $3.50
+• Exit: $22
+• Return: 629%
+
+Wall Street saw it 3 months later.
+
+Edge = speed of information.
+
+---
+AFTER POSTING:
+1. Capture tweet URL
+2. Update content-queue.json (mark w2-9 as posted with URL and timestamp)
+3. Update posted-log.json (add entry with details)
