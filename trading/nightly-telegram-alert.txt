@@ -1,0 +1,11 @@
+🐓 **roostr Nightly Research Complete**
+
+🌍 Scanned global markets
+🤖 18 agents evaluated top 5 opportunities
+
+**Deployable:** 0 position(s) ready
+**Plan:** `trading/next-day-deployment-plan.md`
+
+Wake up and review! Market opens in ~7.5 hours.
+
+Good night. 🌙
